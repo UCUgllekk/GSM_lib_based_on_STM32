@@ -12,8 +12,16 @@ You will also need a STM32f3discovery board, bread board, screen, 8 Arduino wire
 
 ## Compilation
 In order to compile our project 
+1) Clone repository<br>
+```bash
+git clone https://github.com/UCUgllekk/GSM_lib_based_on_STM32.git
+```
+3) Then go to the required directory:<br>
 ```bash
 cd TelephoneLib/Core/Src
+```
+4) Then run this code to compile project:<br>
+```bash
 g++ main.c -o main
 ```
 
