@@ -1,13 +1,13 @@
 # GSM_lib_based_on_STM32
 
-# Authors:
+## Authors:
 - Denysova Iryna
 - Pavlosiuk Roman
 - Hrynda Yuliana
 - Korets Khrystyna
 
-# Prerequirements
+## Prerequirements
 
-# Compilation
+## Compilation
 
-# Usage
+## Usage
