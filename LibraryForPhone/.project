@@ -127,6 +127,16 @@
 			<locationURI>PARENT-3-PROJECT_LOC/STM32Cube/Repository/STM32Cube_FW_F3_V1.11.5/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c</locationURI>
 		</link>
 		<link>
+			<name>Drivers/STM32F3xx_HAL_Driver/stm32f3xx_hal_uart.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/STM32Cube/Repository/STM32Cube_FW_F3_V1.11.5/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/STM32F3xx_HAL_Driver/stm32f3xx_hal_uart_ex.c</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/STM32Cube/Repository/STM32Cube_FW_F3_V1.11.5/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c</locationURI>
+		</link>
+		<link>
 			<name>Drivers/STM32F3xx_HAL_Driver/stm32f3xx_ll_usb.c</name>
 			<type>1</type>
 			<locationURI>PARENT-3-PROJECT_LOC/STM32Cube/Repository/STM32Cube_FW_F3_V1.11.5/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c</locationURI>
