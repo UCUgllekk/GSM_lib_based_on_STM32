@@ -1,0 +1,16 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Nov 2, 2024
+ *      Author: gllekk
+ */
+
+
+#include "GSMModule.hpp"
+
+
+int main(){
+	GSM_Module::Parameters param = load_
+}
+
+

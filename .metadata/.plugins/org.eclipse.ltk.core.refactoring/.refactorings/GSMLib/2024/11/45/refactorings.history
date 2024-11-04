@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;main.cpp&apos; to &apos;Src&apos;" description="Move &apos;main.cpp&apos; to &apos;Src&apos;" destination="Src" element1="/LibraryForPhone/Core/main.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1730654170646" updateReferences="true"/>
+</session>

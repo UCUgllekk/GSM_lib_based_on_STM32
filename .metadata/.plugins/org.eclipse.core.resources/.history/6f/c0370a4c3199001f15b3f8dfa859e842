@@ -1,0 +1,12 @@
+/*
+ * GSM_MODULE.cpp
+ *
+ *  Created on: Nov 2, 2024
+ *      Author: gllekk
+ */
+
+#include "GSM_MODULE.hpp"
+
+GSM_Module(const Parameters& parameters){
+	//
+}

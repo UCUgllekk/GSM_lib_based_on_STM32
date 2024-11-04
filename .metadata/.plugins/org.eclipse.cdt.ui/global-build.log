@@ -1,0 +1,35 @@
+17:48:00 **** Incremental Build of configuration Debug for project Test ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/GSMModule.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/GSMModule.d" -MT"Core/Src/GSMModule.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/GSMModule.o"
+arm-none-eabi-g++ -o "Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/gllekk/POCProjects/GSM_lib_based_on_STM32/Test/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Test.elf
+ 
+arm-none-eabi-size   Test.elf 
+arm-none-eabi-objdump -h -S  Test.elf  > "Test.list"
+   text	   data	    bss	    dec	    hex	filename
+ 175224	    760	   8516	 184500	  2d0b4	Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Test.list
+ 
+17:48:19 **** Incremental Build of configuration Debug for project Test ****
+make -j8 all 
+arm-none-eabi-size   Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 175224	    760	   8516	 184500	  2d0b4	Test.elf
+Finished building: default.size.stdout
+ 
+17:52:10 **** Incremental Build of configuration Debug for project Test ****
+make -j8 all 
+arm-none-eabi-size   Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 175224	    760	   8516	 184500	  2d0b4	Test.elf
+Finished building: default.size.stdout
+ 
+17:52:49 **** Incremental Build of configuration Debug for project Test ****
+make -j8 all 
+arm-none-eabi-size   Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 175224	    760	   8516	 184500	  2d0b4	Test.elf
+Finished building: default.size.stdout
+ 
