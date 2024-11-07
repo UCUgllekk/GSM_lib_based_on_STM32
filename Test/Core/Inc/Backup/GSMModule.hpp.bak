@@ -8,7 +8,6 @@
 #ifndef INC_GSM_MODULE_HPP_
 #define INC_GSM_MODULE_HPP_
 
-#include <stm32f303xc.h>
 #include <string>
 #include "main.h"
 

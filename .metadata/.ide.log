@@ -33,3 +33,1417 @@
 2024-11-07 11:43:07,822 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
 2024-11-07 11:45:51,863 [INFO] WebApp:189 - Connection lost
 2024-11-07 11:45:52,559 [INFO] WebApp:186 - Connection restablished
+2024-11-07 12:19:18,794 [INFO] WebApp:189 - Connection lost
+2024-11-07 12:19:19,283 [INFO] WebApp:186 - Connection restablished
+2024-11-07 12:24:25,941 [INFO] WebApp:189 - Connection lost
+2024-11-07 12:24:26,538 [INFO] WebApp:186 - Connection restablished
+2024-11-07 12:36:46,797 [INFO] WebApp:189 - Connection lost
+2024-11-07 12:36:54,204 [INFO] WebApp:186 - Connection restablished
+2024-11-07 12:42:24,462 [INFO] WebApp:189 - Connection lost
+2024-11-07 12:42:25,241 [INFO] WebApp:186 - Connection restablished
+2024-11-07 12:47:39,951 [INFO] WebApp:189 - Connection lost
+2024-11-07 12:47:40,156 [INFO] WebApp:186 - Connection restablished
+2024-11-07 12:49:00,841 [INFO] WebApp:189 - Connection lost
+2024-11-07 12:49:01,436 [INFO] WebApp:186 - Connection restablished
+2024-11-07 12:55:08,219 [INFO] WebApp:189 - Connection lost
+2024-11-07 12:55:15,432 [INFO] WebApp:186 - Connection restablished
+2024-11-07 12:55:51,350 [INFO] WebApp:189 - Connection lost
+2024-11-07 12:55:51,739 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:05:27,257 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:05:34,877 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:06:10,394 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:06:11,086 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:15:46,809 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:15:53,836 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:16:29,732 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:16:30,008 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:25:05,411 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:25:12,540 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:25:48,533 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:25:49,106 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:35:49,419 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:36:00,755 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:36:36,726 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:36:37,332 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:52:40,503 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:40,503 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:43,310 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:43,310 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:43,347 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:43,385 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:45,199 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:45,199 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:45,235 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:52:45,271 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:00,095 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:00,095 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:05,765 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 13:53:05,849 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:05,850 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:32,254 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:32,257 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:32,258 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:32,320 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:32,321 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:40,701 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:53:40,701 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:54:02,646 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 586742920 Bytes (809500672)
+2024-11-07 13:54:02,745 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 608865296 Bytes (809500672)
+2024-11-07 13:54:03,162 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 688821376 Bytes (809500672)
+2024-11-07 13:54:03,308 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 13:54:03,308 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 13:54:03,308 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 13:54:03,308 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 13:54:03,308 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 13:54:03,308 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 13:54:03,308 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 13:54:03,308 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 13:54:03,309 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 13:54:03,309 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 13:54:03,331 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 13:54:03,417 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 13:54:03,561 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 13:54:03,709 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 13:54:03,802 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 13:54:03,803 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 13:54:03,866 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 13:54:04,470 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 13:54:04,583 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 13:54:04,584 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 13:54:04,668 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 13:54:04,672 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 13:54:04,794 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 13:54:04,795 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 13:54:04,879 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 13:54:04,883 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 13:54:04,971 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 13:54:04,972 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 13:54:05,021 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 13:54:05,023 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 13:54:05,097 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 13:54:05,098 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 13:54:05,153 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 13:54:05,157 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 13:54:05,301 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 13:54:05,302 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 13:54:05,356 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 13:54:05,360 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 13:54:05,435 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 13:54:05,436 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 13:54:05,482 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 13:54:05,485 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 13:54:05,542 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 13:54:05,555 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 13:54:05,623 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 13:54:05,624 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 13:54:05,709 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 13:54:05,948 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 27mS.
+2024-11-07 13:54:05,950 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 13:54:06,046 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 13:54:06,613 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 663mS.
+2024-11-07 13:54:06,614 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 1mS.
+2024-11-07 13:54:06,615 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:11:45,850 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 14:11:45,940 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:11:45,940 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:11:49,544 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 271750648 Bytes (809500672)
+2024-11-07 14:11:49,674 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 294292984 Bytes (809500672)
+2024-11-07 14:11:50,198 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 344447480 Bytes (809500672)
+2024-11-07 14:11:50,300 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:11:50,300 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:11:50,300 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 14:11:50,300 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 14:11:50,300 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 14:11:50,300 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 14:11:50,300 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 14:11:50,300 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 14:11:50,301 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 14:11:50,301 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 14:11:50,324 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:11:50,417 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 14:11:50,517 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 14:11:50,606 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 14:11:50,696 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 14:11:50,697 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 14:11:50,748 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 14:11:51,243 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 14:11:51,334 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 14:11:51,335 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 14:11:51,383 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 14:11:51,386 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 14:11:51,463 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 14:11:51,464 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 14:11:51,511 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 14:11:51,513 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 14:11:51,583 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 14:11:51,584 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 14:11:51,630 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 14:11:51,633 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 14:11:51,701 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 14:11:51,702 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 14:11:51,749 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 14:11:51,754 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 14:11:51,894 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 14:11:51,895 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 14:11:51,952 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 14:11:51,957 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 14:11:52,035 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 14:11:52,036 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 14:11:52,094 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 14:11:52,097 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 14:11:52,156 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 14:11:52,168 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 14:11:52,245 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 14:11:52,246 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 14:11:52,316 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 14:11:52,562 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 20mS.
+2024-11-07 14:11:52,563 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 14:11:52,640 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 14:11:53,207 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 644mS.
+2024-11-07 14:11:53,207 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:11:53,208 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:19:07,310 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,530x527,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 14:19:13,278 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 14:19:21,304 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 14:19:43,792 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 603184200 Bytes (809500672)
+2024-11-07 14:19:43,886 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 625726536 Bytes (809500672)
+2024-11-07 14:19:44,373 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 675535944 Bytes (809500672)
+2024-11-07 14:19:44,489 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:19:44,489 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:19:44,489 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 14:19:44,490 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 14:19:44,490 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 14:19:44,490 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 14:19:44,490 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 14:19:44,490 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 14:19:44,490 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 14:19:44,490 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 14:19:44,520 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:19:44,603 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 14:19:44,692 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 14:19:44,805 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 14:19:44,890 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 14:19:44,891 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 14:19:44,957 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 14:19:45,463 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 14:19:45,540 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 14:19:45,541 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 14:19:45,592 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 14:19:45,594 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 14:19:45,676 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 14:19:45,677 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 14:19:45,724 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 14:19:45,726 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 14:19:45,797 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 14:19:45,798 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 14:19:45,847 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 14:19:45,849 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 14:19:45,922 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 14:19:45,923 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 14:19:45,971 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 14:19:45,976 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 14:19:46,048 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 14:19:46,049 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 14:19:46,120 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 14:19:46,125 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 14:19:46,208 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 14:19:46,209 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 14:19:46,277 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 14:19:46,280 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 14:19:46,340 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 14:19:46,354 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 14:19:46,417 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 14:19:46,418 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 14:19:46,496 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 14:19:46,720 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 35mS.
+2024-11-07 14:19:46,721 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 14:19:46,803 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 14:19:47,307 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 586mS.
+2024-11-07 14:19:47,307 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:19:47,309 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:20:20,465 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 14:20:20,531 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:20:20,532 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:20:20,640 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:20:20,640 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:20:20,750 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:20:20,750 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:20:49,835 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 480803808 Bytes (809500672)
+2024-11-07 14:20:49,943 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 503346144 Bytes (809500672)
+2024-11-07 14:20:50,397 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 583564256 Bytes (809500672)
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 14:20:50,533 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 14:20:50,534 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 14:20:50,572 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:20:50,690 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 14:20:50,763 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 14:20:50,836 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 14:20:50,897 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 14:20:50,898 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 14:20:50,946 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 14:20:51,453 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 14:20:51,530 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 14:20:51,531 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 14:20:51,580 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 14:20:51,582 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 14:20:51,658 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 14:20:51,659 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 14:20:51,723 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 14:20:51,726 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 14:20:51,799 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 14:20:51,800 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 14:20:51,859 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 14:20:51,861 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 14:20:51,938 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 14:20:51,939 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 14:20:52,001 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 14:20:52,005 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 14:20:52,086 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 14:20:52,087 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 14:20:52,151 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 14:20:52,155 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 14:20:52,240 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 14:20:52,242 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 14:20:52,297 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 14:20:52,299 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 14:20:52,358 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 14:20:52,371 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 14:20:52,430 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 14:20:52,431 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 14:20:52,505 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 14:20:52,736 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 19mS.
+2024-11-07 14:20:52,737 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 14:20:52,811 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 14:20:53,254 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 517mS.
+2024-11-07 14:20:53,254 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:20:53,255 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:21:09,344 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 357701384 Bytes (809500672)
+2024-11-07 14:21:09,447 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 380149032 Bytes (809500672)
+2024-11-07 14:21:09,914 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 434152744 Bytes (809500672)
+2024-11-07 14:21:10,018 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:21:10,018 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:21:10,018 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 14:21:10,018 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 14:21:10,018 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 14:21:10,018 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 14:21:10,018 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 14:21:10,018 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 14:21:10,019 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 14:21:10,019 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 14:21:10,041 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:21:10,109 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 14:21:10,170 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 14:21:10,243 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 14:21:10,303 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 14:21:10,304 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 14:21:10,354 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 14:21:11,015 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 14:21:11,113 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 14:21:11,114 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 14:21:11,184 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 14:21:11,187 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 14:21:11,295 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 14:21:11,296 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 14:21:11,356 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 14:21:11,359 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 14:21:11,439 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 14:21:11,441 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 14:21:11,499 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 14:21:11,501 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 14:21:11,570 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 14:21:11,571 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 14:21:11,619 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 14:21:11,622 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 14:21:11,685 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 14:21:11,686 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 14:21:11,741 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 14:21:11,746 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 14:21:11,820 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 14:21:11,820 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 14:21:11,867 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 14:21:11,867 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32_assert.h_save
+2024-11-07 14:21:11,915 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32_assert.h
+2024-11-07 14:21:11,917 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 14:21:11,972 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 14:21:11,988 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 14:21:12,046 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 14:21:12,047 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 14:21:12,121 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 14:21:12,321 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 20mS.
+2024-11-07 14:21:12,322 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 14:21:12,392 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 14:21:12,921 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 599mS.
+2024-11-07 14:21:12,921 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:21:12,922 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:21:25,096 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 525163000 Bytes (879755264)
+2024-11-07 14:21:25,206 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 547183096 Bytes (879755264)
+2024-11-07 14:21:25,634 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 598563320 Bytes (879755264)
+2024-11-07 14:21:25,736 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:21:25,736 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:21:25,736 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 14:21:25,736 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 14:21:25,736 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 14:21:25,736 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 14:21:25,736 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 14:21:25,737 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 14:21:25,737 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 14:21:25,737 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 14:21:25,772 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:21:25,843 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 14:21:25,898 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 14:21:25,994 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 14:21:26,057 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 14:21:26,059 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 14:21:26,125 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 14:21:26,622 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 14:21:26,698 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 14:21:26,699 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 14:21:26,750 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 14:21:26,752 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 14:21:26,833 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 14:21:26,834 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 14:21:26,884 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 14:21:26,886 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 14:21:26,958 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 14:21:26,959 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 14:21:27,017 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 14:21:27,020 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 14:21:27,089 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 14:21:27,090 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 14:21:27,138 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 14:21:27,143 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 14:21:27,207 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 14:21:27,208 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 14:21:27,275 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 14:21:27,279 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 14:21:27,370 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 14:21:27,371 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 14:21:27,431 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 14:21:27,433 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 14:21:27,512 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 14:21:27,524 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 14:21:27,584 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 14:21:27,585 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 14:21:27,657 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 14:21:27,843 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 18mS.
+2024-11-07 14:21:27,845 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 14:21:27,922 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 14:21:28,427 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 581mS.
+2024-11-07 14:21:28,427 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:21:28,428 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:22:11,162 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 14:22:11,233 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:11,233 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:11,417 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:11,417 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:11,528 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:11,528 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:37,939 [INFO] CADModel:198 - CPN selected (Project mode): STM32F303VCT6
+2024-11-07 14:22:37,940 [INFO] CADModel:200 - Internet connection configuration mode: 1
+2024-11-07 14:22:37,940 [INFO] CADModel:203 - rpn retrievedSTM32F303VC
+2024-11-07 14:22:37,949 [INFO] WebAppUi:294 - Instantiating new browser for Project
+2024-11-07 14:22:38,178 [INFO] WebAppUi:1191 - Register for checkConnection events
+2024-11-07 14:22:38,179 [INFO] WebAppUi:1226 - Apply proxy settings
+2024-11-07 14:22:38,179 [INFO] WebAppUi:1264 - Chromium requires no authentication
+2024-11-07 14:22:38,179 [INFO] WebAppUi:1250 - Direct internet connection detected
+2024-11-07 14:22:38,183 [INFO] WebAppUi:320 - Starting web application
+2024-11-07 14:22:38,183 [INFO] WebAppUi:1122 - Web application path used /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256/db/plugins/mcufinder/reactClient/index.html
+2024-11-07 14:22:38,196 [INFO] WebAppUi:887 - Path where api_config.json is located /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/api_config.json
+2024-11-07 14:22:38,196 [INFO] WebAppUi:888 - Setting api config in window object
+2024-11-07 14:22:38,219 [WARN] WebAppUi:925 - Cannot access cad_preferences.json
+2024-11-07 14:22:38,219 [WARN] WebAppUi:928 - Fallback to default consent
+2024-11-07 14:22:38,220 [INFO] WebAppUi:896 - Path where cad_preferences.json is located /home/gllekk/.stm32cubeide/
+2024-11-07 14:22:38,220 [INFO] WebAppUi:897 - Setting consent info in window object
+2024-11-07 14:22:38,812 [INFO] WebAppUi:792 - Allow Downloads
+2024-11-07 14:22:38,813 [INFO] WebAppUi:294 - Instantiating new browser for Finder
+2024-11-07 14:22:39,076 [INFO] WebAppUi:1191 - Register for checkConnection events
+2024-11-07 14:22:39,076 [INFO] WebAppUi:1226 - Apply proxy settings
+2024-11-07 14:22:39,077 [INFO] WebAppUi:1264 - Chromium requires no authentication
+2024-11-07 14:22:39,077 [INFO] WebAppUi:1250 - Direct internet connection detected
+2024-11-07 14:22:39,080 [INFO] WebAppUi:320 - Starting web application
+2024-11-07 14:22:39,080 [INFO] WebAppUi:1122 - Web application path used /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256/db/plugins/mcufinder/reactClient/index.html
+2024-11-07 14:22:39,093 [INFO] WebAppUi:887 - Path where api_config.json is located /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/api_config.json
+2024-11-07 14:22:39,093 [INFO] WebAppUi:888 - Setting api config in window object
+2024-11-07 14:22:39,113 [INFO] WebAppUi:896 - Path where cad_preferences.json is located /home/gllekk/.stm32cubeide/
+2024-11-07 14:22:39,113 [INFO] WebAppUi:897 - Setting consent info in window object
+2024-11-07 14:22:39,512 [INFO] WebAppUi:1056 - Web application message: [UlApiManager component] Connected to Ultra Librarian SSO
+2024-11-07 14:22:39,512 [INFO] WebAppUi:1056 - Web application message: [UlApiManager component] Connected to Ultra Librarian API
+2024-11-07 14:22:39,618 [INFO] WebAppUi:792 - Allow Downloads
+2024-11-07 14:22:39,619 [INFO] WebAppUi:613 - RPN selected STM32F303VC
+2024-11-07 14:22:39,619 [INFO] WebAppUi:614 - RefName selected STM32F303VCTx
+2024-11-07 14:22:39,619 [INFO] WebAppUi:615 - CPN selected STM32F303VCT6
+2024-11-07 14:22:39,625 [INFO] WebAppUi:778 - Which Bigleton in use 2 and which CPN is about STM32F303VCT6
+2024-11-07 14:22:39,631 [INFO] WebAppUi:652 - Have injected Javascript into web application
+2024-11-07 14:22:39,632 [INFO] WebAppUiContainer:153 - Web application run mode: Project CPN: STM32F303VCT6
+2024-11-07 14:22:39,693 [INFO] WebAppUi:1056 - Web application message: [UlApiManager component] Connecting to SSO
+2024-11-07 14:22:40,349 [INFO] WebAppUi:1056 - Web application message: [UlApiManager component] Connected to Ultra Librarian SSO
+2024-11-07 14:22:40,351 [INFO] WebAppUi:1056 - Web application message: [UlApiManager component] Connected to Ultra Librarian API
+2024-11-07 14:22:43,235 [INFO] WebAppUi:887 - Path where api_config.json is located /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/api_config.json
+2024-11-07 14:22:43,235 [INFO] WebAppUi:888 - Setting api config in window object
+2024-11-07 14:22:43,264 [INFO] WebAppUi:896 - Path where cad_preferences.json is located /home/gllekk/.stm32cubeide/
+2024-11-07 14:22:43,264 [INFO] WebAppUi:897 - Setting consent info in window object
+2024-11-07 14:22:45,259 [INFO] WebAppUi:1056 - Web application message: THREE.WebGLRenderer 101
+2024-11-07 14:22:45,734 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 14:22:45,795 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:45,795 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:45,977 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:45,977 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:46,118 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:46,118 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:22:51,779 [INFO] CheckServerUpdateThread:120 - End of CheckServer Thread
+2024-11-07 14:24:27,767 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-AI.9.1.0.pack
+2024-11-07 14:24:43,711 [INFO] AnalyticsPlugin:368 - Accepted License(s): [STMicroelectronics.X-CUBE-AI.9.1.0]
+2024-11-07 14:24:43,711 [INFO] FileExtend:240 - Unzip File : STMicroelectronics.X-CUBE-AI.9.1.0.pack
+2024-11-07 14:24:43,711 [INFO] FileExtend:255 - Standard Zip Deflate
+2024-11-07 14:24:43,988 [INFO] LoadServerPackagesThread:196 - End of LoadServerPackages Thread
+2024-11-07 14:24:44,152 [WARN] ThirdParty:509 - waiting for thirdparty lock release [add software pack]
+2024-11-07 14:24:44,152 [INFO] ThirdParty:511 - entering critical section [add software pack]
+2024-11-07 14:24:44,196 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-11-07 14:24:44,587 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.3.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC9 1.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.4.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-WB05N 1.1.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TCPP 4.1.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.1.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.2.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-IPS 3.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 7.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.1.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-STBOX1 2.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 11.0.0
+2024-11-07 14:24:44,597 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SAFEA1 1.2.2
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DPower 1.2.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :EmbeddedOffice I-CUBE-FS-RTOS 1.0.1
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :Cesanta I-CUBE-Mongoose 7.13.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :RealThread X-CUBE-RT-Thread_Nano 4.1.1
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC10 1.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.2
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.7.4
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.9.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.24.1
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfTPM 3.4.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.1.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.4.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 5.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfMQTT 1.19.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.2
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 9.1.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.6.1
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2024-11-07 14:24:44,598 [INFO] ThirdPartyPackRequestProcessor:621 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSH 1.4.17
+2024-11-07 14:24:44,598 [INFO] ThirdParty:514 - exiting critical section [add software pack]
+2024-11-07 14:24:44,605 [INFO] LoadServerUpdatesThread:375 - End of LoadServerUpdate Thread
+2024-11-07 14:24:44,783 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-11-07 14:24:45,177 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-11-07 14:24:45,185 [INFO] CheckServerUpdateThread:120 - End of CheckServer Thread
+2024-11-07 14:25:44,492 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,517x274,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 14:25:52,150 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 14:25:52,347 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:25:52,347 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:25:56,645 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 14:25:56,756 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:25:56,756 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:25:59,819 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 652842384 Bytes (879755264)
+2024-11-07 14:25:59,914 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 674793704 Bytes (879755264)
+2024-11-07 14:26:00,381 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 307139288 Bytes (879755264)
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 14:26:00,648 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 14:26:00,649 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 14:26:00,685 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 14:26:00,807 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 14:26:00,879 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 14:26:00,961 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 14:26:01,020 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 14:26:01,021 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 14:26:01,093 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 14:26:01,615 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 14:26:01,700 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 14:26:01,701 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 14:26:01,760 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 14:26:01,762 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 14:26:01,840 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 14:26:01,841 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 14:26:01,900 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 14:26:01,902 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 14:26:01,989 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 14:26:01,990 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 14:26:02,051 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 14:26:02,054 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 14:26:02,134 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 14:26:02,135 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 14:26:02,185 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 14:26:02,188 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 14:26:02,258 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 14:26:02,259 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 14:26:02,323 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 14:26:02,327 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 14:26:02,401 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 14:26:02,402 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 14:26:02,456 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 14:26:02,459 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 14:26:02,518 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 14:26:02,531 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 14:26:02,599 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 14:26:02,600 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 14:26:02,678 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 14:26:02,866 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 21mS.
+2024-11-07 14:26:02,868 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 14:26:02,945 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 14:26:03,465 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 597mS.
+2024-11-07 14:26:03,465 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:26:03,466 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 14:50:17,385 [INFO] I2cTimingTraitement:330 - 0x00201D2B
+2024-11-07 15:02:43,661 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 15:02:43,778 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:02:43,778 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:01,064 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:01,064 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:24,377 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:24,377 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:42,230 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:42,233 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:42,234 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:42,274 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:42,274 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:53,608 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:53,608 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:55,685 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:55,686 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:55,750 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:55,801 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:55,801 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:55,804 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:04:55,805 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:05:50,649 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 666174832 Bytes (879755264)
+2024-11-07 15:05:50,777 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 698680688 Bytes (879755264)
+2024-11-07 15:05:51,293 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 291409120 Bytes (879755264)
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: UART
+2024-11-07 15:05:51,414 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 15:05:51,415 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 15:05:51,437 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:05:51,438 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:05:51,509 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 15:05:51,624 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 15:05:51,697 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 15:05:51,780 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 15:05:51,781 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 15:05:51,843 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 15:05:52,340 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 15:05:52,450 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 15:05:52,451 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 15:05:52,527 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 15:05:52,530 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 15:05:52,615 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 15:05:52,616 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 15:05:52,674 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 15:05:52,677 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 15:05:52,754 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 15:05:52,755 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 15:05:52,814 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 15:05:52,816 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 15:05:52,892 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 15:05:52,893 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 15:05:52,942 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 15:05:52,946 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 15:05:53,088 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 15:05:53,088 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 15:05:53,153 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 15:05:53,157 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 15:05:53,234 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 15:05:53,235 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 15:05:53,287 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 15:05:53,290 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 15:05:53,357 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 15:05:53,377 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 15:05:53,461 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 15:05:53,462 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 15:05:53,545 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 15:05:53,806 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 27mS.
+2024-11-07 15:05:53,807 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 15:05:53,889 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 15:05:54,424 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 617mS.
+2024-11-07 15:05:54,424 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 15:05:54,425 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 15:10:06,847 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 543377040 Bytes (879755264)
+2024-11-07 15:10:06,949 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 565397136 Bytes (879755264)
+2024-11-07 15:10:07,465 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 655048336 Bytes (879755264)
+2024-11-07 15:10:07,615 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 15:10:07,615 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 15:10:07,615 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 15:10:07,615 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 15:10:07,615 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 15:10:07,615 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 15:10:07,615 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 15:10:07,615 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: UART
+2024-11-07 15:10:07,616 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 15:10:07,616 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 15:10:07,646 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 15:10:07,647 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 15:10:07,756 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 15:10:07,841 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 15:10:07,930 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 15:10:07,995 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 15:10:07,996 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 15:10:08,054 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 15:10:08,544 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 15:10:08,626 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 15:10:08,627 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 15:10:08,688 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 15:10:08,690 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 15:10:08,774 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 15:10:08,775 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 15:10:08,848 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 15:10:08,851 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 15:10:08,944 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 15:10:08,945 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 15:10:09,020 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 15:10:09,022 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 15:10:09,108 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 15:10:09,109 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 15:10:09,159 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 15:10:09,162 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 15:10:09,229 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 15:10:09,230 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 15:10:09,286 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 15:10:09,290 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 15:10:09,377 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 15:10:09,378 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 15:10:09,433 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 15:10:09,435 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 15:10:09,495 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 15:10:09,509 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 15:10:09,570 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 15:10:09,571 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 15:10:09,650 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 15:10:09,844 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 21mS.
+2024-11-07 15:10:09,846 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 15:10:09,922 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 15:10:10,382 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 536mS.
+2024-11-07 15:10:10,382 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 15:10:10,383 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 15:12:33,955 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 15:12:34,463 [INFO] WebApp:189 - Connection lost
+2024-11-07 15:12:34,664 [INFO] WebApp:186 - Connection restablished
+2024-11-07 16:58:44,369 [INFO] WebApp:189 - Connection lost
+2024-11-07 16:58:52,640 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 16:58:55,954 [INFO] WebApp:186 - Connection restablished
+2024-11-07 17:02:55,078 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 17:03:07,993 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:03:07,993 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:03:07,997 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 17:03:07,997 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 17:03:10,981 [WARN] IP:2191 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-11-07 17:03:13,697 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:03:13,698 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:07:03,827 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 466694544 Bytes (879755264)
+2024-11-07 17:07:03,945 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 488947992 Bytes (879755264)
+2024-11-07 17:07:04,466 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 561588624 Bytes (879755264)
+2024-11-07 17:07:04,584 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 17:07:04,584 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 17:07:04,585 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 17:07:04,585 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 17:07:04,585 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 17:07:04,585 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 17:07:04,585 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 17:07:04,585 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 17:07:04,585 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 17:07:04,585 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 17:07:04,616 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:07:04,686 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 17:07:04,756 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 17:07:04,860 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 17:07:04,923 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 17:07:04,924 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 17:07:04,996 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 17:07:05,513 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 17:07:05,597 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 17:07:05,598 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 17:07:05,647 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 17:07:05,649 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 17:07:05,735 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 17:07:05,736 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 17:07:05,800 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 17:07:05,803 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 17:07:05,877 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 17:07:05,877 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 17:07:05,927 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 17:07:05,929 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 17:07:06,000 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 17:07:06,001 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 17:07:06,049 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 17:07:06,053 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 17:07:06,117 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 17:07:06,118 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 17:07:06,178 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 17:07:06,183 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 17:07:06,264 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 17:07:06,265 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 17:07:06,319 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 17:07:06,322 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 17:07:06,383 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 17:07:06,395 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 17:07:06,455 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 17:07:06,456 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 17:07:06,535 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 17:07:06,775 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 38mS.
+2024-11-07 17:07:06,777 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 17:07:06,879 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 17:07:07,353 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 576mS.
+2024-11-07 17:07:07,354 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 17:07:07,355 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 17:07:13,914 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 711876784 Bytes (879755264)
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 17:07:14,025 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 17:07:14,026 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 17:07:14,064 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:07:14,175 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 17:07:14,251 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 17:07:14,352 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 17:07:14,421 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 17:07:14,422 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 17:07:14,486 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 17:07:14,968 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 17:07:15,065 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 17:07:15,066 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 17:07:15,126 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 17:07:15,128 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 17:07:15,218 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 17:07:15,219 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 17:07:15,269 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 17:07:15,271 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 17:07:15,349 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 17:07:15,350 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 17:07:15,407 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 17:07:15,409 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 17:07:15,492 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 17:07:15,493 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 17:07:15,548 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 17:07:15,552 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 17:07:15,614 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 17:07:15,615 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 17:07:15,684 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 17:07:15,689 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 17:07:15,770 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 17:07:15,771 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 17:07:15,820 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 17:07:15,823 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 17:07:15,883 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 17:07:15,895 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 17:07:15,950 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 17:07:15,951 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 17:07:16,019 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 17:07:16,206 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 20mS.
+2024-11-07 17:07:16,207 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 17:07:16,282 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 17:07:17,275 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 1068mS.
+2024-11-07 17:07:17,275 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 17:07:17,276 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 17:07:25,422 [INFO] WebApp:189 - Connection lost
+2024-11-07 17:07:29,704 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-11-07 17:07:29,793 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:07:29,793 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:07:31,005 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 17:07:32,729 [INFO] WebApp:186 - Connection restablished
+2024-11-07 17:07:33,520 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 612671184 Bytes (879755264)
+2024-11-07 17:07:33,635 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 635213520 Bytes (879755264)
+2024-11-07 17:07:34,139 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 691314384 Bytes (879755264)
+2024-11-07 17:07:34,279 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 17:07:34,279 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SPI
+2024-11-07 17:07:34,279 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-07 17:07:34,279 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-07 17:07:34,279 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: I2C
+2024-11-07 17:07:34,279 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-07 17:07:34,279 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-07 17:07:34,279 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USB
+2024-11-07 17:07:34,280 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-07 17:07:34,280 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-07 17:07:34,310 [WARN] IP:2191 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-11-07 17:07:34,416 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp_save
+2024-11-07 17:07:34,497 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/license.tmp
+2024-11-07 17:07:34,580 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c_save
+2024-11-07 17:07:34,643 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/gpio.c
+2024-11-07 17:07:34,644 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h_save
+2024-11-07 17:07:34,694 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/gpio.h
+2024-11-07 17:07:35,231 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c_save
+2024-11-07 17:07:35,302 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/i2c.c
+2024-11-07 17:07:35,303 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h_save
+2024-11-07 17:07:35,350 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/i2c.h
+2024-11-07 17:07:35,353 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c_save
+2024-11-07 17:07:35,421 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/spi.c
+2024-11-07 17:07:35,422 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h_save
+2024-11-07 17:07:35,469 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/spi.h
+2024-11-07 17:07:35,471 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c_save
+2024-11-07 17:07:35,543 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usart.c
+2024-11-07 17:07:35,544 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h_save
+2024-11-07 17:07:35,595 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usart.h
+2024-11-07 17:07:35,598 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c_save
+2024-11-07 17:07:35,674 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/usb.c
+2024-11-07 17:07:35,675 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h_save
+2024-11-07 17:07:35,725 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/usb.h
+2024-11-07 17:07:35,728 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c_save
+2024-11-07 17:07:35,790 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_it.c
+2024-11-07 17:07:35,791 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h_save
+2024-11-07 17:07:35,846 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_it.h
+2024-11-07 17:07:35,850 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c_save
+2024-11-07 17:07:35,925 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/stm32f3xx_hal_msp.c
+2024-11-07 17:07:35,926 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp_save
+2024-11-07 17:07:35,977 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/MXTmpFiles/system.tmp
+2024-11-07 17:07:35,980 [INFO] CodeEngine:311 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-11-07 17:07:36,041 [INFO] CodeEngine:335 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/stm32f3xx_hal_conf.h
+2024-11-07 17:07:36,054 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h_save
+2024-11-07 17:07:36,118 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Inc/main.h
+2024-11-07 17:07:36,119 [INFO] CodeEngine:255 - oldGeneratedFile, /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c_save
+2024-11-07 17:07:36,203 [INFO] CodeEngine:279 - Generated code: /home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test/Core/Src/main.c
+2024-11-07 17:07:36,428 [INFO] ProjectBuilder:3249 - Time for Copy HAL[1] : 22mS.
+2024-11-07 17:07:36,429 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-07 17:07:36,522 [INFO] ConfigFileManager:1531 - The Die is : DIE422
+2024-11-07 17:07:37,009 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 580mS.
+2024-11-07 17:07:37,010 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 17:07:37,010 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-07 17:12:29,487 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 17:12:29,986 [INFO] WebApp:189 - Connection lost
+2024-11-07 17:12:30,558 [INFO] WebApp:186 - Connection restablished
+2024-11-07 17:46:28,477 [INFO] WebApp:189 - Connection lost
+2024-11-07 17:55:15,670 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 17:55:19,267 [INFO] WebApp:186 - Connection restablished
+2024-11-07 17:59:09,522 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 17:59:10,021 [INFO] WebApp:189 - Connection lost
+2024-11-07 17:59:10,681 [INFO] WebApp:186 - Connection restablished
+2024-11-07 18:03:26,458 [INFO] WebApp:189 - Connection lost
+2024-11-07 18:03:36,459 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 18:03:38,108 [INFO] WebApp:186 - Connection restablished
+2024-11-07 18:07:40,589 [INFO] WebApp:189 - Connection lost
+2024-11-07 18:07:45,813 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 18:07:47,511 [INFO] WebApp:186 - Connection restablished
+2024-11-07 18:12:06,979 [INFO] WebApp:189 - Connection lost
+2024-11-07 18:12:16,647 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 18:12:18,403 [INFO] WebApp:186 - Connection restablished
+2024-11-07 18:16:50,702 [INFO] WebApp:189 - Connection lost
+2024-11-07 18:16:55,645 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 18:16:57,370 [INFO] WebApp:186 - Connection restablished
+2024-11-07 18:22:02,837 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 18:22:03,337 [INFO] WebApp:189 - Connection lost
+2024-11-07 18:22:03,793 [INFO] WebApp:186 - Connection restablished
+2024-11-07 18:22:32,334 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 18:22:32,834 [INFO] WebApp:189 - Connection lost
+2024-11-07 18:22:33,745 [INFO] WebApp:186 - Connection restablished
+2024-11-07 18:26:12,770 [INFO] WebApp:189 - Connection lost
+2024-11-07 18:26:18,054 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 18:26:19,774 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:06:34,293 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:06:42,317 [INFO] WebAppUi:1056 - Web application message: Reloading CAD
+2024-11-07 21:06:44,095 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:06:45,964 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:06:46,224 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:06:47,641 [INFO] WebAppUi:263 - Path where cad_preferences.json is located /home/gllekk/.stm32cubeide/
+2024-11-07 21:06:47,641 [INFO] WebAppUi:264 - Updating consent from JSON file
+2024-11-07 21:06:47,642 [INFO] WebAppUi:263 - Path where cad_preferences.json is located /home/gllekk/.stm32cubeide/
+2024-11-07 21:06:47,642 [INFO] WebAppUi:264 - Updating consent from JSON file
+2024-11-07 21:06:48,618 [INFO] WebApp:388 - JxBrowser engine has been closed 
+2024-11-07 21:06:48,619 [INFO] WebAppUi:453 - JxBrowser engine has been closed 
+2024-11-07 21:06:48,619 [INFO] WebAppUi:490 - Close the Jxbrowser engine manually
+2024-11-07 22:18:25,924 [INFO] Activator:176 - 
+
+
+2024-11-07 22:18:25,927 [INFO] Activator:177 - !SESSION log4j initialized
+2024-11-07 22:18:31,497 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-11-07 22:18:32,397 [INFO] ApplicationProperties:184 - Using Application install path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256
+2024-11-07 22:18:32,430 [INFO] DbMcusXml:78 - Set database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//mcu/
+2024-11-07 22:18:32,430 [INFO] ApiDb:274 - Set plugin database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/boardmanager/
+2024-11-07 22:18:32,430 [WARN] ApiDb:259 - Overriding images path with different value:  => /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/mcufinder/images/
+2024-11-07 22:18:32,453 [INFO] ApiDb:250 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-07 22:18:32,455 [INFO] DbMcusAds:125 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-07 22:18:32,459 [INFO] CrossReferenceDbSqlite:203 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/cs/
+2024-11-07 22:18:32,612 [INFO] RulesReader:64 - Compatibility file has been processed (297 Rules)
+2024-11-07 22:18:32,686 [INFO] DbMcusXml:78 - Set database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//mcu/
+2024-11-07 22:18:32,687 [INFO] ApiDb:274 - Set plugin database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/boardmanager/
+2024-11-07 22:18:32,687 [INFO] ApiDb:261 - Set plugin images path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/mcufinder/images/
+2024-11-07 22:18:32,687 [WARN] DbFile:41 - Overriding database path with different value: /home/gllekk/.stmcufinder/plugins/mcufinder/ => /home/gllekk/.stmcufinder/plugins/mcufinder
+2024-11-07 22:18:32,687 [INFO] ApiDb:250 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-07 22:18:32,687 [WARN] DbFile:41 - Overriding database path with different value: /home/gllekk/.stmcufinder/plugins/mcufinder/ => /home/gllekk/.stmcufinder/plugins/mcufinder
+2024-11-07 22:18:32,687 [INFO] DbMcusAds:125 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-07 22:18:32,687 [WARN] DbFile:41 - Overriding database path with different value: /home/gllekk/.stmcufinder/plugins/mcufinder/ => /home/gllekk/.stmcufinder/plugins/mcufinder
+2024-11-07 22:18:32,687 [WARN] DbFile:41 - Overriding database path with different value: /home/gllekk/.stmcufinder/plugins/mcufinder/ => /home/gllekk/.stmcufinder/plugins/mcufinder
+2024-11-07 22:18:32,688 [INFO] CrossReferenceDbSqlite:203 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/cs/
+2024-11-07 22:18:32,799 [INFO] MainPanel:268 - HeapMemory: 268435456
+2024-11-07 22:18:33,071 [INFO] DbMcusXml:78 - Set database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//mcu/
+2024-11-07 22:18:33,072 [INFO] ApiDb:274 - Set plugin database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/boardmanager/
+2024-11-07 22:18:33,072 [INFO] ApiDb:261 - Set plugin images path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/mcufinder/images/
+2024-11-07 22:18:33,072 [WARN] DbFile:41 - Overriding database path with different value: /home/gllekk/.stmcufinder/plugins/mcufinder/ => /home/gllekk/.stmcufinder/plugins/mcufinder
+2024-11-07 22:18:33,072 [INFO] ApiDb:250 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-07 22:18:33,072 [WARN] DbFile:41 - Overriding database path with different value: /home/gllekk/.stmcufinder/plugins/mcufinder/ => /home/gllekk/.stmcufinder/plugins/mcufinder
+2024-11-07 22:18:33,073 [INFO] DbMcusAds:125 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-07 22:18:33,073 [WARN] DbFile:41 - Overriding database path with different value: /home/gllekk/.stmcufinder/plugins/mcufinder/ => /home/gllekk/.stmcufinder/plugins/mcufinder
+2024-11-07 22:18:33,073 [WARN] DbFile:41 - Overriding database path with different value: /home/gllekk/.stmcufinder/plugins/mcufinder/ => /home/gllekk/.stmcufinder/plugins/mcufinder
+2024-11-07 22:18:33,073 [INFO] CrossReferenceDbSqlite:203 - Set database path to: /home/gllekk/.stmcufinder/plugins/mcufinder//mcu/cs/
+2024-11-07 22:18:33,104 [INFO] ApplicationProperties:184 - Using Application install path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256
+2024-11-07 22:18:33,106 [INFO] PluginManage:196 - Search for loadable plugins [exclusion list=, ]
+2024-11-07 22:18:33,108 [INFO] PluginManage:310 - Check plugin analytics
+2024-11-07 22:18:33,324 [INFO] AnalyticsPlugin:253 - Accepted Software Licenses: 
+2024-11-07 22:18:33,324 [INFO] AnalyticsPlugin:255 - Accepted CMSIS Pack Licenses: STMicroelectronics.X-CUBE-AI.9.1.0
+2024-11-07 22:18:33,324 [INFO] AnalyticsPlugin:257 - Accepted Firmware Licenses: 
+2024-11-07 22:18:33,327 [INFO] PluginManage:359 - Loaded plugin analytics (category:tool,tabindex:-1)
+2024-11-07 22:18:33,327 [INFO] PluginManage:310 - Check plugin cadmodel
+2024-11-07 22:18:33,337 [INFO] CADModel:105 - Init CAD model plugin
+2024-11-07 22:18:33,338 [INFO] PluginManage:359 - Loaded plugin cadmodel (category:power,tabindex:5)
+2024-11-07 22:18:33,338 [INFO] PluginManage:310 - Check plugin clock
+2024-11-07 22:18:33,353 [INFO] PluginManage:359 - Loaded plugin clock (category:base,tabindex:2)
+2024-11-07 22:18:33,353 [INFO] PluginManage:310 - Check plugin ddr
+2024-11-07 22:18:33,356 [INFO] PluginManage:359 - Loaded plugin ddr (category:tool,tabindex:6)
+2024-11-07 22:18:33,357 [INFO] PluginManage:310 - Check plugin filemanager
+2024-11-07 22:18:33,541 [INFO] PluginManage:359 - Loaded plugin filemanager (category:base,tabindex:10)
+2024-11-07 22:18:33,541 [INFO] PluginManage:310 - Check plugin ipmanager
+2024-11-07 22:18:33,549 [INFO] PluginManage:359 - Loaded plugin ipmanager (category:base,tabindex:5)
+2024-11-07 22:18:33,549 [INFO] PluginManage:310 - Check plugin lpbam
+2024-11-07 22:18:33,565 [INFO] PluginManage:359 - Loaded plugin lpbam (category:base,tabindex:0)
+2024-11-07 22:18:33,565 [INFO] PluginManage:310 - Check plugin memorymap
+2024-11-07 22:18:33,587 [INFO] PluginManage:359 - Loaded plugin memorymap (category:base,tabindex:4)
+2024-11-07 22:18:33,587 [INFO] PluginManage:310 - Check plugin pinoutandconfiguration
+2024-11-07 22:18:33,600 [INFO] PluginManage:359 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2024-11-07 22:18:33,600 [INFO] PluginManage:310 - Check plugin pinoutconfig
+2024-11-07 22:18:33,700 [WARN] SupportedApi:132 - Cannot load RTOS API schema: s4s-elt-must-match.1: The content of 'definitions' must match (annotation?, (simpleType | complexType)?, (unique | key | keyref)*)). A problem was found starting at: attribute.
+2024-11-07 22:18:33,880 [INFO] PluginManage:359 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2024-11-07 22:18:33,880 [INFO] PluginManage:310 - Check plugin power
+2024-11-07 22:18:33,903 [INFO] PluginManage:359 - Loaded plugin power (category:power,tabindex:4)
+2024-11-07 22:18:33,903 [INFO] PluginManage:310 - Check plugin projectmanager
+2024-11-07 22:18:33,919 [INFO] PluginManage:359 - Loaded plugin projectmanager (category:projectmanager,tabindex:4)
+2024-11-07 22:18:33,920 [INFO] PluginManage:310 - Check plugin rif
+2024-11-07 22:18:33,930 [INFO] PluginManage:359 - Loaded plugin rif (category:base,tabindex:3)
+2024-11-07 22:18:33,931 [INFO] PluginManage:310 - Check plugin thirdparty
+2024-11-07 22:18:34,088 [INFO] PluginManage:359 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2024-11-07 22:18:34,088 [WARN] IntegrityCheckThread:84 - waiting for thirdparty lock release [integrity check]
+2024-11-07 22:18:34,089 [INFO] PluginManage:310 - Check plugin tools
+2024-11-07 22:18:34,089 [INFO] IntegrityCheckThread:86 - entering critical section [integrity check]
+2024-11-07 22:18:34,089 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2024-11-07 22:18:34,099 [INFO] PluginManage:359 - Loaded plugin tools (category:base,tabindex:7)
+2024-11-07 22:18:34,099 [INFO] PluginManage:310 - Check plugin tutovideos
+2024-11-07 22:18:34,324 [INFO] PluginManage:359 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2024-11-07 22:18:34,324 [INFO] PluginManage:310 - Check plugin updater
+2024-11-07 22:18:34,346 [INFO] PluginManage:359 - Loaded plugin updater (category:base,tabindex:12)
+2024-11-07 22:18:34,346 [INFO] PluginManage:310 - Check plugin userauth
+2024-11-07 22:18:34,354 [INFO] UserAuth:113 - Init User Auth plugin
+2024-11-07 22:18:34,354 [INFO] PluginManage:359 - Loaded plugin userauth (category:base,tabindex:14)
+2024-11-07 22:18:34,355 [INFO] PluginManage:283 - PluginManage : Loaded plugins [18]
+2024-11-07 22:18:34,541 [INFO] PinOutPanel:1561 - setPackage(No Configuration,No Configuration)
+2024-11-07 22:18:34,633 [INFO] CADModel:165 - CPN selected for project level
+2024-11-07 22:18:34,634 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-07 22:18:34,654 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,655 [INFO] PluginManager:220 - loadIPPluginJar : add touchsensing
+2024-11-07 22:18:34,658 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,658 [INFO] PluginManager:220 - loadIPPluginJar : add gfxmmu
+2024-11-07 22:18:34,660 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,660 [INFO] PluginManager:220 - loadIPPluginJar : add tsc
+2024-11-07 22:18:34,662 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,662 [INFO] PluginManager:220 - loadIPPluginJar : add tracer_emb
+2024-11-07 22:18:34,672 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,673 [INFO] PluginManager:220 - loadIPPluginJar : add freertos
+2024-11-07 22:18:34,674 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,674 [INFO] PluginManager:220 - loadIPPluginJar : add genericplugin
+2024-11-07 22:18:34,679 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,679 [INFO] PluginManager:220 - loadIPPluginJar : add opamp
+2024-11-07 22:18:34,682 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,683 [INFO] PluginManager:220 - loadIPPluginJar : add dma3
+2024-11-07 22:18:34,685 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,686 [INFO] PluginManager:220 - loadIPPluginJar : add comp
+2024-11-07 22:18:34,689 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,689 [INFO] PluginManager:220 - loadIPPluginJar : add can
+2024-11-07 22:18:34,692 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,692 [INFO] PluginManager:220 - loadIPPluginJar : add i2s
+2024-11-07 22:18:34,694 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,694 [INFO] PluginManager:220 - loadIPPluginJar : add radio
+2024-11-07 22:18:34,700 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,701 [INFO] PluginManager:220 - loadIPPluginJar : add gic
+2024-11-07 22:18:34,705 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,705 [INFO] PluginManager:220 - loadIPPluginJar : add gtzc
+2024-11-07 22:18:34,711 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,711 [INFO] PluginManager:220 - loadIPPluginJar : add resmgrutility
+2024-11-07 22:18:34,713 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,713 [INFO] PluginManager:220 - loadIPPluginJar : add ltdc
+2024-11-07 22:18:34,718 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,718 [INFO] PluginManager:220 - loadIPPluginJar : add ddr_ctrl_phy
+2024-11-07 22:18:34,725 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,725 [INFO] PluginManager:220 - loadIPPluginJar : add gpio
+2024-11-07 22:18:34,727 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,727 [INFO] PluginManager:220 - loadIPPluginJar : add ts
+2024-11-07 22:18:34,738 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,738 [INFO] PluginManager:220 - loadIPPluginJar : add mdma
+2024-11-07 22:18:34,742 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,742 [INFO] PluginManager:220 - loadIPPluginJar : add sai
+2024-11-07 22:18:34,745 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,745 [INFO] PluginManager:220 - loadIPPluginJar : add pdm2pcm
+2024-11-07 22:18:34,747 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,747 [INFO] PluginManager:220 - loadIPPluginJar : add spi
+2024-11-07 22:18:34,750 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,751 [INFO] PluginManager:220 - loadIPPluginJar : add i2c
+2024-11-07 22:18:34,753 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,753 [INFO] PluginManager:220 - loadIPPluginJar : add lorawan
+2024-11-07 22:18:34,756 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,756 [INFO] PluginManager:220 - loadIPPluginJar : add cryp
+2024-11-07 22:18:34,758 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,758 [INFO] PluginManager:220 - loadIPPluginJar : add aes
+2024-11-07 22:18:34,762 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,762 [INFO] PluginManager:220 - loadIPPluginJar : add fmc
+2024-11-07 22:18:34,772 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,774 [INFO] PluginManager:220 - loadIPPluginJar : add plateformsettings
+2024-11-07 22:18:34,781 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,781 [INFO] PluginManager:220 - loadIPPluginJar : add adc
+2024-11-07 22:18:34,787 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,787 [INFO] PluginManager:220 - loadIPPluginJar : add dma
+2024-11-07 22:18:34,790 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,790 [INFO] PluginManager:220 - loadIPPluginJar : add openamp
+2024-11-07 22:18:34,792 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,792 [INFO] PluginManager:220 - loadIPPluginJar : add quadspi
+2024-11-07 22:18:34,796 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,796 [INFO] PluginManager:220 - loadIPPluginJar : add ipddr
+2024-11-07 22:18:34,800 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,800 [INFO] PluginManager:220 - loadIPPluginJar : add extmemmanager
+2024-11-07 22:18:34,802 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,802 [INFO] PluginManager:220 - loadIPPluginJar : add usart
+2024-11-07 22:18:34,809 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,809 [INFO] PluginManager:220 - loadIPPluginJar : add stm32_wpan
+2024-11-07 22:18:34,814 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,814 [INFO] PluginManager:220 - loadIPPluginJar : add nvic
+2024-11-07 22:18:34,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,817 [INFO] PluginManager:220 - loadIPPluginJar : add usbx
+2024-11-07 22:18:34,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,819 [INFO] PluginManager:220 - loadIPPluginJar : add fatfs
+2024-11-07 22:18:34,829 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,829 [INFO] PluginManager:220 - loadIPPluginJar : add linkedlist
+2024-11-07 22:18:34,831 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,831 [INFO] PluginManager:220 - loadIPPluginJar : add tim
+2024-11-07 22:18:34,833 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,834 [INFO] PluginManager:220 - loadIPPluginJar : add dfsdm
+2024-11-07 22:18:34,836 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,836 [INFO] PluginManager:220 - loadIPPluginJar : add hash
+2024-11-07 22:18:34,839 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,839 [INFO] PluginManager:220 - loadIPPluginJar : add i3c
+2024-11-07 22:18:34,842 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-07 22:18:34,842 [INFO] PluginManager:220 - loadIPPluginJar : add ucpd
+2024-11-07 22:18:34,940 [INFO] CADModel:165 - CPN selected for project level
+2024-11-07 22:18:34,940 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-07 22:18:34,940 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:34,941 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2024-11-07 22:18:35,099 [INFO] CADModel:165 - CPN selected for project level
+2024-11-07 22:18:35,099 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-07 22:18:35,099 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:35,099 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2024-11-07 22:18:35,102 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:35,194 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:35,198 [INFO] DbMcusAds:53 - JSON generation date=Fri Sep 20 16:04:38 EEST 2024 (1726837478367)
+2024-11-07 22:18:35,199 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:35,270 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2024-11-07 22:18:35,359 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:35,360 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:35,360 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:35,360 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2024-11-07 22:18:35,361 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-07 22:18:35,399 [ERROR] Updater:1164 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2024-11-07 22:18:35,401 [INFO] Updater:1100 - Updater Version found : 6.12.1
+2024-11-07 22:18:35,430 [INFO] ApplicationProperties:184 - Using Application install path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256
+2024-11-07 22:18:35,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:18:35 PM java.util.prefs.FileSystemPreferences$2 run
+2024-11-07 22:18:35,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not create system preferences directory. System preferences are unusable.
+2024-11-07 22:18:35,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:18:35,709 [INFO] MainUpdater:2873 - connection check result : 10
+2024-11-07 22:18:35,709 [INFO] MainUpdater:290 - Updater Check For Update Now.
+2024-11-07 22:18:35,709 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.121
+2024-11-07 22:18:35,715 [INFO] McuFinderGlobals:63 - Set McuFinder mode to 2 (CubeIDE integrated)
+2024-11-07 22:18:35,722 [INFO] UserAuth:417 - Internet connection configuration mode: 1
+2024-11-07 22:18:35,757 [INFO] JxBrowserEngine:152 - Initiate JxBrowser Engine with user profile folder
+2024-11-07 22:18:35,916 [INFO] CheckServerUpdateThread:120 - End of CheckServer Thread
+2024-11-07 22:18:37,771 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENVWB1.1.4.0
+2024-11-07 22:18:37,797 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SMBUS.2.1.0
+2024-11-07 22:18:37,809 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-WB05N.1.1.0
+2024-11-07 22:18:37,858 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F7.1.1.0
+2024-11-07 22:18:37,961 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.11.0.0
+2024-11-07 22:18:38,160 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.0.2
+2024-11-07 22:18:38,176 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.3.0.0
+2024-11-07 22:18:38,188 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.7.0.0
+2024-11-07 22:18:38,199 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC10.1.0.0
+2024-11-07 22:18:38,219 [WARN] PackLoader:240 - Cannot read IP mode file for emotas.I-CUBE-CANOPEN.1.3.0
+2024-11-07 22:18:38,240 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.3.1.0
+2024-11-07 22:18:38,251 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-SMARTAG2.1.2.0
+2024-11-07 22:18:38,273 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-07 22:18:38,273 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-07 22:18:38,274 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-07 22:18:38,274 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-07 22:18:38,274 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-07 22:18:38,280 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.2.0.0
+2024-11-07 22:18:38,286 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.5.0.0
+2024-11-07 22:18:38,291 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfMQTT.1.19.0
+2024-11-07 22:18:38,306 [WARN] PackLoader:240 - Cannot read IP mode file for WES.I-CUBE-Cesium.1.3.0
+2024-11-07 22:18:38,315 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.3.0
+2024-11-07 22:18:38,327 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC9.1.0.0
+2024-11-07 22:18:38,339 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TCPP.4.1.0
+2024-11-07 22:18:38,372 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G0.1.1.0
+2024-11-07 22:18:38,385 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SAFEA1.1.2.2
+2024-11-07 22:18:38,397 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.3.0.0
+2024-11-07 22:18:38,411 [WARN] PackLoader:240 - Cannot read IP mode file for EmbeddedOffice.I-CUBE-FS-RTOS.1.0.1
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,411 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,412 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,413 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,414 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,415 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,416 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-07 22:18:38,428 [WARN] PackLoader:240 - Cannot read IP mode file for RealThread.X-CUBE-RT-Thread_Nano.4.1.1
+2024-11-07 22:18:38,432 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2024-11-07 22:18:38,443 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.5.1.0
+2024-11-07 22:18:38,483 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.5.7.4
+2024-11-07 22:18:38,494 [WARN] PackLoader:240 - Cannot read IP mode file for ITTIA_DB.I-CUBE-ITTIADB.8.9.0
+2024-11-07 22:18:38,538 [WARN] PackLoader:240 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.3.1
+2024-11-07 22:18:38,581 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.4.0
+2024-11-07 22:18:38,586 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.9.1.0
+2024-11-07 22:18:38,672 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2024-11-07 22:18:38,678 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.2.1.0
+2024-11-07 22:18:38,682 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.2.0
+2024-11-07 22:18:38,709 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.2.0.0
+2024-11-07 22:18:38,719 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC6.3.1.0
+2024-11-07 22:18:38,727 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DPower.1.2.0
+2024-11-07 22:18:38,736 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.1
+2024-11-07 22:18:38,767 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-11-07 22:18:38,767 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.2.0.0
+2024-11-07 22:18:38,768 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-11-07 22:18:38,768 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-11-07 22:18:38,769 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-11-07 22:18:38,781 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0
+2024-11-07 22:18:38,816 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.3.0
+2024-11-07 22:18:38,830 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-IPS.3.0.0
+2024-11-07 22:18:38,868 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-07 22:18:38,869 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-07 22:18:38,872 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.2.0.0
+2024-11-07 22:18:38,872 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-07 22:18:38,873 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-07 22:18:38,873 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-07 22:18:38,873 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-07 22:18:38,874 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-07 22:18:38,884 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.7.0.0
+2024-11-07 22:18:38,896 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-STBOX1.2.0.0
+2024-11-07 22:18:38,919 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.5.0.0
+2024-11-07 22:18:38,926 [WARN] PackLoader:240 - Cannot read IP mode file for Cesanta.I-CUBE-Mongoose.7.13.0
+2024-11-07 22:18:38,954 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0
+2024-11-07 22:18:38,959 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALS.1.0.2
+2024-11-07 22:18:38,963 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.24.1
+2024-11-07 22:18:38,967 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfTPM.3.4.0
+2024-11-07 22:18:38,998 [WARN] PackLoader:240 - Cannot read IP mode file for portGmbH.I-Cube-SoM-uGOAL.1.1.0
+2024-11-07 22:18:39,040 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7RS.1.0.0
+2024-11-07 22:18:39,051 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.2.0.0
+2024-11-07 22:18:39,087 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.4.2
+2024-11-07 22:18:39,134 [WARN] PackLoader:240 - Cannot read IP mode file for Infineon.AIROC-Wi-Fi-Bluetooth-STM32.1.6.1
+2024-11-07 22:18:39,156 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSH.1.4.17
+2024-11-07 22:18:39,156 [INFO] ThirdParty:978 - Integrity check success = true
+2024-11-07 22:18:39,157 [INFO] IntegrityCheckThread:100 - exiting critical section [integrity check]
+2024-11-07 22:18:39,157 [INFO] IntegrityCheckThread:103 - End integrity checks thread
+2024-11-07 22:18:42,546 [INFO] WebApp:167 - Instantiating new browser for Auth
+2024-11-07 22:18:45,140 [INFO] WebApp:448 - Apply proxy settings
+2024-11-07 22:18:45,141 [INFO] WebApp:533 - Chromium requires no authentication
+2024-11-07 22:18:45,154 [INFO] WebApp:476 - Direct internet connection detected
+2024-11-07 22:18:45,182 [INFO] WebApp:869 - Register for checkConnection events
+2024-11-07 22:18:45,183 [INFO] WebApp:448 - Apply proxy settings
+2024-11-07 22:18:45,183 [INFO] WebApp:533 - Chromium requires no authentication
+2024-11-07 22:18:45,183 [INFO] WebApp:476 - Direct internet connection detected
+2024-11-07 22:18:45,421 [INFO] WebApp:220 - Starting web application
+2024-11-07 22:18:45,422 [INFO] WebApp:578 - Web application path used /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256/db/plugins/mcufinder/reactClient1/index.html
+2024-11-07 22:18:45,578 [INFO] WebApp:186 - Connection restablished
+2024-11-07 22:18:45,662 [INFO] UserAuth:417 - Internet connection configuration mode: 1
+2024-11-07 22:19:03,275 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:19:03 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:19:03,275 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:19:03,275 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:19:03,276 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:19:03 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:19:03,276 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:19:03,276 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:19:33,265 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:19:33 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:19:33,265 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:19:33,266 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:19:33,266 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:19:33 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:19:33,266 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:19:33,266 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:20:03,266 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:20:03 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:20:03,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:20:03,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:20:03,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:20:03 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:20:03,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:20:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:20:33,266 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:20:33 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:20:33,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:20:33,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:20:33,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:20:33 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:20:33,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:20:33,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:21:03,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:21:03 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:21:03,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:21:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:21:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:21:03 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:21:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:21:03,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:21:33,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:21:33 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:21:33,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:21:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:21:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:21:33 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:21:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:21:33,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:22:03,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:22:03 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:22:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:22:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:22:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:22:03 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:22:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:22:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:22:33,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:22:33 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:22:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:22:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:22:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:22:33 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:22:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:22:33,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:23:03,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:23:03 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:23:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:23:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:23:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:23:03 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:23:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:23:03,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:23:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:23:33 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:23:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:23:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:23:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:23:33 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:23:33,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:23:33,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:24:03,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:24:03 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:24:03,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:24:03,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:24:03,270 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:24:03 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:24:03,270 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:24:03,270 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:24:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:24:33 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-07 22:24:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-07 22:24:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-07 22:24:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 07, 2024 10:24:33 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-07 22:24:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-07 22:24:33,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

@@ -26,26 +26,26 @@ int GSM_Module::send_sms(const char* message){
 
 void GSM_Module::make_call(const char* number){
 	// make call
-	char command[32] = "ATD";
-	strcat(command, number);
-	strcat(command, "\r\n");
+	char command[32];
+	snprintf(command, sizeof(command), "ATD+38%s\r\n", number);
 	HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)command, strlen(command), 100);
 }
 
 bool GSM_Module::send_AT(){
 	// private send "AT" command, return true if accepted good, return false if otherwise
 	const char* check = "AT\r\n";
-	HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)check, strlen(check), 100);
-	char answer[32];
-	HAL_StatusTypeDef result = HAL_UART_Receive(this->parameters.uart_handle, (uint8_t*)answer, sizeof(answer), 1000);
-	if (result == HAL_OK){
-	  if (strstr(answer, "OK") != nullptr){
-		  return true;
-	  }
+	if (HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)check, strlen(check), 10) != HAL_OK){
+		return false;
+	}
+	char answer[10];
+	HAL_StatusTypeDef result = HAL_UART_Receive(this->parameters.uart_handle, (uint8_t*)answer, 10, 10);
+	if (result == HAL_OK) {
+		if (strstr(answer, "OK")){
+			return true;
+		}
 	}
 	return false;
 }
-
 
 int GSM_Module::send_at_command(const char* command){
 	return 0;
@@ -53,7 +53,7 @@ int GSM_Module::send_at_command(const char* command){
 
 Parameters load_parameters(){
 	Parameters parameters;
-	parameters.uart_handle = &huart1;
+	parameters.uart_handle = &huart2;
 	parameters.rx_pin = USART_RX_Pin;
 	parameters.rx_port = USART_RX_GPIO_Port;
 	parameters.tx_pin = USART_TX_Pin;
