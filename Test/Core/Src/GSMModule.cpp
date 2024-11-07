@@ -10,9 +10,11 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "GSMModule.hpp"
-#include "stm32f3xx_hal.h"
 #include "usart.h"
+#include "usb.h"
 #include <cstring>
+#include <iostream>
+#include <string>
 
 GSM_Module::GSM_Module(const Parameters& parameters){
 	this->parameters = parameters;
@@ -22,24 +24,28 @@ int GSM_Module::send_sms(const char* message){
 	return 0;
 }
 
-void GSM_Module::make_call(){
+void GSM_Module::make_call(const char* number){
 	// make call
+	char command[32] = "ATD";
+	strcat(command, number);
+	strcat(command, "\r\n");
+	HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)command, strlen(command), 100);
 }
 
 bool GSM_Module::send_AT(){
 	// private send "AT" command, return true if accepted good, return false if otherwise
 	const char* check = "AT\r\n";
-	HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)check, strlen(check), HAL_MAX_DELAY);
-
-	char answer[100];
-	HAL_StatusTypeDef result = HAL_UART_Receive(this->parameters.uart_handle, (uint8_t*)answer, sizeof(answer), 5000);
+	HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)check, strlen(check), 100);
+	char answer[32];
+	HAL_StatusTypeDef result = HAL_UART_Receive(this->parameters.uart_handle, (uint8_t*)answer, sizeof(answer), 1000);
 	if (result == HAL_OK){
-		if (strstr(answer, "OK") != nullptr){
-			return true;
-		}
+	  if (strstr(answer, "OK") != nullptr){
+		  return true;
+	  }
 	}
 	return false;
 }
+
 
 int GSM_Module::send_at_command(const char* command){
 	return 0;
@@ -48,9 +54,9 @@ int GSM_Module::send_at_command(const char* command){
 Parameters load_parameters(){
 	Parameters parameters;
 	parameters.uart_handle = &huart1;
-	parameters.rx_pin = RX_FROM_GSM_Pin;
-	parameters.rx_port = RX_FROM_GSM_GPIO_Port;
-	parameters.td_pin = TX_TO_GSM_Pin;
-	parameters.td_port = TX_TO_GSM_GPIO_Port;
+	parameters.rx_pin = USART_RX_Pin;
+	parameters.rx_port = USART_RX_GPIO_Port;
+	parameters.tx_pin = USART_TX_Pin;
+	parameters.tx_port = USART_TX_GPIO_Port;
 	return parameters;
 }

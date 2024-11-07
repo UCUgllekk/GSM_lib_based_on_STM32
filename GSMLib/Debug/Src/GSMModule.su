@@ -1,6 +1,6 @@
 ../Src/GSMModule.cpp:17:1:GSM_Module::GSM_Module(const Parameters&)	24	static
 ../Src/GSMModule.cpp:21:5:int GSM_Module::send_sms(const char*)	16	static
 ../Src/GSMModule.cpp:25:6:void GSM_Module::make_call()	16	static
-../Src/GSMModule.cpp:29:6:bool GSM_Module::send_AT()	40	static
+../Src/GSMModule.cpp:29:6:bool GSM_Module::send_AT()	48	static
 ../Src/GSMModule.cpp:42:5:int GSM_Module::send_at_command(const char*)	16	static
 ../Src/GSMModule.cpp:46:12:Parameters load_parameters()	16	static

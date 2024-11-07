@@ -1,26 +1,26 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+../Src/GSMModule.cpp \
+../Src/main.cpp 
+
 C_SRCS += \
 ../Src/syscalls.c \
 ../Src/sysmem.c 
 
-CPP_SRCS += \
-../Src/GSMModule.cpp \
-../Src/main.cpp 
+C_DEPS += \
+./Src/syscalls.d \
+./Src/sysmem.d 
 
 OBJS += \
 ./Src/GSMModule.o \
 ./Src/main.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o 
-
-C_DEPS += \
-./Src/syscalls.d \
-./Src/sysmem.d 
 
 CPP_DEPS += \
 ./Src/GSMModule.d \

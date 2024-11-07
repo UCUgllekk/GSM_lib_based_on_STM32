@@ -107,10 +107,6 @@ void Error_Handler(void);
 #define LCD1_CS_GPIO_Port GPIOB
 #define LCD1_DATA_Pin GPIO_PIN_15
 #define LCD1_DATA_GPIO_Port GPIOB
-#define TX_TO_GSM_Pin GPIO_PIN_9
-#define TX_TO_GSM_GPIO_Port GPIOA
-#define RX_FROM_GSM_Pin GPIO_PIN_10
-#define RX_FROM_GSM_GPIO_Port GPIOA
 #define DM_Pin GPIO_PIN_11
 #define DM_GPIO_Port GPIOA
 #define DP_Pin GPIO_PIN_12
