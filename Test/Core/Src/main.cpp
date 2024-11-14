@@ -99,9 +99,12 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-//  gsm.make_call("0671251626");
+//  gsm.make_call("0962069717");
+//gsm.receive_call();
 
-  gsm.send_AT();
+// gsm.send_sms("380986629200", "Test");
+
+//  gsm.send_AT();
 
 
 //  bool at_result = gsm.send_AT();

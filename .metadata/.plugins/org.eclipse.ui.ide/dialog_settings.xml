@@ -9,8 +9,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
-			<item value="/home/gllekk/STMProjects/GSM_lib_based_on_STM32/Test"/>
-			<item value="/home/gllekk/STMProjects/GSM_lib_based_on_STM32/GSMLib"/>
+			<item value="/home/yuliana/Downloads/Telegram Desktop/Smartphone-main/FInal_project"/>
+			<item value="/home/yuliana/Documents/POC/phone_project/GSM_lib_based_on_STM32/Test"/>
+			<item value="/home/yuliana/Documents/POC/phone_project/GSM_lib_based_on_STM32/GSMLib"/>
 		</list>
 	</section>
 </section>
