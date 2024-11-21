@@ -10,7 +10,7 @@
 Project is devided into 2 CubeIDE projects: Lib, Test(phone) <br>
 Team work devided into two branches: Lib and Screen
 * In Lib branch work Roman Pavlosiuk with Yuliana Hrynda building main library to work with GSM module.
-* In Screen branch work Iryna Denysova with Khrystyne Korets developing screen states and connecting keyboard to STM32.
+* In Screen branch work Iryna Denysova with Khrystyna Korets developing screen states and connecting keyboard to STM32.
 
 ## Prerequirements
 In order to compile the existing part of our project, you need to install **STM32CUBEIDE** (it is better to do it for Windows). Here is the link to the site where you can find it [here](https://www.st.com/en/development-tools/stm32cubeide.html).
