@@ -2,9 +2,17 @@
 
 ## Authors:
 - Denysova Iryna
+- Korets Khrystyna
 - Pavlosiuk Roman
 - Hrynda Yuliana
-- Korets Khrystyna
+
+## Project Structure
+Project devided into two parts (branches): Lib and Screen:
+* Denysova Iryna with Korets Khrystyna work on screen states and keyboard interuction
+* Pavlosiuk Roman with Hrynda Yuliana work on building library
+
+Main interface with screen states is in Test project, and in future it'll become a phone project. \
+The GSM library is in GSMLib project, where you can get ```lib.a``` file and use this library in your projects.
 
 ## Prerequirements
 In order to compile the existing part of our project, you need to install **STM32CUBEIDE** (it is better to do it for Windows). Here is the link to the site where you can find it [here](https://www.st.com/en/development-tools/stm32cubeide.html).
