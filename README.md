@@ -15,8 +15,8 @@ Team work devided into two branches: Lib and Screen
 P.S GSMLib is currently outdated due to dependance project to other files which is created only in executable project in CubeIDE, but not in static library
 
 ## Prerequirements
-In order to compile the existing part of our project, you need to install **STM32CUBEIDE** (it is better to do it for Windows). Here is the link to the site where you can find it [here](https://www.st.com/en/development-tools/stm32cubeide.html).
-You will also need a STM32f3discovery board, bread board, screen, 8 Arduino wires and mini USB.
+In order to compile the existing part of our project, you need to install **STM32CUBEIDE** (work better with Ubuntu 22 or Windows). Here is the link to the site where you can find it [here](https://www.st.com/en/development-tools/stm32cubeide.html).
+You will also need a STM32f3discovery board, bread board, screen, speakers, GSM A9G module, Arduino wires, micro-USB, mini-USB.
 
 ## Compilation
 In order to compile our project 
@@ -26,11 +26,11 @@ git clone https://github.com/UCUgllekk/GSM_lib_based_on_STM32.git
 ```
 3) Then go to the required directory:<br>
 ```bash
-cd TelephoneLib/Core/Src
+cd Test/Core/Src
 ```
 4) Then run this code to compile project:<br>
 ```bash
-g++ main.c -o main
+g++ main.cpp -o main
 ```
 
 ## Usage
