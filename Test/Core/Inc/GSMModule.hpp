@@ -31,13 +31,14 @@ public:
 	void receive_call();
 	void hang_up();
 private:
+	uint16_t rx_index = 0;
 	uint8_t rx_buffer[256];
 	Parameters parameters;
 
-	bool send_at_command(const char* command, int retries = 3);
+	void handle_interruption();
+	bool send_at_command(const char* command);
 	void read_sms(int index);
-
-//	void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
+    friend void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart);
 };
 
 Parameters load_parameters();

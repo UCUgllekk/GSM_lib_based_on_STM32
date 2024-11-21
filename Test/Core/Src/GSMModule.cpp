@@ -24,20 +24,16 @@ const char* CALL = "ATD+";
 
 const char* AT = "AT\r\n";
 
-GSM_Module* self = nullptr;
+static GSM_Module* gsm = nullptr;
 
 GSM_Module::GSM_Module(const Parameters& parameters){
-	self = this;
+	gsm = this;
 	this->parameters = parameters;
-//	if (!send_at_command(AT)){
-//		throw std::runtime_error("GSM not initialized correctly!");
-//	}
-	HAL_UART_Receive_IT(this->parameters.uart_handle, rx_buffer, sizeof(rx_buffer));
+	if(!send_at_command(AT)){
+        throw std::runtime_error("UART transmit failed!");
+	}
+	HAL_UART_Receive_IT(this->parameters.uart_handle, &rx_buffer[rx_index], 1);
 }
-
-//int GSM_Module::send_sms(const char* message){
-//	return 0;
-//}
 
 void GSM_Module::make_call(const char* number){
 	// make call
@@ -47,86 +43,83 @@ void GSM_Module::make_call(const char* number){
 }
 
 void GSM_Module::receive_call() {
-	char command[32];
-	int index = 0;
-
-	while (true) {
-		uint8_t received_char;
-
-		HAL_UART_Receive(this->parameters.uart_handle, &received_char, 1, 100);
-
-		if (received_char) {
-			command[index] = received_char;
-
-			index++;
-
-			std::string result = command;
-
-			if (result.find("RING") <= sizeof(command) - 1) {
-				HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)"ATA\r\n", 5, 100);
-			}
-		}
-
-		if (index >= sizeof(command) - 1) {
-			memset(command, 0, sizeof(command));
-			index = 0;
-		}
-	}
-
+	HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)"ATA\r\n", 5, 100);
 }
+//	char command[32];
+//	int index = 0;
+//
+//	while (true) {
+//		uint8_t received_char;
+//
+//		HAL_UART_Receive(this->parameters.uart_handle, &received_char, 1, 100);
+//
+//		if (received_char) {
+//			command[index] = received_char;
+//
+//			index++;
+//
+//			std::string result = command;
+//
+//			if (result.find("RING") <= sizeof(command) - 1) {
+//				HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)"ATA\r\n", 5, 100);
+//			}
+//		}
+//
+//		if (index >= sizeof(command) - 1) {
+//			memset(command, 0, sizeof(command));
+//			index = 0;
+//		}
 
 void GSM_Module::hang_up(){
 	HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)"ATH\r\n", 5, 100);
 }
 
 
-//bool GSM_Module::send_AT(){
-//	// private send "AT" command, return true if accepted good, return false if otherwise
-//	const char* check = "AT\r\n";
-//	if (HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)check, strlen(check), 10) != HAL_OK){
-//		return false;
-//	}
-//	char answer[10];
-//	HAL_StatusTypeDef result = HAL_UART_Receive(this->parameters.uart_handle, (uint8_t*)answer, 10, 10);
-//	if (result == HAL_OK) {
-//		if (strstr(answer, "OK")){
-//			return true;
-//		}
-//	}
-//	return false;
-//}
-
-bool GSM_Module::send_at_command(const char* command, int retries){
-	if (retries <= 0){
-		return false;
-	}
-	if (HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)command, strlen(command), 100) != HAL_OK){
+bool GSM_Module::send_at_command(const char* command){
+	if (HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)command, strlen(command), 10) != HAL_OK){
 		return false;
 	}
 	char answer[256];
-	HAL_StatusTypeDef result = HAL_UART_Receive(this->parameters.uart_handle, (uint8_t*)answer, sizeof(answer), 100);
+	HAL_StatusTypeDef result = HAL_UART_Receive(this->parameters.uart_handle, (uint8_t*)answer, sizeof(answer), 10);
 	if (result == HAL_OK) {
 		if (!strstr(answer, "OK")){
-			return send_at_command(command, retries-1);
+			return false;
 		}
 	}
 	return true;
 }
 
-//void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-//	if (huart == &huart2){
-//		char* buffer = (char*)self->rx_buffer;
-//
-//		if(strstr(buffer, "CALL")){
-//
-//		}
-//		else if(strstr(buffer, "+CMTI:")){
-//			int index = 0;
-//			sscanf(buffer, "+CMTI: \"SM\",%d", &index);
-//			read_sms(index);
-//		}
-//	}
-//}
+void GSM_Module::handle_interruption(){
+    if (strstr((char*)rx_buffer, "+CMTI:")) {
+
+        int index = 0;
+
+        sscanf((char*)rx_buffer, "+CMTI: \"SM\",%d", &index);
+
+        char command[32];
+
+        snprintf(command, sizeof(command), "AT+CMGR=%d\r\n", index); // Read SMS
+
+        send_at_command(command);
+
+    } else if (strstr((char*)rx_buffer, "RING")) {
+
+    	receive_call();
+
+    }
+    rx_index = 0;
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	if (gsm && huart == gsm->parameters.uart_handle){
+
+        gsm->rx_index = (gsm->rx_index + 1) % 256;
+
+        gsm->handle_interruption();
+
+        HAL_UART_Receive_IT(huart, &gsm->rx_buffer[gsm->rx_index], 1);
+	}
+}
 
 void GSM_Module::send_sms(const char* number, const char* message){
 
@@ -154,4 +147,9 @@ Parameters load_parameters(){
 	parameters.tx_pin = USART_TX_Pin;
 	parameters.tx_port = USART_TX_GPIO_Port;
 	return parameters;
+}
+
+int _write(int file, char *data, int len) {
+    HAL_UART_Transmit(&huart2, (uint8_t*)data, len, HAL_MAX_DELAY);
+    return len;
 }

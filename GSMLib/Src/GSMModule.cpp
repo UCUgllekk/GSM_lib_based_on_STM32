@@ -31,7 +31,7 @@ bool GSM_Module::send_AT(){
 	const char* check = "AT\r\n";
 	HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)check, strlen(check), HAL_MAX_DELAY);
 
-	char answer[16];
+	char answer[10];
 	HAL_StatusTypeDef result = HAL_UART_Receive(this->parameters.uart_handle, (uint8_t*)answer, sizeof(answer), HAL_MAX_DELAY);
 	if (result == HAL_OK){
 		return true;

@@ -55,8 +55,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-Parameters parameters = load_parameters();
-GSM_Module gsm(parameters);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -99,13 +98,15 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-//  gsm.make_call("0962069717");
+  Parameters parameters = load_parameters();
+  GSM_Module gsm(parameters);
+
+//  gsm.make_call("380963809782");
 //gsm.receive_call();
 
 // gsm.send_sms("380986629200", "Test");
 
 //  gsm.send_AT();
-
 
 //  bool at_result = gsm.send_AT();
 //  std::cout<<at_result;
@@ -113,7 +114,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
+  while (true)
   {
     /* USER CODE END WHILE */
 
