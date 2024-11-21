@@ -7,10 +7,12 @@
 - Korets Khrystyna
 
 ## Project Structure
-Project is devided into 2 CubeIDE projects: Lib, Test(phone) <br>
+Project is devided into 2 CubeIDE projects: GSMLib, Test(phone) <br>
 Team work devided into two branches: Lib and Screen
 * In Lib branch work Roman Pavlosiuk with Yuliana Hrynda building main library to work with GSM module.
 * In Screen branch work Iryna Denysova with Khrystyna Korets developing screen states and connecting keyboard to STM32.
+
+P.S GSMLib is currently outdated due to dependance project to other files which is created only in executable project in CubeIDE, but not in static library
 
 ## Prerequirements
 In order to compile the existing part of our project, you need to install **STM32CUBEIDE** (it is better to do it for Windows). Here is the link to the site where you can find it [here](https://www.st.com/en/development-tools/stm32cubeide.html).
