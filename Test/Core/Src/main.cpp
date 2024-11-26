@@ -18,12 +18,14 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "GSMModule.hpp"
-#include "main.h"
-#include "i2c.h"
-#include "spi.h"
-#include "usart.h"
-#include "usb.h"
-#include "gpio.h"
+extern "C"{
+	#include "main.h"
+	#include "i2c.h"
+	#include "spi.h"
+	#include "usart.h"
+	#include "usb.h"
+	#include "gpio.h"
+}
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <cstring>
@@ -101,15 +103,8 @@ int main(void)
   Parameters parameters = load_parameters();
   GSM_Module gsm(parameters);
 
-//  gsm.make_call("380963809782");
-//gsm.receive_call();
+  gsm.make_call("380963809782");
 
-// gsm.send_sms("380986629200", "Test");
-
-//  gsm.send_AT();
-
-//  bool at_result = gsm.send_AT();
-//  std::cout<<at_result;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,7 +112,8 @@ int main(void)
   while (true)
   {
     /* USER CODE END WHILE */
-
+	  c_print("Check");
+	  HAL_Delay(3000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
