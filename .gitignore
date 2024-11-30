@@ -1,4 +1,4 @@
-/.metadata
-/.idea
-/Test/.settings/
-/GSMLib/.settings/
+.metadata
+.idea
+Test/.settings/*
+GSMLib/.settings/*

@@ -3,15 +3,15 @@
 ../Core/Src/GSMModule.cpp:41:6:void GSM_Module::make_call(const char*)	1
 ../Core/Src/GSMModule.cpp:47:6:void GSM_Module::receive_call()	1
 ../Core/Src/GSMModule.cpp:51:6:void GSM_Module::hang_up()	1
-../Core/Src/GSMModule.cpp:55:6:bool GSM_Module::send_at_command(const char*)	3
-../Core/Src/GSMModule.cpp:66:6:void GSM_Module::handle_interruption()	2
-../Core/Src/GSMModule.cpp:82:17:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	4
-../Core/Src/GSMModule.cpp:95:6:void GSM_Module::send_sms(const char*, const char*)	1
-../Core/Src/GSMModule.cpp:115:6:void c_print(const char*)	1
-../Core/Src/GSMModule.cpp:122:12:Parameters load_parameters()	1
-../Core/Src/GSMModule.cpp:132:6:void GSM_Module::start_receiving()	1
-../Core/Src/GSMModule.cpp:136:6:bool GSM_Module::transmit(const uint8_t*, size_t)	1
-../Core/Src/GSMModule.cpp:140:6:bool GSM_Module::receive(uint8_t*, size_t, uint32_t)	1
-../Core/Src/GSMModule.cpp:142:1:void __static_initialization_and_destruction_0(int, int)	5
-../Core/Src/GSMModule.cpp:142:1:cpp)	1
-../Core/Src/GSMModule.cpp:142:1:cpp)	1
+../Core/Src/GSMModule.cpp:55:6:bool GSM_Module::send_at_command(const char*)	4
+../Core/Src/GSMModule.cpp:67:6:void GSM_Module::handle_interruption()	2
+../Core/Src/GSMModule.cpp:83:17:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	4
+../Core/Src/GSMModule.cpp:96:6:void GSM_Module::send_sms(const char*, const char*)	1
+../Core/Src/GSMModule.cpp:116:6:void c_print(const char*)	1
+../Core/Src/GSMModule.cpp:123:12:Parameters load_parameters()	1
+../Core/Src/GSMModule.cpp:133:6:void GSM_Module::start_receiving()	1
+../Core/Src/GSMModule.cpp:137:6:bool GSM_Module::transmit(const char*, size_t)	1
+../Core/Src/GSMModule.cpp:141:6:bool GSM_Module::receive(char*, size_t)	1
+../Core/Src/GSMModule.cpp:143:1:void __static_initialization_and_destruction_0(int, int)	5
+../Core/Src/GSMModule.cpp:143:1:cpp)	1
+../Core/Src/GSMModule.cpp:143:1:cpp)	1

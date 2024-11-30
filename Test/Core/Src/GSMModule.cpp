@@ -41,26 +41,27 @@ GSM_Module::GSM_Module(const Parameters& parameters){
 void GSM_Module::make_call(const char* number){
 	char command[32];
 	snprintf(command, sizeof(command), "%s%s\r\n", CALL, number);
-	transmit((uint8_t*)command, strlen(command));
+	transmit(command, strlen(command));
 }
 
 void GSM_Module::receive_call() {
-	transmit((uint8_t*)"ATA\r\n", 5);
+	transmit("ATA\r\n", 5);
 }
 
 void GSM_Module::hang_up(){
-	transmit((uint8_t*)"ATH\r\n", 5);
+	transmit("ATH\r\n", 5);
 }
 
 bool GSM_Module::send_at_command(const char* command){
-	if (!transmit((uint8_t*)command, strlen(command))){
+	if (!transmit(command, strlen(command))){
 		return false;
 	}
 	char answer[256];
-	if (!receive((uint8_t*)answer, sizeof(answer), 100)){
+	bool result = receive(answer, 100);
+	if (result != HAL_OK or !strstr(answer, "OK")){
 		return false;
 	}
-	return strstr(answer, "OK") != nullptr;
+	return true;
 }
 
 void GSM_Module::handle_interruption(){
@@ -94,29 +95,29 @@ extern "C" void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 
 void GSM_Module::send_sms(const char* number, const char* message){
 
-	transmit((uint8_t*)MSG_MODE_1, strlen(MSG_MODE_1));
+	transmit(MSG_MODE_1, strlen(MSG_MODE_1) != HAL_OK);
 
 	HAL_Delay(1000);
 
 	char command[32];
 	snprintf(command, sizeof(command), "%s\"%s\"", MSG, number);
-	transmit((uint8_t*)command, strlen(command));
+	transmit(command, strlen(command));
 	HAL_Delay(1000);
 
 	char msg[256];
 
     snprintf(msg, sizeof(msg), "%s\r\n0x1A", message);
-    transmit((uint8_t*)msg, strlen(msg));
+    transmit(msg, strlen(msg));
     HAL_Delay(1000);
 
-    transmit((uint8_t*)MSG_MODE_0, strlen(MSG_MODE_0));
+    transmit(MSG_MODE_0, strlen(MSG_MODE_0));
 }
 
 void c_print(const char* str){
-	size_t command_len = strlen(str) + 3;
+	size_t command_len = strlen(str) + 2;
 	char command[command_len];
 	snprintf(command, command_len, "%s\r\n", str);
-	gsm->transmit((uint8_t*)command, strlen(command));
+	gsm->transmit(command, strlen(command));
 }
 
 Parameters load_parameters(){
@@ -133,12 +134,12 @@ void GSM_Module::start_receiving() {
     HAL_UART_Receive_IT(parameters.uart_handle, &rx_buffer[rx_index], 1);
 }
 
-bool GSM_Module::transmit(const uint8_t* data, size_t size) {
+bool GSM_Module::transmit(const char* data, size_t size) {
     return HAL_UART_Transmit(parameters.uart_handle, (uint8_t*)data, size, 100) == HAL_OK;
 }
 
-bool GSM_Module::receive(uint8_t* buffer, size_t size, uint32_t timeout) {
-    return HAL_UART_Receive(parameters.uart_handle, buffer, size, timeout) == HAL_OK;
+bool GSM_Module::receive(char* buffer, size_t size) {
+    return HAL_UART_Receive(parameters.uart_handle, (uint8_t*)buffer, size, 100) == HAL_OK;
 }
 
 //	char command[32];

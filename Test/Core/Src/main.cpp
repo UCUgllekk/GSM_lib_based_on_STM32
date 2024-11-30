@@ -62,7 +62,6 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
 /* USER CODE END 0 */
 
 /**
@@ -99,12 +98,11 @@ int main(void)
   MX_SPI2_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
   Parameters parameters = load_parameters();
   GSM_Module gsm(parameters);
+//  gsm.make_call("380963809782");
 
-  gsm.make_call("380963809782");
-
+//  const char* str = "Hello\r\n";
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -112,8 +110,9 @@ int main(void)
   while (true)
   {
     /* USER CODE END WHILE */
-	  c_print("Check");
-	  HAL_Delay(3000);
+//	  HAL_UART_Transmit(&huart2, (uint8_t*)str, strlen(str), 100);
+//	  c_print("Check");
+//	  HAL_Delay(3000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

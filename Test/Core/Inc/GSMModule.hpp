@@ -26,6 +26,13 @@ struct Parameters{
 };
 
 class GSM_Module{
+
+enum State{
+	WAITING_FOR_MESSAGE,
+	SNAKE,
+	CALLING,
+	IDLE,
+};
 public:
 	GSM_Module(const Parameters& parameters);
 
@@ -36,8 +43,8 @@ public:
 	void receive_call();
 	void receive_sms();
 
-	bool transmit(const uint8_t* data, size_t size);
-	bool receive(uint8_t* buffer, size_t size, uint32_t timeout);
+	bool transmit(const char* data, size_t size);
+	bool receive(char* buffer, size_t size);
 	void start_receiving();
 
 private:

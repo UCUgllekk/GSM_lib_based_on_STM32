@@ -3,15 +3,15 @@
 ../Core/Src/GSMModule.cpp:41:6:void GSM_Module::make_call(const char*)	56	static
 ../Core/Src/GSMModule.cpp:47:6:void GSM_Module::receive_call()	16	static
 ../Core/Src/GSMModule.cpp:51:6:void GSM_Module::hang_up()	16	static
-../Core/Src/GSMModule.cpp:55:6:bool GSM_Module::send_at_command(const char*)	272	static
-../Core/Src/GSMModule.cpp:66:6:void GSM_Module::handle_interruption()	56	static
-../Core/Src/GSMModule.cpp:82:17:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static
-../Core/Src/GSMModule.cpp:95:6:void GSM_Module::send_sms(const char*, const char*)	328	static
-../Core/Src/GSMModule.cpp:115:6:void c_print(const char*)	56	dynamic
-../Core/Src/GSMModule.cpp:122:12:Parameters load_parameters()	16	static
-../Core/Src/GSMModule.cpp:132:6:void GSM_Module::start_receiving()	16	static
-../Core/Src/GSMModule.cpp:136:6:bool GSM_Module::transmit(const uint8_t*, size_t)	24	static
-../Core/Src/GSMModule.cpp:140:6:bool GSM_Module::receive(uint8_t*, size_t, uint32_t)	24	static
-../Core/Src/GSMModule.cpp:142:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Core/Src/GSMModule.cpp:142:1:cpp)	8	static
-../Core/Src/GSMModule.cpp:142:1:cpp)	8	static
+../Core/Src/GSMModule.cpp:55:6:bool GSM_Module::send_at_command(const char*)	280	static
+../Core/Src/GSMModule.cpp:67:6:void GSM_Module::handle_interruption()	56	static
+../Core/Src/GSMModule.cpp:83:17:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static
+../Core/Src/GSMModule.cpp:96:6:void GSM_Module::send_sms(const char*, const char*)	328	static
+../Core/Src/GSMModule.cpp:116:6:void c_print(const char*)	56	dynamic
+../Core/Src/GSMModule.cpp:123:12:Parameters load_parameters()	16	static
+../Core/Src/GSMModule.cpp:133:6:void GSM_Module::start_receiving()	16	static
+../Core/Src/GSMModule.cpp:137:6:bool GSM_Module::transmit(const char*, size_t)	24	static
+../Core/Src/GSMModule.cpp:141:6:bool GSM_Module::receive(char*, size_t)	24	static
+../Core/Src/GSMModule.cpp:143:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/GSMModule.cpp:143:1:cpp)	8	static
+../Core/Src/GSMModule.cpp:143:1:cpp)	8	static
