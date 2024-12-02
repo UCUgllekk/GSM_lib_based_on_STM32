@@ -26,6 +26,7 @@ const char* CALL = "ATD+";
 
 const char* AT = "AT\r\n";
 
+
 static GSM_Module* gsm = nullptr;
 
 
@@ -39,9 +40,16 @@ GSM_Module::GSM_Module(const Parameters& parameters){
 }
 
 void GSM_Module::make_call(const char* number){
+	if (this->current_state != IDLE) {
+	    return;
+	}
+
 	char command[32];
 	snprintf(command, sizeof(command), "%s%s\r\n", CALL, number);
 	transmit(command, strlen(command));
+
+	this->prev_state = this->current_state;
+	this->current_state = this->CALLING;
 }
 
 void GSM_Module::receive_call() {
@@ -49,7 +57,13 @@ void GSM_Module::receive_call() {
 }
 
 void GSM_Module::hang_up(){
+	if (this->current_state != CALLING) {
+	    return;
+	}
+
 	transmit("ATH\r\n", 5);
+	this->current_state = this->prev_state;
+	this->prev_state = IDLE;
 }
 
 bool GSM_Module::send_at_command(const char* command){
@@ -70,11 +84,17 @@ void GSM_Module::handle_interruption(){
 
     if (buffer_to_str.find("RING")) {
 
-        receive_call();
+    	this->prev_state = this->current_state;
+    	this->current_state = RINGING;
 
-    } else if (buffer_to_str.find("")) {
+    } else if (buffer_to_str.find('+CMTI: "SM"')) {
 
-//    	receive_sms();
+    	receive_sms();
+
+    } else {
+
+    	this->prev_state = this->current_state;
+    	this->current_state = this->UNKNOWN;
 
     }
     rx_index = 0;

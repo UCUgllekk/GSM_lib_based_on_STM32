@@ -30,11 +30,16 @@ extern "C"{
 /* USER CODE BEGIN Includes */
 #include <cstring>
 #include <iostream>
+#include <queue>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+typedef enum {
+	IDLE,
+	MENU,
 
+} ProgramState;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -48,7 +53,7 @@ extern "C"{
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-
+GSMState current_state = WAITING;
 
 /* USER CODE BEGIN PV */
 
@@ -57,7 +62,9 @@ extern "C"{
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void handle_state_machine(GSM_Module& gsm);
+GSMState parse_command(const std::string& command, GSM_Module gsm);
+//std::string read_keyboard_input();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -107,16 +114,44 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (true)
-  {
-    /* USER CODE END WHILE */
-//	  HAL_UART_Transmit(&huart2, (uint8_t*)str, strlen(str), 100);
-//	  c_print("Check");
-//	  HAL_Delay(3000);
-    /* USER CODE BEGIN 3 */
+
+  while (true) {
+
+	  if (gsm.current_state == gsm.UNKNOWN) {
+		  parse_command(gsm.rx_buffer);
+	  }
+
+	  HAL_DELAY(1000);
   }
+
   /* USER CODE END 3 */
 }
+
+/**
+  * @brief  Handle the GSM state machine based on user input.
+  * @param  gsm: Reference to the GSM_Module instance.
+  * @param  user_input: Input from the keyboard.
+  * @retval None
+  */
+void handle_state_machine(GSM_Module& gsm, const std::string& user_input) {
+    GSMState next_state = parse_command(user_input);
+
+    if (next_state != GSM_UNKNOWN) {
+        current_state = next_state;
+    }
+
+    }
+}
+
+/**
+  * @brief Parse command and map it to a GSMState.
+  * @param command: The command string.
+  * @retval GSMState corresponding to the command.
+  */
+ProgramState parse_command(const std::string& command, GSM_Module gsm) {
+
+}
+
 
 /**
   * @brief System Clock Configuration

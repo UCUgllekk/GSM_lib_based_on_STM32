@@ -28,10 +28,14 @@ struct Parameters{
 class GSM_Module{
 
 enum State{
-	WAITING_FOR_MESSAGE,
-	SNAKE,
-	CALLING,
 	IDLE,
+	CALLING,
+	RECEIVE_CALL,
+	RINGING,
+	HANG_UP,
+	SEND_SMS,
+	RECEIVE_SMS,
+	UNKNOWN
 };
 public:
 	GSM_Module(const Parameters& parameters);
@@ -47,6 +51,9 @@ public:
 	bool receive(char* buffer, size_t size);
 	void start_receiving();
 
+	State prev_state = IDLE;
+	State current_state = IDLE;
+
 private:
 	uint16_t rx_index = 0;
 	uint8_t rx_buffer[256];
@@ -57,6 +64,7 @@ private:
 
 	void handle_interruption();
     friend void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart);
+
 };
 
 void c_print(const char* str);
