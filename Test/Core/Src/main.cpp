@@ -726,8 +726,12 @@ typedef enum {
     STATE_MENU,
     STATE_CALL_SCREEN,
     STATE_MESSAGES_SCREEN,
+	STATE_MESSAGE_SCREEN_INPUT,
     STATE_SNAKE_SCREEN,
-    STATE_MUSIC_SCREEN
+    STATE_MUSIC_SCREEN,
+    STATE_CALL_INPUT,
+    STATE_CALL_PROCESS,
+    STATE_HANG_ON_SCREEN
 } SystemState;
 
 int MAX_OPTIONS = 4;
@@ -752,6 +756,17 @@ void update_display_for_option(int option) {
     }
 }
 
+void update_display_for_message_option(int option) {
+    switch (option) {
+        case 0:
+        	display_messages_screen(&lcd,0);
+            break;
+        case 1:
+        	display_messages_screen(&lcd,1);
+            break;
+    }
+}
+
 void enter_main_screen() {
     display_main_screen(&lcd, 0);
     current_state = STATE_MAIN_SCREEN;
@@ -768,17 +783,33 @@ void enter_call_screen() {
     current_state = STATE_CALL_SCREEN;
 }
 
+void enter_call_input() {
+    read_input(&lcd);
+    current_state = STATE_CALL_INPUT;
+}
+
+void enter_call_process() {
+    display_call_process(&lcd);
+    current_state = STATE_CALL_PROCESS;
+}
+
+void enter_hang_on_screen() {
+	display_hang_up_call_process(&lcd);
+    current_state = STATE_HANG_ON_SCREEN;
+    // Wait for 2 seconds before returning to the main screen
+    delay(2000);
+    enter_main_screen();
+}
+
 void enter_messages_screen() {
-    display_messages_screen(&lcd, 0);
+	display_messages_screen(&lcd,0);
+    current_message_option = 0;
     current_state = STATE_MESSAGES_SCREEN;
 }
 
-void enter_snake_screen() {
-    current_state = STATE_SNAKE_SCREEN;
-}
-
-void enter_music_screen() {
-    current_state = STATE_MUSIC_SCREEN;
+void enter_message_input() {
+	display_send_sms(&lcd);  // Display the phone input screen (or you can swap this with text input if needed)
+    current_state = STATE_MESSAGE_SCREEN_INPUT;  // Assuming phone input screen is the initial state
 }
 
 void handle_key_press(char key_pressed) {
@@ -789,39 +820,91 @@ void handle_key_press(char key_pressed) {
             }
             break;
 
-
         case STATE_MENU:
-                    if (key_pressed == 'A') {
-                        current_option = (current_option - 1 + MAX_OPTIONS) % MAX_OPTIONS;
-                        update_display_for_option(current_option);
-                    } else if (key_pressed == 'B') {
-                        current_option = (current_option + 1) % MAX_OPTIONS;
-                        update_display_for_option(current_option);
-                    } else if (key_pressed == '0') {
-                        switch (current_option) {
-                            case 0: enter_call_screen(); break;
-                            case 1: enter_messages_screen(); break;
-                            case 2: enter_snake_screen(); break;
-                            case 3: enter_music_screen(); break;
-                        }
-                    } else if (key_pressed == 'D') {
-                        enter_main_screen();
-                    }
-                    break;
-
-                case STATE_CALL_SCREEN:
-                case STATE_MESSAGES_SCREEN:
-                case STATE_SNAKE_SCREEN:
-                case STATE_MUSIC_SCREEN:
-                    if (key_pressed == 'D') {
-                        enter_menu();
-                    }
-                    break;
-
-                default:
-                    break;
+            if (key_pressed == 'A') {
+                current_option = (current_option - 1 + MAX_OPTIONS) % MAX_OPTIONS;
+                update_display_for_option(current_option);
+            } else if (key_pressed == 'B') {
+                current_option = (current_option + 1) % MAX_OPTIONS;
+                update_display_for_option(current_option);
+            } else if (key_pressed == '0') {
+                switch (current_option) {
+                    case 0: enter_call_screen(); break;
+                    case 1: enter_messages_screen(); break;
+                    case 2: enter_snake_screen(); break;
+                    case 3: enter_music_screen(); break;
+                }
+            } else if (key_pressed == 'D') {
+                enter_main_screen();
             }
-        }
+            break;
+
+        case STATE_CALL_SCREEN:
+            if (key_pressed == '#') {
+                enter_call_input();
+            } else if (key_pressed == 'D') {
+                enter_main_screen();
+            }
+            break;
+
+        case STATE_CALL_INPUT:
+            if (key_pressed == '#') {
+                enter_call_process();
+            } else if (key_pressed == 'D') {
+                enter_main_screen();
+            }
+            break;
+
+        case STATE_CALL_PROCESS:
+            if (key_pressed == '#') {
+                enter_hang_on_screen();
+            } else if (key_pressed == 'D') {
+                enter_main_screen();
+            }
+            break;
+
+        case STATE_HANG_ON_SCREEN:
+            // No user input expected; state automatically transitions to the main screen after 2 seconds
+            break;
+
+        case STATE_MESSAGES_SCREEN:
+            // Handle user input to select between "Send SMS" and "Received SMS"
+            if (key_pressed == 'A') {
+                current_message_option = (current_message_option - 1 + 2) % 2; // Toggle between 0 and 1
+                update_display_for_message_option(current_message_option);
+            } else if (key_pressed == 'B') {
+                current_message_option = (current_message_option + 1) % 2; // Toggle between 0 and 1
+                update_display_for_message_option(current_message_option);
+            } else if (key_pressed == '0') {
+                if (current_message_option == 0) {
+                    enter_message_input(); // Enter message input for sending SMS
+                }
+                // Handle case for receiving SMS, if needed, you can add logic here
+            } else if (key_pressed == 'D') {
+                enter_menu();
+            }
+            break;
+
+        case STATE_MESSAGE_SCREEN_INPUT:
+            // Handle phone number and message input
+            if (key_pressed == '#') {
+                // Transition to the next stage of SMS input or main screen
+                // Assuming # ends the input process and goes back to the main screen
+                enter_main_screen();
+            }
+            break;
+
+        case STATE_SNAKE_SCREEN:
+        case STATE_MUSIC_SCREEN:
+            if (key_pressed == 'D') {
+                enter_menu();
+            }
+            break;
+
+        default:
+            break;
+    }
+}
 
 
 /* USER CODE END 0 */
@@ -853,7 +936,6 @@ int main(void) {
     lcd.def_scr = lcd5110_def_scr;
 
     LCD5110_init(&lcd.hw_conf, LCD5110_NORMAL_MODE, 0x40, 2, 3);
-
     keypad_init();
 
     enter_main_screen();
@@ -993,8 +1075,7 @@ void SystemClock_Config(void){}
   * @brief  This function is executed in case of error occurrence.
   * @retval None
   */
-void Error_Handler(void)
-{
+void Error_Handler(void){
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
