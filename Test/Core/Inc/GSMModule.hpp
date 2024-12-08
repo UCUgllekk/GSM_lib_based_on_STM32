@@ -37,6 +37,7 @@ enum State{
 	RECEIVE_SMS,
 	UNKNOWN
 };
+
 public:
 	GSM_Module(const Parameters& parameters);
 
@@ -48,6 +49,7 @@ public:
 	void receive_sms();
 
 	bool transmit(const char* data, size_t size);
+	bool transmit(const uint8_t* data);
 	bool receive(char* buffer, size_t size);
 	void start_receiving();
 

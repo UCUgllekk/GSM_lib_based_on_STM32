@@ -19,8 +19,8 @@ extern "C"{
 #include <string>
 
 const char* MSG = "AT+CMGS=";
-const char* MSG_MODE_1 = "AT+CMGF=1\r\n";
-const char* MSG_MODE_0 = "AT+CMGF=0\r\n";
+const char* MSG_TEXT_MODE = "AT+CMGF=1\r\n";
+char END_OF_MSG = 0x1A;
 
 const char* CALL = "ATD+";
 
@@ -33,7 +33,7 @@ static GSM_Module* gsm = nullptr;
 GSM_Module::GSM_Module(const Parameters& parameters){
 	gsm = this;
 	this->parameters = parameters;
-	if(!send_at_command(AT)){
+	if(!send_at_command(AT) && !send_at_command(MSG_TEXT_MODE)){
 		Error_Handler();
 	}
 	start_receiving();
@@ -82,14 +82,15 @@ void GSM_Module::handle_interruption(){
 
 	std::string buffer_to_str(reinterpret_cast<char*>(rx_buffer), rx_index);
 
-    if (buffer_to_str.find("RING")) {
+    if (buffer_to_str.find("RING") != std::string::npos) {
 
     	this->prev_state = this->current_state;
     	this->current_state = RINGING;
 
-    } else if (buffer_to_str.find('+CMTI: "SM"')) {
 
-    	receive_sms();
+    } else if (buffer_to_str.find("+CTM:") != std::string::npos) {
+
+//    	receive_sms();
 
     } else {
 
@@ -97,6 +98,7 @@ void GSM_Module::handle_interruption(){
     	this->current_state = this->UNKNOWN;
 
     }
+    std::fill(std::begin(rx_buffer), std::end(rx_buffer), 0);
     rx_index = 0;
 }
 
@@ -104,40 +106,28 @@ extern "C" void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	if (gsm && huart == gsm->parameters.uart_handle){
 
         if (gsm->rx_buffer[gsm->rx_index] == '\n'){
+            gsm->rx_buffer[gsm->rx_index] = '\0';
+
         	gsm->handle_interruption();
         }
-
-        gsm->rx_index = (gsm->rx_index + 1) % 256;
+        else{
+            gsm->rx_index = (gsm->rx_index + 1) % 256;
+        }
 
         gsm->start_receiving();
 	}
 }
 
 void GSM_Module::send_sms(const char* number, const char* message){
-
-	transmit(MSG_MODE_1, strlen(MSG_MODE_1) != HAL_OK);
-
-	HAL_Delay(1000);
-
 	char command[32];
-	snprintf(command, sizeof(command), "%s\"%s\"", MSG, number);
-	transmit(command, strlen(command));
+	snprintf(command, sizeof(command), "%s\"%s\"\r", MSG, number);
+	if(!transmit(command, strlen(command))){
+		make_call("380986629200");
+	}
 	HAL_Delay(1000);
-
-	char msg[256];
-
-    snprintf(msg, sizeof(msg), "%s\r\n0x1A", message);
-    transmit(msg, strlen(msg));
+    transmit(message, strlen(message));
+    transmit(&END_OF_MSG, 1);
     HAL_Delay(1000);
-
-    transmit(MSG_MODE_0, strlen(MSG_MODE_0));
-}
-
-void c_print(const char* str){
-	size_t command_len = strlen(str) + 2;
-	char command[command_len];
-	snprintf(command, command_len, "%s\r\n", str);
-	gsm->transmit(command, strlen(command));
 }
 
 Parameters load_parameters(){
@@ -161,30 +151,3 @@ bool GSM_Module::transmit(const char* data, size_t size) {
 bool GSM_Module::receive(char* buffer, size_t size) {
     return HAL_UART_Receive(parameters.uart_handle, (uint8_t*)buffer, size, 100) == HAL_OK;
 }
-
-//	char command[32];
-//	int index = 0;
-//
-//	while (true) {
-//		uint8_t received_char;
-//
-//		HAL_UART_Receive(this->parameters.uart_handle, &received_char, 1, 100);
-//
-//		if (received_char) {
-//			command[index] = received_char;
-//
-//			index++;
-//
-//			std::string result = command;
-//
-//			if (result.find("RING") <= sizeof(command) - 1) {
-//				HAL_UART_Transmit(this->parameters.uart_handle, (uint8_t*)"ATA\r\n", 5, 100);
-//			}
-//		}
-//
-//		if (index >= sizeof(command) - 1) {
-//			memset(command, 0, sizeof(command));
-//			index = 0;
-//		}
-
-
