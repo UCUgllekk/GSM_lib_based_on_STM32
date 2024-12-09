@@ -33,6 +33,7 @@ extern "C"{
 #include <iostream>
 #include <queue>
 #include <fstream>
+#include <string>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -167,43 +168,93 @@ char keypad_scan(void)
   return 0;
 }
 
+std::string entered_number = "";
+
 std::string read_input(LCD5110_display* lcd) {
-    size_t index = 0;
     char key;
-    char buffer[11];
-    std::memset(buffer, 0, 11);
-
-
-    int cursor_x = 21;
+    int cursor_x = 21; // Starting position for the cursor on the display
+    unsigned long last_key_time = 0; // Time of the last key press
+    unsigned long debounce_delay = 200; // 200 ms debounce delay
 
     while (true) {
-        key = keypad_scan();
+        key = keypad_scan(); // Get key from the keypad
 
-        if (key != 0) {
+        // Check if key is pressed and debounce
+        if (key != 0 && (HAL_GetTick() - last_key_time > debounce_delay)) {
+            last_key_time = HAL_GetTick(); // Update last key time
+
             if (key == '#') {
-                break;
-            } else if (key == '*') {
-                if (index > 0) {
-                    index--;
-                    buffer[index] = '\0';
-                    cursor_x -= 6;
-                    LCD5110_set_cursor(cursor_x, 34, lcd);
-                    LCD5110_print(" ", BLACK, lcd);
-                }
-            } else if (index < sizeof(buffer) - 1) {
-                buffer[index++] = key;
-
-                LCD5110_set_cursor(cursor_x, 34, lcd);
-                char str[2] = {key, '\0'};
-                LCD5110_print(str, BLACK, lcd);
-                cursor_x += 6;
+                return entered_number;  // Return the global variable
             }
-            HAL_Delay(100);
-            LCD5110_refresh(lcd);
+            if (key == '*') {
+                if (!entered_number.empty()) { // Handle backspace if not empty
+                    entered_number.pop_back(); // Remove the last character
+                    cursor_x = std::max(21, cursor_x - 6); // Prevent cursor from going past the start
+                    LCD5110_set_cursor(cursor_x, 34, lcd);
+                    LCD5110_print(" ", BLACK, lcd); // Clear the character on the display
+                }
+            } else if (key >= '0' && key <= '9') { // Check if the key is a digit
+                if (entered_number.length() < 10) { // Ensure the input doesn't exceed 10 characters
+                    entered_number.push_back(key); // Append the key to the global variable
+
+                    LCD5110_set_cursor(cursor_x, 34, lcd);
+                    char str[2] = {key, '\0'}; // Temporary string for display
+                    LCD5110_print(str, BLACK, lcd); // Print character on the display
+                    cursor_x += 6; // Move the cursor forward
+                }
+            } else {
+                // If the key is not a digit and not '*' or '#', display error message
+                LCD5110_set_cursor(0, 40, lcd);
+                LCD5110_print("Invalid input", BLACK, lcd); // Print error message
+                HAL_Delay(1000); // Wait for 1 second to show the error message
+                LCD5110_set_cursor(0, 40, lcd);
+                LCD5110_print("              ", BLACK, lcd); // Clear the error message
+            }
+
+            HAL_Delay(150); // Small delay to debounce
+            LCD5110_refresh(lcd); // Refresh the display
         }
     }
-    return std::string(buffer);
 }
+
+
+//std::string read_input(LCD5110_display* lcd) {
+//    size_t index = 0;
+//    char key;
+//    char buffer[11];
+//    std::memset(buffer, 0, 11);
+//
+//
+//    int cursor_x = 21;
+//
+//    while (true) {
+//        key = keypad_scan();
+//
+//        if (key != 0) {
+//            if (key == '#') {
+//            	return std::string(buffer);
+//            } else if (key == '*') {
+//                if (index > 0) {
+//                    index--;
+//                    buffer[index] = '\0';
+//                    cursor_x -= 6;
+//                    LCD5110_set_cursor(cursor_x, 34, lcd);
+//                    LCD5110_print(" ", BLACK, lcd);
+//                }
+//            } else if (index < sizeof(buffer) - 1) {
+//                buffer[index++] = key;
+//
+//                LCD5110_set_cursor(cursor_x, 34, lcd);
+//                char str[2] = {key, '\0'};
+//                LCD5110_print(str, BLACK, lcd);
+//                cursor_x += 6;
+//            }
+//            HAL_Delay(100);
+//            LCD5110_refresh(lcd);
+//        }
+//    }
+////    return std::string(buffer);
+//}
 
 
 void display_main_screen(LCD5110_display* lcd, int menu) {
@@ -571,30 +622,29 @@ void display_call_screen(LCD5110_display* lcd) {
 }
 
 
-void display_call_process(LCD5110_display* lcd){
-  LCD5110_clear_scr(lcd);
-  LCD5110_set_cursor(15, 0, lcd);
-  LCD5110_print("Calling...", BLACK, lcd);
+void display_call_process(LCD5110_display* lcd) {
+    LCD5110_clear_scr(lcd);
+    LCD5110_set_cursor(15, 0, lcd);
+    LCD5110_print("Calling...", BLACK, lcd);
 
-  int x_start = 0;
-  int y_start = 18;
-  int text_width = 72;
-  int text_height = 8;
+    int x_start = 0;
+    int y_start = 18;
 
-  for (int x = x_start; x < x_start + text_width; x++) {
-    for (int y = y_start; y < y_start + text_height; y++) {
-      LCD5110_putpix(x, y, BLACK, &lcd->hw_conf);
+    if (entered_number.empty()) {
+       LCD5110_set_cursor(x_start, y_start, lcd);
+       LCD5110_print("Empty", BLACK, lcd);
+    } else{
+
+    // Display the entered number
+    LCD5110_set_cursor(x_start, y_start, lcd);
+    LCD5110_print(entered_number.c_str(), BLACK, lcd); // Use entered_number instead of "+380........."
     }
-  }
+    LCD5110_set_cursor(0, 35, lcd);
+    LCD5110_print("Press * to end", BLACK, lcd);
 
-  LCD5110_set_cursor(x_start, y_start, lcd);
-  LCD5110_print("+380.........", WHITE, lcd);
-
-  LCD5110_set_cursor(0, 35, lcd);
-  LCD5110_print("Press * to end", BLACK, lcd);
-
-  LCD5110_refresh(lcd);
+    LCD5110_refresh(lcd);
 }
+
 
 
 void display_hang_up_call_process(LCD5110_display* lcd){
@@ -721,23 +771,99 @@ void display_send_sms_input(LCD5110_display* lcd){
   LCD5110_refresh(lcd);
 }
 
+void display_sent_sms(LCD5110_display* lcd){
+  LCD5110_clear_scr(lcd);
+  LCD5110_set_cursor(0, 15, lcd);
+  LCD5110_print("The message was sent", BLACK, lcd);
+
+
+  LCD5110_set_cursor(0, 30, lcd);
+  LCD5110_print(entered_number.c_str(), BLACK, lcd);
+
+  LCD5110_refresh(lcd);
+}
+
+void display_calling(LCD5110_display* lcd, char keyPressed) {
+    LCD5110_clear_scr(lcd);
+    LCD5110_set_cursor(4, 5, lcd);
+    LCD5110_print(entered_number.c_str(), BLACK, lcd);
+
+    LCD5110_set_cursor(18, 20, lcd);
+    LCD5110_print("*", BLACK, lcd);
+
+    LCD5110_set_cursor(60, 18, lcd);
+    LCD5110_print("#", BLACK, lcd);
+
+    int claimTextColor = BLACK;
+    int claimRectColor = WHITE;
+    int cancelTextColor = BLACK;
+    int cancelRectColor = WHITE;
+
+    if (keyPressed == '*') {
+        claimTextColor = WHITE;
+        claimRectColor = BLACK;
+    } else if (keyPressed == '#') {
+        cancelTextColor = WHITE;
+        cancelRectColor = BLACK;
+    }
+
+    // Draw "Claim" with a filled rectangle
+    for (int y = 30; y <= 40; y++) {       // Fill vertical range
+        for (int x = 0; x < 40; x++) {     // Fill horizontal range
+            LCD5110_putpix(x, y, claimRectColor, &lcd->hw_conf);
+        }
+    }
+    LCD5110_set_cursor(4, 32, lcd);
+    LCD5110_print("Claim", claimTextColor, lcd);
+
+    // Draw "Cancel" with a filled rectangle
+    for (int y = 30; y <= 40; y++) {       // Fill vertical range
+        for (int x = 43; x < 82; x++) {    // Fill horizontal range
+            LCD5110_putpix(x, y, cancelRectColor, &lcd->hw_conf);
+        }
+    }
+    LCD5110_set_cursor(45, 32, lcd);
+    LCD5110_print("Cancel", cancelTextColor, lcd);
+
+    // Refresh the screen to apply changes
+    LCD5110_refresh(lcd);
+}
+
+
+
 typedef enum {
     STATE_MAIN_SCREEN,
     STATE_MENU,
     STATE_CALL_SCREEN,
     STATE_MESSAGES_SCREEN,
 	STATE_MESSAGE_SCREEN_INPUT,
+	STATE_MESSAGE_TEXT,
     STATE_SNAKE_SCREEN,
     STATE_MUSIC_SCREEN,
     STATE_CALL_INPUT,
     STATE_CALL_PROCESS,
+	STATE_CALL,
     STATE_HANG_ON_SCREEN
 } SystemState;
+
+void update_display_for_option(int option);
+void update_display_for_message_option(int option);
+void enter_main_screen();
+void enter_menu();
+void enter_call_screen();
+void enter_call_input();
+void enter_call_process();
+void enter_hang_on_screen();
+void enter_messages_screen();
+void enter_message_input();
+char keypad_scan();
+void handle_key_press(char key_pressed);
 
 int MAX_OPTIONS = 4;
 
 SystemState current_state = STATE_MAIN_SCREEN;
 int current_option = 0;
+int current_message_option = 1;
 
 void update_display_for_option(int option) {
     switch (option) {
@@ -759,16 +885,17 @@ void update_display_for_option(int option) {
 void update_display_for_message_option(int option) {
     switch (option) {
         case 0:
-        	display_messages_screen(&lcd,0);
+        	display_messages_screen(&lcd,1);
             break;
         case 1:
-        	display_messages_screen(&lcd,1);
+        	display_messages_screen(&lcd,2);
             break;
     }
 }
 
 void enter_main_screen() {
     display_main_screen(&lcd, 0);
+    entered_number.clear();
     current_state = STATE_MAIN_SCREEN;
 }
 
@@ -797,7 +924,7 @@ void enter_hang_on_screen() {
 	display_hang_up_call_process(&lcd);
     current_state = STATE_HANG_ON_SCREEN;
     // Wait for 2 seconds before returning to the main screen
-    delay(2000);
+    HAL_Delay(2000);
     enter_main_screen();
 }
 
@@ -812,6 +939,11 @@ void enter_message_input() {
     current_state = STATE_MESSAGE_SCREEN_INPUT;  // Assuming phone input screen is the initial state
 }
 
+void enter_message_text(){
+	display_send_sms_input(&lcd);
+	current_state = STATE_MESSAGE_TEXT;
+}
+
 void handle_key_press(char key_pressed) {
     switch (current_state) {
         case STATE_MAIN_SCREEN:
@@ -819,7 +951,6 @@ void handle_key_press(char key_pressed) {
                 enter_menu();
             }
             break;
-
         case STATE_MENU:
             if (key_pressed == 'A') {
                 current_option = (current_option - 1 + MAX_OPTIONS) % MAX_OPTIONS;
@@ -831,14 +962,11 @@ void handle_key_press(char key_pressed) {
                 switch (current_option) {
                     case 0: enter_call_screen(); break;
                     case 1: enter_messages_screen(); break;
-                    case 2: enter_snake_screen(); break;
-                    case 3: enter_music_screen(); break;
                 }
             } else if (key_pressed == 'D') {
                 enter_main_screen();
             }
             break;
-
         case STATE_CALL_SCREEN:
             if (key_pressed == '#') {
                 enter_call_input();
@@ -846,65 +974,59 @@ void handle_key_press(char key_pressed) {
                 enter_main_screen();
             }
             break;
-
         case STATE_CALL_INPUT:
             if (key_pressed == '#') {
-                enter_call_process();
+                enter_call_process(); // Transition to call process
             } else if (key_pressed == 'D') {
-                enter_main_screen();
+                enter_main_screen(); // Allow exit to main screen
             }
             break;
-
         case STATE_CALL_PROCESS:
-            if (key_pressed == '#') {
-                enter_hang_on_screen();
-            } else if (key_pressed == 'D') {
-                enter_main_screen();
-            }
-            break;
-
-        case STATE_HANG_ON_SCREEN:
-            // No user input expected; state automatically transitions to the main screen after 2 seconds
-            break;
-
+        	if (key_pressed == '*') {
+        		enter_main_screen();
+        	}
+        	break;
+        case STATE_CALL:
+        	enter_hang_on_screen();
+        	if (key_pressed == '*') {
+        		enter_main_screen();
+        	}
+        	break;
         case STATE_MESSAGES_SCREEN:
-            // Handle user input to select between "Send SMS" and "Received SMS"
-            if (key_pressed == 'A') {
-                current_message_option = (current_message_option - 1 + 2) % 2; // Toggle between 0 and 1
-                update_display_for_message_option(current_message_option);
-            } else if (key_pressed == 'B') {
-                current_message_option = (current_message_option + 1) % 2; // Toggle between 0 and 1
-                update_display_for_message_option(current_message_option);
-            } else if (key_pressed == '0') {
-                if (current_message_option == 0) {
-                    enter_message_input(); // Enter message input for sending SMS
-                }
-                // Handle case for receiving SMS, if needed, you can add logic here
-            } else if (key_pressed == 'D') {
-                enter_menu();
-            }
-            break;
-
+        	if (key_pressed == 'A') {
+        		current_message_option = (current_message_option - 1 + 2) % 2; // Toggle between 1 and 2
+        	    update_display_for_message_option(current_message_option);
+        	}
+        	if (key_pressed == 'B') {
+        		current_message_option = (current_message_option + 1) % 2; // Toggle between 1 and 2
+        	    update_display_for_message_option(current_message_option);
+        	}
+        	if (key_pressed == '0') {
+				if (current_message_option == 0) {
+					enter_message_input(); // Enter message input for sending SMS
+				}
+			}
+        	if (key_pressed == 'D') {
+				enter_menu();
+			}
+        	break;
         case STATE_MESSAGE_SCREEN_INPUT:
-            // Handle phone number and message input
-            if (key_pressed == '#') {
-                // Transition to the next stage of SMS input or main screen
-                // Assuming # ends the input process and goes back to the main screen
-                enter_main_screen();
-            }
-            break;
+        	if (key_pressed = '#') {
+        		enter_message_text();
+        	}
+        	break;
+        case STATE_MESSAGE_TEXT:
+        	if (key_pressed = '#') {
+        		display_sent_sms(&lcd);
+				HAL_Delay(2000);
+				enter_main_screen();
+        	}
+        	break;
 
-        case STATE_SNAKE_SCREEN:
-        case STATE_MUSIC_SCREEN:
-            if (key_pressed == 'D') {
-                enter_menu();
-            }
-            break;
 
-        default:
-            break;
     }
 }
+
 
 
 /* USER CODE END 0 */
