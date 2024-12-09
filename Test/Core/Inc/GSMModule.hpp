@@ -39,6 +39,9 @@ enum State{
 };
 
 public:
+
+	const char END_OF_MSG = 0x1A;
+
 	GSM_Module(const Parameters& parameters);
 
 	void send_sms(const char* number, const char* message);
@@ -49,14 +52,30 @@ public:
 	void receive_sms();
 
 	bool transmit(const char* data, size_t size);
-	bool transmit(const uint8_t* data);
 	bool receive(char* buffer, size_t size);
 	void start_receiving();
+
+	int get_signal_strength();
+	char* get_date();
+	char* receive_gps_data();
 
 	State prev_state = IDLE;
 	State current_state = IDLE;
 
 private:
+
+	static constexpr const char* MSG = "AT+CMGS=";
+	static constexpr const char* MSG_TEXT_MODE = "AT+CMGF=1\r\n";
+
+	static constexpr const char* CALL = "ATD+";
+
+	static constexpr const char* AT = "AT\r\n";
+
+	static constexpr const char* GPS_ON = "AT+GPS=1\r\n";
+	static constexpr const char* GPS_OFF = "AT+GPS=0\r\n";
+	static constexpr const char* GET_TIME = "AT+CCLK?\r\n";
+	static constexpr const char* GET_SIGNAL = "AT+CSQ\r\n";
+
 	uint16_t rx_index = 0;
 	uint8_t rx_buffer[256];
 	Parameters parameters;
@@ -69,7 +88,7 @@ private:
 
 };
 
-void c_print(const char* str);
+[[maybe_unused]] static GSM_Module* gsm = nullptr;
 
 Parameters load_parameters();
 
