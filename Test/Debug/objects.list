@@ -1,5 +1,6 @@
 "./Core/Src/GSMModule.o"
 "./Core/Src/gpio.o"
+"./Core/Src/gui.o"
 "./Core/Src/i2c.o"
 "./Core/Src/lcd5110.o"
 "./Core/Src/lcd5110_hal.o"

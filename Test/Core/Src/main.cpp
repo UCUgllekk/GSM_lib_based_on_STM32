@@ -17,15 +17,15 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-//#include "GSMModule.hpp"
+#include "GSMModule.hpp"
 extern "C"{
-  #include "main.h"
-  #include "i2c.h"
-  #include "spi.h"
-//  #include "usart.h"
-  #include "usb.h"
-  #include "gpio.h"
-  #include "lcd5110.h"
+	#include "main.h"
+	#include "i2c.h"
+	#include "spi.h"
+	#include "usart.h"
+	#include "usb.h"
+	#include "gpio.h"
+	#include "lcd5110.h"
 }
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -257,7 +257,7 @@ std::string read_input(LCD5110_display* lcd) {
 //}
 
 
-void display_main_screen(LCD5110_display* lcd, int menu) {
+void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
   LCD5110_clear_scr(lcd);
 
 // Kitty
@@ -496,10 +496,10 @@ void display_main_screen(LCD5110_display* lcd, int menu) {
 
 
   LCD5110_set_cursor(53, 13, lcd);
-  LCD5110_print("19:45", BLACK, lcd);
+  LCD5110_print(gsm.time.c_str(), BLACK, lcd);
 
-  LCD5110_set_cursor(30, 25, lcd);
-  LCD5110_print("Thu/09.05", BLACK, lcd);
+  LCD5110_set_cursor(36, 25, lcd);
+  LCD5110_print(gsm.date.c_str(), BLACK, lcd);
 
 
   LCD5110_refresh(lcd);
@@ -829,33 +829,36 @@ void display_calling(LCD5110_display* lcd, char keyPressed) {
     LCD5110_refresh(lcd);
 }
 
-
-
 typedef enum {
     STATE_MAIN_SCREEN,
     STATE_MENU,
-    STATE_CALL_SCREEN,
-    STATE_MESSAGES_SCREEN,
-	STATE_MESSAGE_SCREEN_INPUT,
+    STATE_CALL_INPUT,
+	STATE_CALLING,
+	STATE_CALL,
+	STATE_INCOMING_CALL,
+    STATE_MESSAGES,
+	STATE_MESSAGE_NUMBER,
 	STATE_MESSAGE_TEXT,
     STATE_SNAKE_SCREEN,
     STATE_MUSIC_SCREEN,
-    STATE_CALL_INPUT,
-    STATE_CALL_PROCESS,
-	STATE_CALL,
+//    STATE_CALL_INPUT,
+//    STATE_CALL_PROCESS,
+//	STATE_CALL,
+
     STATE_HANG_ON_SCREEN
 } SystemState;
 
 void update_display_for_option(int option);
 void update_display_for_message_option(int option);
-void enter_main_screen();
+void enter_main_screen(GSM_Module gsm);
 void enter_menu();
-void enter_call_screen();
+void enter_call();
 void enter_call_input();
-void enter_call_process();
-void enter_hang_on_screen();
-void enter_messages_screen();
+void enter_calling();
+//void enter_hang_on_screen();
+void enter_messages();
 void enter_message_input();
+void enter_message_text();
 char keypad_scan();
 void handle_key_press(char key_pressed);
 
@@ -893,8 +896,8 @@ void update_display_for_message_option(int option) {
     }
 }
 
-void enter_main_screen() {
-    display_main_screen(&lcd, 0);
+void enter_main_screen(GSM_Module gsm) {
+    display_main_screen(&lcd, 0, gsm);
     entered_number.clear();
     current_state = STATE_MAIN_SCREEN;
 }
@@ -905,38 +908,39 @@ void enter_menu() {
     current_state = STATE_MENU;
 }
 
-void enter_call_screen() {
-    display_call_screen(&lcd);
-    current_state = STATE_CALL_SCREEN;
-}
+//void enter_call_input() {
+//    display_call_screen(&lcd);
+//    current_state = STATE_CALL_INPUT;
+//}
 
 void enter_call_input() {
+	display_call_screen(&lcd);
     read_input(&lcd);
     current_state = STATE_CALL_INPUT;
 }
 
-void enter_call_process() {
+void enter_calling() {
     display_call_process(&lcd);
-    current_state = STATE_CALL_PROCESS;
+    current_state = STATE_CALLING;
 }
 
-void enter_hang_on_screen() {
+void enter_call() {
 	display_hang_up_call_process(&lcd);
-    current_state = STATE_HANG_ON_SCREEN;
+    current_state = STATE_CALL;
     // Wait for 2 seconds before returning to the main screen
-    HAL_Delay(2000);
-    enter_main_screen();
+//    HAL_Delay(2000);
+//    enter_main_screen();
 }
 
-void enter_messages_screen() {
+void enter_messages() {
 	display_messages_screen(&lcd,0);
     current_message_option = 0;
-    current_state = STATE_MESSAGES_SCREEN;
+    current_state = STATE_MESSAGES;
 }
 
-void enter_message_input() {
+void enter_message_number() {
 	display_send_sms(&lcd);  // Display the phone input screen (or you can swap this with text input if needed)
-    current_state = STATE_MESSAGE_SCREEN_INPUT;  // Assuming phone input screen is the initial state
+    current_state = STATE_MESSAGE_NUMBER;  // Assuming phone input screen is the initial state
 }
 
 void enter_message_text(){
@@ -944,87 +948,105 @@ void enter_message_text(){
 	current_state = STATE_MESSAGE_TEXT;
 }
 
-void handle_key_press(char key_pressed) {
-    switch (current_state) {
-        case STATE_MAIN_SCREEN:
-            if (key_pressed == '0') {
-                enter_menu();
-            }
-            break;
-        case STATE_MENU:
-            if (key_pressed == 'A') {
-                current_option = (current_option - 1 + MAX_OPTIONS) % MAX_OPTIONS;
-                update_display_for_option(current_option);
-            } else if (key_pressed == 'B') {
-                current_option = (current_option + 1) % MAX_OPTIONS;
-                update_display_for_option(current_option);
-            } else if (key_pressed == '0') {
-                switch (current_option) {
-                    case 0: enter_call_screen(); break;
-                    case 1: enter_messages_screen(); break;
-                }
-            } else if (key_pressed == 'D') {
-                enter_main_screen();
-            }
-            break;
-        case STATE_CALL_SCREEN:
-            if (key_pressed == '#') {
-                enter_call_input();
-            } else if (key_pressed == 'D') {
-                enter_main_screen();
-            }
-            break;
-        case STATE_CALL_INPUT:
-            if (key_pressed == '#') {
-                enter_call_process(); // Transition to call process
-            } else if (key_pressed == 'D') {
-                enter_main_screen(); // Allow exit to main screen
-            }
-            break;
-        case STATE_CALL_PROCESS:
-        	if (key_pressed == '*') {
-        		enter_main_screen();
-        	}
-        	break;
-        case STATE_CALL:
-        	enter_hang_on_screen();
-        	if (key_pressed == '*') {
-        		enter_main_screen();
-        	}
-        	break;
-        case STATE_MESSAGES_SCREEN:
-        	if (key_pressed == 'A') {
-        		current_message_option = (current_message_option - 1 + 2) % 2; // Toggle between 1 and 2
-        	    update_display_for_message_option(current_message_option);
-        	}
-        	if (key_pressed == 'B') {
-        		current_message_option = (current_message_option + 1) % 2; // Toggle between 1 and 2
-        	    update_display_for_message_option(current_message_option);
-        	}
-        	if (key_pressed == '0') {
-				if (current_message_option == 0) {
-					enter_message_input(); // Enter message input for sending SMS
+void handle_key_press(char key_pressed, GSM_Module gsm) {
+	if (gsm.current_state == gsm.IDLE) {
+		switch (current_state) {
+			case STATE_MAIN_SCREEN:
+				if (key_pressed == '0') {
+					enter_menu();
 				}
-			}
-        	if (key_pressed == 'D') {
-				enter_menu();
-			}
-        	break;
-        case STATE_MESSAGE_SCREEN_INPUT:
-        	if (key_pressed = '#') {
-        		enter_message_text();
-        	}
-        	break;
-        case STATE_MESSAGE_TEXT:
-        	if (key_pressed = '#') {
-        		display_sent_sms(&lcd);
-				HAL_Delay(2000);
-				enter_main_screen();
-        	}
-        	break;
+				break;
+			case STATE_MENU:
+				if (key_pressed == 'A') {
+					current_option = (current_option - 1 + MAX_OPTIONS) % MAX_OPTIONS;
+					update_display_for_option(current_option);
+				} else if (key_pressed == 'B') {
+					current_option = (current_option + 1) % MAX_OPTIONS;
+					update_display_for_option(current_option);
+				} else if (key_pressed == '0') {
+					switch (current_option) {
+						case 0: enter_call_input(); break;
+						case 1: enter_messages(); break;
+					}
+				} else if (key_pressed == 'D') {
+					enter_main_screen(gsm);
+				}
+				break;
+			case STATE_CALL_INPUT:
+				if (key_pressed == '#') {
+					enter_calling();
+				} else if (key_pressed == 'D') {
+					enter_main_screen(gsm);
+				}
+				break;
+			case STATE_CALLING:
+				if (key_pressed == '#') {
+					gsm.make_call(entered_number.c_str());
+					enter_call(); // Transition to call process
+				} else if (key_pressed == '*') {
+					enter_main_screen(gsm); // Allow exit to main screen
+				}
+				break;
+//			case STATE_CALL:
+//				enter_hang_on_screen();
+//				if (key_pressed == '*') {
+//					enter_main_screen();
+//				}
+//				break;
+			case STATE_MESSAGES:
+				if (key_pressed == 'A') {
+					current_message_option = (current_message_option - 1 + 2) % 2; // Toggle between 1 and 2
+					update_display_for_message_option(current_message_option);
+				}
+				if (key_pressed == 'B') {
+					current_message_option = (current_message_option + 1) % 2; // Toggle between 1 and 2
+					update_display_for_message_option(current_message_option);
+				}
+				if (key_pressed == '0') {
+					if (current_message_option == 0) {
+//						enter_message_input(); // Enter message input for sending SMS
+					}
+				}
+				if (key_pressed == 'D') {
+					enter_menu();
+				}
+				break;
+			case STATE_MESSAGE_NUMBER:
+				if (key_pressed = '#') {
+					enter_message_text();
+				}
+				break;
+			case STATE_MESSAGE_TEXT:
+				if (key_pressed = '#') {
+					display_sent_sms(&lcd);
+					HAL_Delay(2000);
+					enter_main_screen(gsm);
+				}
+				break;
+			default:
+				enter_main_screen(gsm);
 
 
-    }
+		}
+	} else {
+		switch (current_state) {
+			case STATE_CALL:
+				if (key_pressed == '*') {
+					gsm.hang_up();
+					enter_main_screen(gsm);
+				}
+				break;
+			case STATE_INCOMING_CALL:
+				if (key_pressed == '*') {
+					gsm.receive_call();
+					enter_call();
+				} else if (key_pressed == '#') {
+					gsm.hang_up();
+					enter_main_screen(gsm);
+				}
+		}
+
+	}
 }
 
 
@@ -1039,6 +1061,25 @@ void handle_key_press(char key_pressed) {
 
 // Main function
 int main(void) {
+	/* USER CODE BEGIN 1 */
+
+    /* USER CODE END 1 */
+
+    /* MCU Configuration--------------------------------------------------------*/
+
+    /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+
+    /* USER CODE BEGIN Init */
+
+    /* USER CODE END Init */
+
+    /* Configure the system clock */
+
+    /* USER CODE BEGIN SysInit */
+
+    /* USER CODE END SysInit */
+
+    /* Initialize all configured peripherals */
     HAL_Init();
     SystemClock_Config();
 
@@ -1047,6 +1088,8 @@ int main(void) {
     MX_SPI1_Init();
     MX_USB_PCD_Init();
     MX_SPI2_Init();
+    MX_USART2_UART_Init();
+    /* USER CODE BEGIN 2 */
 
     lcd.hw_conf.spi_handle = &hspi2;
     lcd.hw_conf.spi_cs_pin = LCD1_CS_Pin;
@@ -1060,19 +1103,31 @@ int main(void) {
     LCD5110_init(&lcd.hw_conf, LCD5110_NORMAL_MODE, 0x40, 2, 3);
     keypad_init();
 
-    enter_main_screen();
+//    enter_main_screen(gsm);
 
     char key_pressed = 0;
 
+    Parameters parameters = load_parameters();
+    GSM_Module gsm(parameters);
+    enter_main_screen(gsm);
+
+    /* USER CODE END 2 */
+//    gsm.make_call("380661597304");
+
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
     while (1) {
+    	/* USER CODE END WHILE */
         key_pressed = keypad_scan();
         if (key_pressed != 0) {
           HAL_GPIO_WritePin(GPIOE, GPIO_PIN_8, GPIO_PIN_SET);
-            handle_key_press(key_pressed);
+            handle_key_press(key_pressed, gsm);
             HAL_Delay(2000);
           HAL_GPIO_WritePin(GPIOE, GPIO_PIN_8, GPIO_PIN_RESET);
         }
+        /* USER CODE BEGIN 3 */
     }
+    /* USER CODE END 3 */
 
     return 0;
 }
@@ -1127,50 +1182,51 @@ int main(void) {
   * @brief System Clock Configuration
   * @retval None
   */
-void SystemClock_Config(void){}
-////  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-////  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-////  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
-////
-////  /** Initializes the RCC Oscillators according to the specified parameters
-////  * in the RCC_OscInitTypeDef structure.
-////  */
-////  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
-////  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
-////  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
-////  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-////  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-////  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-////  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-////  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
-////  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-////  {
-////    Error_Handler();
-////  }
-////
-////  /** Initializes the CPU, AHB and APB buses clocks
-////  */
-////  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-////                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-////  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-////  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-////  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
-////  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
-////
-////  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
-////  {
-////    Error_Handler();
-////  }
-////  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB|RCC_PERIPHCLK_USART1
-////                              |RCC_PERIPHCLK_I2C1;
-////  PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
-////  PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_HSI;
-////  PeriphClkInit.USBClockSelection = RCC_USBCLKSOURCE_PLL;
-////  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-////  {
-////    Error_Handler();
-////  }
-//}
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB|RCC_PERIPHCLK_USART1
+                              |RCC_PERIPHCLK_I2C1;
+  PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
+  PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_HSI;
+  PeriphClkInit.USBClockSelection = RCC_USBCLKSOURCE_PLL;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
 
 /**
   * @brief I2C1 Initialization Function
