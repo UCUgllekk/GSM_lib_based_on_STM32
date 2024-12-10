@@ -795,7 +795,10 @@ int main(void){
   /* USER CODE BEGIN 2 */
   Parameters parameters = load_parameters();
   GSM_Module gsm(parameters);
-  gsm.send_sms("380671485000", "Ira idi naxui");
+
+//  gsm.make_call("380986629200");
+//  gsm.send_sms("380671485000", "Ira, vertaisya vid masika v k2 0 floor");
+  gsm.get_signal_strength();
   /* USER CODE END 2 */
 
   /* Infinite loop */

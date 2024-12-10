@@ -22,8 +22,8 @@ extern "C"{
 GSM_Module::GSM_Module(const Parameters& parameters){
 	gsm = this;
 	this->parameters = parameters;
-	if(!send_at_command(AT) && !send_at_command(MSG_TEXT_MODE) && !send_at_command(GPS_ON)){
-		Error_Handler();
+	if(!send_at_command(AT) || !send_at_command(MSG_TEXT_MODE) || !send_at_command(GPS_ON)){
+//		Error_Handler();
 	}
 	start_receiving();
 }
@@ -55,6 +55,45 @@ void GSM_Module::hang_up(){
 	this->prev_state = IDLE;
 }
 
+int GSM_Module::get_signal_strength() {
+	if (transmit(GET_SIGNAL, strlen(GET_SIGNAL))){
+//	HAL_Delay(20);
+//	start_receiving();
+		return signal;
+	}
+}
+
+void GSM_Module::receive_signal_strength(std::string buffer) {
+	int rssi = -1, ber = -1;
+	const std::string needle = "+CSQ:";
+
+	if (buffer.find(needle) != std::string::npos) {
+
+		size_t pos = needle.length();
+
+		rssi = 0;
+		while (pos < buffer.length() && buffer[pos] >= '0' && buffer[pos] <= '9') {
+			rssi = rssi * 10 + (buffer[pos] - '0');
+			pos++;
+		}
+
+		if (pos < buffer.length() && buffer[pos] == ',') {
+			pos++;
+		}
+
+		ber = 0;
+		while (pos < buffer.length() && buffer[pos] >= '0' && buffer[pos] <= '9') {
+			ber = ber * 10 + (buffer[pos] - '0');
+			pos++;
+		}
+
+		signal = rssi;
+	} else {
+
+//		make_call("380986629200");
+	}
+}
+
 bool GSM_Module::send_at_command(const char* command){
 	if (!transmit(command, strlen(command))){
 		return false;
@@ -71,16 +110,26 @@ void GSM_Module::handle_interruption(){
 
 	std::string buffer_to_str(reinterpret_cast<char*>(rx_buffer), rx_index);
 
-    if (buffer_to_str.find("RING") != std::string::npos) {
+	if (buffer_to_str.find("RING") != std::string::npos) {
 
-    	this->prev_state = this->current_state;
-    	this->current_state = RINGING;
+		receive_call();
+
+		this->prev_state = this->current_state;
+		this->current_state = RINGING;
 
     } else if (buffer_to_str.find("+CTM:") != std::string::npos) {
 
 //    	receive_sms();
 
-    } else {
+    } else if (buffer_to_str.find("+CSQ:") != std::string::npos) {
+//    	HAL_Delay(10);
+    	receive_signal_strength(buffer_to_str);
+
+	} else if (buffer_to_str.find("+CCLK:") != std::string::npos){
+
+		receive_date_and_time(buffer_to_str);
+
+	} else {
 
     	this->prev_state = this->current_state;
     	this->current_state = this->UNKNOWN;
@@ -118,47 +167,81 @@ void GSM_Module::send_sms(const char* number, const char* message){
     HAL_Delay(1000);
 }
 
-char* GSM_Module::receive_gps_data() {
-  char answer[256];
-  transmit(GET_TIME, strlen(GET_TIME));
-  receive(answer, 256);
+//char* GSM_Module::receive_gps_data() {
+//  char answer[256];
+//  transmit(GET_TIME, strlen(GET_TIME));
+//  receive(answer, 256);
+//
+//  return answer;
+//
+//}
 
-  return answer;
-
+std::pair<std::string, std::string> GSM_Module::get_date_and_time() {
+	transmit(GET_TIME, strlen(GET_TIME));
+	return std::make_pair(date, time);
 }
 
-char* GSM_Module::get_date() {
+void GSM_Module::receive_date_and_time(std::string buffer) {
+	size_t cclk_start = buffer.find("+CCLK: ");
 
-  char* buffer = receive_gps_data();
+	std::string time_string = buffer.substr(cclk_start + 7);
 
-//    const char* cclk_start = strstr(buffer, "+CCLK: ");
-//    if (!cclk_start) {
+	if (time_string[0] == '"') {
+		time_string = time_string.substr(1, time_string.size() - 2); // Remove quotes
+	}
+
+	int year, month, day, hh, mm, ss, tz;
+
+	sscanf(time_string.c_str(), "%2d/%2d/%2d,%2d:%2d:%2d+%2d", &year, &month, &day, &hh, &mm, &ss, &tz);
+
+	year += 2000;
+
+	char date_buffer[11];
+	snprintf(date_buffer, sizeof(date_buffer), "%4d/%02d/%02d", year, month, day);
+	date = std::string(date_buffer);
+
+	char time_buffer[9]; // "hh:mm:ss"
+	snprintf(time_buffer, sizeof(time_buffer), "%02d:%02d:%02d", hh, mm, ss);
+	time = std::string(time_buffer);
+}
+
+//std::string GSM_Module::get_time() {
+//	transmit(GET_TIME, strlen(GET_TIME));
+//	return time;
+//}
+
+//char* GSM_Module::get_date() {
+//
+//  char* buffer = receive_gps_data();
+//
+////    const char* cclk_start = strstr(buffer, "+CCLK: ");
+////    if (!cclk_start) {
+////        return NULL;
+////    }
+////
+////    char date_string[30];
+////    if (sscanf(cclk_start, "+CCLK: \"%[^\"]\"", date_string) != 1) {
+////        return NULL;
+////    }
+//
+//    int year, month, day;
+//    if (sscanf(buffer, "%2d/%2d/%2d,", &year, &month, &day) != 3) {
 //        return NULL;
 //    }
 //
-//    char date_string[30];
-//    if (sscanf(cclk_start, "+CCLK: \"%[^\"]\"", date_string) != 1) {
+//    make_call("380986629200");
+//
+//    year += 2000;
+//
+//    char* result = (char*)malloc(13 * sizeof(char));
+//    if (!result) {
 //        return NULL;
 //    }
-
-    int year, month, day;
-    if (sscanf(buffer, "%2d/%2d/%2d,", &year, &month, &day) != 3) {
-        return NULL;
-    }
-
-    make_call("380986629200");
-
-    year += 2000;
-
-    char* result = (char*)malloc(13 * sizeof(char));
-    if (!result) {
-        return NULL;
-    }
-
-    snprintf(result, 13, "%04d-%02d-%02d\r\n", year, month, day);
-
-    return result;
-}
+//
+//    snprintf(result, 13, "%04d-%02d-%02d\r\n", year, month, day);
+//
+//    return result;
+//}
 
 //char* GSM_Module::get_time() {
 //
@@ -192,33 +275,6 @@ char* GSM_Module::get_date() {
 //}
 //
 
-int GSM_Module::get_signal_strength() {
-  if(!transmit(GET_SIGNAL, strlen(GET_SIGNAL))){
-    make_call("380986629200");
-  }
-  HAL_Delay(500);
-    char response[256];
-//    make_call("380963809782");
-    if (!receive(response, sizeof(response))) {
-        make_call("380963809782");
-        return -1;
-    }
-
-    char* pos = strstr(response, "+CSQ:");
-    make_call("380986629200");
-    if (pos != nullptr) {
-        int rssi, ber;
-
-        if (sscanf(pos + 6, "%d,%d", &rssi, &ber) == 2) {
-            make_call("380986629200");
-
-            return rssi;
-        }
-        make_call("380683809782");
-    }
-
-    return -1;
-}
 
 void GSM_Module::start_receiving() {
     HAL_UART_Receive_IT(parameters.uart_handle, &rx_buffer[rx_index], 1);

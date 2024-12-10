@@ -56,11 +56,14 @@ public:
 	void start_receiving();
 
 	int get_signal_strength();
-	char* get_date();
-	char* receive_gps_data();
+	std::pair<std::string, std::string> GSM_Module::get_date();
+//	char* receive_gps_data();
 
 	State prev_state = IDLE;
 	State current_state = IDLE;
+
+	void receive_signal_strength(std::string buffer);
+	void receive_date_and_time(std::string buffer);
 
 private:
 
@@ -85,6 +88,10 @@ private:
 
 	void handle_interruption();
     friend void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart);
+
+    int signal = 0;
+    std::string time;
+    std::string date;
 
 };
 
