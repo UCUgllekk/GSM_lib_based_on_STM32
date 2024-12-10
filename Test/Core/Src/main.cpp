@@ -217,46 +217,6 @@ std::string read_input(LCD5110_display* lcd) {
     }
 }
 
-
-//std::string read_input(LCD5110_display* lcd) {
-//    size_t index = 0;
-//    char key;
-//    char buffer[11];
-//    std::memset(buffer, 0, 11);
-//
-//
-//    int cursor_x = 21;
-//
-//    while (true) {
-//        key = keypad_scan();
-//
-//        if (key != 0) {
-//            if (key == '#') {
-//            	return std::string(buffer);
-//            } else if (key == '*') {
-//                if (index > 0) {
-//                    index--;
-//                    buffer[index] = '\0';
-//                    cursor_x -= 6;
-//                    LCD5110_set_cursor(cursor_x, 34, lcd);
-//                    LCD5110_print(" ", BLACK, lcd);
-//                }
-//            } else if (index < sizeof(buffer) - 1) {
-//                buffer[index++] = key;
-//
-//                LCD5110_set_cursor(cursor_x, 34, lcd);
-//                char str[2] = {key, '\0'};
-//                LCD5110_print(str, BLACK, lcd);
-//                cursor_x += 6;
-//            }
-//            HAL_Delay(100);
-//            LCD5110_refresh(lcd);
-//        }
-//    }
-////    return std::string(buffer);
-//}
-
-
 void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
   LCD5110_clear_scr(lcd);
 
@@ -469,6 +429,34 @@ void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
   LCD5110_putpix(82, 8, BLACK, &lcd->hw_conf);
   LCD5110_putpix(83, 8, BLACK, &lcd->hw_conf);
 
+  if (gsm.signal >= 0) {
+      LCD5110_putpix(70, 7, BLACK, &lcd->hw_conf);
+    }
+
+    if (gsm.signal >= 9) {
+      LCD5110_putpix(74, 7, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(74, 6, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(74, 5, BLACK, &lcd->hw_conf);
+    }
+
+    if (gsm.signal >= 14) {
+      LCD5110_putpix(78, 7, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(78, 6, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(78, 5, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(78, 4, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(78, 3, BLACK, &lcd->hw_conf);
+    }
+
+    if (gsm.signal >= 19) {
+      LCD5110_putpix(82, 7, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(82, 6, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(82, 5, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(82, 4, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(82, 3, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(82, 2, BLACK, &lcd->hw_conf);
+      LCD5110_putpix(82, 1, BLACK, &lcd->hw_conf);
+    }
+
   int y_position = 35; // Y position for the menu button
   int rect_height = 8; // Height of the rectangle
   int rect_width = 8; // Full width of the screen (Nokia 5110)
@@ -517,8 +505,8 @@ void display_main_menu(LCD5110_display* lcd, int selected_num) {
         LCD5110_putpix(x, 9, BLACK, &lcd->hw_conf);
     }
 
-    const char* menu_items[] = {"> Call", "> Messages", "> Snake", "> Music"};
-    const int y_positions[] = {12, 20, 28, 36};
+    const char* menu_items[] = {"> Call", "> Messages", "> Snake"};
+    const int y_positions[] = {12, 20, 28};
     const int num_items = 4;
 
 
