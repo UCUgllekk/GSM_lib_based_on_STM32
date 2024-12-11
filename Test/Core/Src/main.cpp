@@ -977,7 +977,7 @@ void push_state(SystemState state) {
     state_stack.push(state);
 }
 
-void pop_state() {
+void pop_state(GSM_Module gsm) {
     if (!state_stack.empty()) {
         current_state = state_stack.top();
         state_stack.pop();
@@ -1096,7 +1096,7 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                 } else if (key_pressed == 'D') {
                     enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
-                    pop_state();
+                    pop_state(gsm);
                 }
                 break;
             case STATE_CALL_INPUT:
@@ -1105,7 +1105,7 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                 } else if (key_pressed == 'D') {
                     enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
-                    pop_state();
+                    pop_state(gsm);
                 }
                 break;
             case STATE_CALLING:
@@ -1114,7 +1114,7 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                 } else if (key_pressed == '*') {
                     enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
-                    pop_state();
+                    pop_state(gsm);
                 }
                 break;
             case STATE_MESSAGES:
@@ -1132,14 +1132,14 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                 } else if (key_pressed == 'D') {
                     enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
-                    pop_state();
+                    pop_state(gsm);
                 }
                 break;
             case STATE_MESSAGE_NUMBER:
                 if (key_pressed == '#') {
                     enter_message_text();
                 } else if (key_pressed == 'C') {
-                    pop_state();
+                    pop_state(gsm);
                 } else if (key_pressed == 'D') {
                 	enter_main_screen(gsm);
                 }
@@ -1150,7 +1150,7 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                     HAL_Delay(2000);
                     enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
-                    pop_state();
+                    pop_state(gsm);
                 } else if (key_pressed == 'D') {
                 	enter_main_screen(gsm);
                 }
@@ -1175,7 +1175,7 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                     gsm.hang_up();
                     enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
-                    pop_state();
+                    pop_state(gsm);
                 }
                 break;
         }
@@ -1242,8 +1242,8 @@ int main(void) {
 
     char key_pressed = 0;
 
-//    Parameters parameters = load_parameters();
-//    _Module (parameters);
+    Parameters parameters = load_parameters();
+    GSM_Module gsm(parameters);
     enter_main_screen(gsm);
 
     /* USER CODE END 2 */
@@ -1256,7 +1256,7 @@ int main(void) {
         key_pressed = keypad_scan();
         if (key_pressed != 0) {
           HAL_GPIO_WritePin(GPIOE, GPIO_PIN_8, GPIO_PIN_SET);
-            handle_key_press(key_pressed);
+            handle_key_press(key_pressed, gsm);
             HAL_Delay(2000);
           HAL_GPIO_WritePin(GPIOE, GPIO_PIN_8, GPIO_PIN_RESET);
         }
