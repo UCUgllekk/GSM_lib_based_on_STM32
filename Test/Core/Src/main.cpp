@@ -179,8 +179,6 @@ std::string read_input(LCD5110_display* lcd) {
 
     while (true) {
         key = keypad_scan(); // Get key from the keypad
-
-        // Check if key is pressed and debounce
         if (key != 0 && (HAL_GetTick() - last_key_time > debounce_delay)) {
             last_key_time = HAL_GetTick(); // Update last key time
 
@@ -227,7 +225,6 @@ std::string read_input_message(LCD5110_display* lcd) {
 
     while (true) {
         key = keypad_scan(); // Get key from the keypad
-        // Check if key is pressed and debounce
         if (key != 0 && (HAL_GetTick() - last_key_time > debounce_delay)) {
             last_key_time = HAL_GetTick(); // Update last key time
 
@@ -251,59 +248,18 @@ std::string read_input_message(LCD5110_display* lcd) {
                     cursor_x += 6; // Move the cursor forward
                 }
             } else {
-                // If the key is not a digit and not '*' or '#', display error message
                 LCD5110_set_cursor(0, 40, lcd);
                 LCD5110_print("Invalid input", BLACK, lcd); // Print error message
                 HAL_Delay(1000); // Wait for 1 second to show the error message
                 LCD5110_set_cursor(0, 40, lcd);
-                LCD5110_print("              ", BLACK, lcd); // Clear the error message
+                LCD5110_print("              ", BLACK, lcd);
             }
 
-            HAL_Delay(150); // Small delay to debounce
-            LCD5110_refresh(lcd); // Refresh the display
+            HAL_Delay(150);
+            LCD5110_refresh(lcd);
         }
     }
 }
-
-
-//std::string read_input(LCD5110_display* lcd) {
-//    size_t index = 0;
-//    char key;
-//    char buffer[11];
-//    std::memset(buffer, 0, 11);
-//
-//
-//    int cursor_x = 21;
-//
-//    while (true) {
-//        key = keypad_scan();
-//
-//        if (key != 0) {
-//            if (key == '#') {
-//            	return std::string(buffer);
-//            } else if (key == '*') {
-//                if (index > 0) {
-//                    index--;
-//                    buffer[index] = '\0';
-//                    cursor_x -= 6;
-//                    LCD5110_set_cursor(cursor_x, 34, lcd);
-//                    LCD5110_print(" ", BLACK, lcd);
-//                }
-//            } else if (index < sizeof(buffer) - 1) {
-//                buffer[index++] = key;
-//
-//                LCD5110_set_cursor(cursor_x, 34, lcd);
-//                char str[2] = {key, '\0'};
-//                LCD5110_print(str, BLACK, lcd);
-//                cursor_x += 6;
-//            }
-//            HAL_Delay(100);
-//            LCD5110_refresh(lcd);
-//        }
-//    }
-////    return std::string(buffer);
-//}
-
 
 void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
   LCD5110_clear_scr(lcd);
@@ -583,7 +539,6 @@ void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
 
 
 void display_main_menu(LCD5110_display* lcd, int selected_num) {
-    // Clear the screen
     LCD5110_clear_scr(lcd);
 
     LCD5110_set_cursor(31, 0, lcd);
@@ -600,7 +555,6 @@ void display_main_menu(LCD5110_display* lcd, int selected_num) {
 
     for (int i = 0; i < num_items; i++) {
         if (selected_num == i + 1) {
-            // Draw a filled rectangle to highlight the selected item
             for (int x = 0; x < 84; x++) {
                 for (int y = y_positions[i]; y < y_positions[i] + 8; y++) {
                     LCD5110_putpix(x, y, BLACK, &lcd->hw_conf);
@@ -609,7 +563,6 @@ void display_main_menu(LCD5110_display* lcd, int selected_num) {
             LCD5110_set_cursor(0, y_positions[i], lcd);
             LCD5110_print(menu_items[i], WHITE, lcd);
         } else {
-            // Print the item in black color
             LCD5110_set_cursor(0, y_positions[i], lcd);
             LCD5110_print(menu_items[i], BLACK, lcd);
         }
@@ -619,7 +572,7 @@ void display_main_menu(LCD5110_display* lcd, int selected_num) {
 
 
 void display_messages_screen(LCD5110_display* lcd, int selected_num) {
-    LCD5110_clear_scr(lcd); // CLEAR THE SCREEN
+    LCD5110_clear_scr(lcd);
 
     LCD5110_set_cursor(21, 0, lcd);
     LCD5110_print("Messages", BLACK, lcd);
@@ -642,7 +595,6 @@ void display_messages_screen(LCD5110_display* lcd, int selected_num) {
         LCD5110_set_cursor(0, y_positions[i], lcd);
         LCD5110_print(menu_items[i], WHITE, lcd);
       } else {
-            // Print the item in black color
             LCD5110_set_cursor(0, y_positions[i], lcd);
             LCD5110_print(menu_items[i], BLACK, lcd);
         }
@@ -652,7 +604,7 @@ void display_messages_screen(LCD5110_display* lcd, int selected_num) {
 
 
 void display_call_screen(LCD5110_display* lcd) {
-    LCD5110_clear_scr(lcd); // Очистити екран
+    LCD5110_clear_scr(lcd);
 
     LCD5110_set_cursor(31, 0, lcd);
     LCD5110_print("Call", BLACK, lcd);
@@ -667,7 +619,6 @@ void display_call_screen(LCD5110_display* lcd) {
     LCD5110_set_cursor(1, 34, lcd);
     LCD5110_print("+38", BLACK, lcd);
 
-    // Відобразити рамку для номера
 
     int x_start = 19;
     int x_end = 83;
@@ -692,7 +643,6 @@ void display_call_screen(LCD5110_display* lcd) {
 
     LCD5110_refresh(lcd);
 
-    // Виклик функції для зчитування вводу з клавіатури
     std::string phone_number = read_input(lcd);
 
 }
@@ -711,9 +661,8 @@ void display_call_process(LCD5110_display* lcd) {
        LCD5110_print("Empty", BLACK, lcd);
     } else{
 
-    // Display the entered number
     LCD5110_set_cursor(x_start, y_start, lcd);
-    LCD5110_print(entered_number.c_str(), BLACK, lcd); // Use entered_number instead of "+380........."
+    LCD5110_print(entered_number.c_str(), BLACK, lcd);
     }
     LCD5110_set_cursor(0, 35, lcd);
     LCD5110_print("Press * to end", BLACK, lcd);
@@ -915,6 +864,78 @@ void display_calling(LCD5110_display* lcd, char keyPressed) {
     LCD5110_refresh(lcd);
 }
 
+const int MAX_VISIBLE_MESSAGES = 5;
+
+void display_messages_list(LCD5110_display* lcd, const std::vector<std::string>& messages) {
+    int selected_message = 0;
+    int scroll_offset = 0;
+
+    while (true) {
+        LCD5110_clear_scr(lcd);
+
+        // Title "Received SMS"
+        LCD5110_set_cursor(10, 0, lcd);
+        LCD5110_print("Received SMS", BLACK, lcd);
+
+        // Horizontal line under the title
+        for (int x = 0; x < 84; x++) {
+            LCD5110_putpix(x, 9, BLACK, &lcd->hw_conf);
+        }
+
+        // Display visible messages
+        for (int i = 0; i < MAX_VISIBLE_MESSAGES; ++i) {
+            int msg_index = scroll_offset + i;
+            if (msg_index >= messages.size()) {
+                break; // No more messages
+            }
+
+            // Adjust the starting Y position for the messages
+            int y_position = 12 + i * 8; // Start at 12px instead of 10px
+
+            if (msg_index == selected_message) {
+                // Highlight selected message with a black background
+                for (int x = 0; x < 84; ++x) {
+                    for (int y = y_position; y < y_position + 8; ++y) {
+                        LCD5110_putpix(x, y, BLACK, &lcd->hw_conf);
+                    }
+                }
+                LCD5110_set_cursor(0, y_position, lcd);
+                LCD5110_print(("> " + messages[msg_index]).c_str(), WHITE, lcd); // White text on black background
+            } else {
+                // Regular message
+                LCD5110_set_cursor(0, y_position, lcd);
+                LCD5110_print(("> " + messages[msg_index]).c_str(), BLACK, lcd);
+            }
+        }
+
+        LCD5110_refresh(lcd); // Refresh display
+
+        // Navigation input
+        char key = keypad_scan();
+
+        if (key == 'A') { // Up
+            if (selected_message > 0) {
+                --selected_message;
+                if (selected_message < scroll_offset) {
+                    --scroll_offset; // Scroll up
+                }
+            }
+        } else if (key == 'B') { // Down
+            if (selected_message < messages.size() - 1) {
+                ++selected_message;
+                if (selected_message >= scroll_offset + MAX_VISIBLE_MESSAGES) {
+                    ++scroll_offset; // Scroll down
+                }
+            }
+        } else if (key == '#') { // Select message
+            return; // Exit the function
+        }
+
+        HAL_Delay(150); // Debounce delay
+    }
+}
+
+
 typedef enum {
     STATE_MAIN_SCREEN,
     STATE_MENU,
@@ -925,6 +946,7 @@ typedef enum {
     STATE_MESSAGES,
     STATE_MESSAGE_NUMBER,
     STATE_MESSAGE_TEXT,
+	STATE_RECIEVED,
     STATE_SNAKE_SCREEN
 } SystemState;
 
@@ -946,7 +968,19 @@ int MAX_OPTIONS = 3;
 SystemState current_state = STATE_MAIN_SCREEN;
 std::stack<SystemState> state_stack;
 int current_option = 0;
-int current_message_option = 1;
+int current_message_option = 0;
+
+std::vector<std::string> messages = {
+    "Hello there!",
+    "How are you?",
+    "This is a test message.",
+    "Please reply ASAP.",
+    "Don't forget the meeting.",
+    "Urgent: System update required.",
+    "Reminder: Code review tomorrow.",
+    "Lunch at 12:00?"
+};
+
 
 void update_display_for_option(int option) {
     switch (option) {
@@ -1011,6 +1045,9 @@ void pop_state(GSM_Module gsm) {
             case STATE_MESSAGE_TEXT:
                 display_send_sms_input(&lcd);
                 break;
+            case STATE_RECIEVED:
+            	display_messages_list(&lcd, messages);
+            	break;
             default:
                 break;
         }
@@ -1073,6 +1110,13 @@ void enter_message_text() {
     current_state = STATE_MESSAGE_TEXT;
 }
 
+void enter_recieved() {
+	display_messages_list(&lcd, messages);
+	push_state(current_state);
+	current_state = STATE_RECIEVED;
+
+}
+
 void handle_key_press(char key_pressed, GSM_Module gsm) {
     if (gsm.current_state == gsm.IDLE) {
         switch (current_state) {
@@ -1085,62 +1129,73 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                 if (key_pressed == 'A') {
                     current_option = (current_option - 1 + MAX_OPTIONS) % MAX_OPTIONS;
                     update_display_for_option(current_option);
-                } else if (key_pressed == 'B') {
+                }
+                if (key_pressed == 'B') {
                     current_option = (current_option + 1) % MAX_OPTIONS;
                     update_display_for_option(current_option);
-                } else if (key_pressed == '0') {
+                }
+                if (key_pressed == '0') {
                     switch (current_option) {
                         case 0: enter_call_input(); break;
                         case 1: enter_messages(); break;
                     }
-                } else if (key_pressed == 'D') {
+                }
+                if (key_pressed == 'D') {
                     enter_main_screen(gsm);
-                } else if (key_pressed == 'C') {
+                }
+                if (key_pressed == 'C') {
                     pop_state(gsm);
                 }
                 break;
             case STATE_CALL_INPUT:
                 if (key_pressed == '#') {
                     enter_calling();
-                } else if (key_pressed == 'D') {
+                }
+                if (key_pressed == 'D') {
                     enter_main_screen(gsm);
-                } else if (key_pressed == 'C') {
+                }
+                if (key_pressed == 'C') {
                     pop_state(gsm);
                 }
                 break;
             case STATE_CALLING:
                 if (key_pressed == '#') {
                     enter_call();
-                } else if (key_pressed == '*') {
+                }
+                if (key_pressed == '*') {
                     enter_main_screen(gsm);
-                } else if (key_pressed == 'C') {
-                    pop_state(gsm);
                 }
                 break;
             case STATE_MESSAGES:
                 if (key_pressed == 'A') {
                     current_message_option = (current_message_option - 1 + 2) % 2;
                     update_display_for_message_option(current_message_option);
-                } else if (key_pressed == 'B') {
+                }
+                if (key_pressed == 'B') {
                     current_message_option = (current_message_option + 1) % 2;
                     update_display_for_message_option(current_message_option);
-                } else if (key_pressed == '0') {
+                }
+                if (key_pressed == '0') {
                 	switch (current_message_option) {
-						case 0: enter_message_number(); break;
-//						case 1: enter_message(); break;
-					}
-                } else if (key_pressed == 'D') {
+				case 0: enter_message_number(); break;
+				case 1: enter_recieved();
+			}
+                }
+                if (key_pressed == 'D') {
                     enter_main_screen(gsm);
-                } else if (key_pressed == 'C') {
+                }
+                if (key_pressed == 'C') {
                     pop_state(gsm);
                 }
                 break;
             case STATE_MESSAGE_NUMBER:
                 if (key_pressed == '#') {
                     enter_message_text();
-                } else if (key_pressed == 'C') {
+                }
+                if (key_pressed == 'C') {
                     pop_state(gsm);
-                } else if (key_pressed == 'D') {
+                }
+                if (key_pressed == 'D') {
                 	enter_main_screen(gsm);
                 }
                 break;
@@ -1149,12 +1204,22 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                     display_sent_sms(&lcd);
                     HAL_Delay(2000);
                     enter_main_screen(gsm);
-                } else if (key_pressed == 'C') {
+                }
+                if (key_pressed == 'C') {
                     pop_state(gsm);
-                } else if (key_pressed == 'D') {
+                }
+                if (key_pressed == 'D') {
                 	enter_main_screen(gsm);
                 }
                 break;
+            case STATE_RECIEVED:
+            	display_messages_list(&lcd, messages);
+            	if (key_pressed == 'C') {
+					pop_state(gsm);
+				}
+				if (key_pressed == 'D') {
+					enter_main_screen(gsm);
+				}
             default:
                 enter_main_screen(gsm);
         }
@@ -1164,18 +1229,16 @@ void handle_key_press(char key_pressed, GSM_Module gsm) {
                 if (key_pressed == '*') {
                     gsm.hang_up();
                     enter_main_screen(gsm);
-                } else if (key_pressed == 'C') {
                 }
                 break;
             case STATE_INCOMING_CALL:
                 if (key_pressed == '*') {
                     gsm.receive_call();
                     enter_call();
-                } else if (key_pressed == '#') {
+                }
+                if (key_pressed == '#') {
                     gsm.hang_up();
                     enter_main_screen(gsm);
-                } else if (key_pressed == 'C') {
-                    pop_state(gsm);
                 }
                 break;
         }
