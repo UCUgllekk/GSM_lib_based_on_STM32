@@ -34,6 +34,7 @@ extern "C"{
 #include <queue>
 #include <fstream>
 #include <string>
+#include <stack>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -64,8 +65,8 @@ LCD5110_display lcd;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-//void handle_state_machine(GSM_Module& gsm);
-//GSMState parse_command(const std::string& command, GSM_Module gsm);
+//void handle_state_machine(GSM_Module& );
+//State parse_command(const std::string& command, GSM_Module );
 //std::string read_keyboard_input();
 /* USER CODE END PFP */
 
@@ -216,6 +217,93 @@ std::string read_input(LCD5110_display* lcd) {
         }
     }
 }
+
+std::string entered_message = "";
+std::string read_input_message(LCD5110_display* lcd) {
+    char key;
+    int cursor_x = 21; // Starting position for the cursor on the display
+    unsigned long last_key_time = 0; // Time of the last key press
+    unsigned long debounce_delay = 200; // 200 ms debounce delay
+
+    while (true) {
+        key = keypad_scan(); // Get key from the keypad
+        // Check if key is pressed and debounce
+        if (key != 0 && (HAL_GetTick() - last_key_time > debounce_delay)) {
+            last_key_time = HAL_GetTick(); // Update last key time
+
+            if (key == '#') {
+                return entered_message;  // Return the global variable
+            }
+            if (key == '*') {
+                if (!entered_message.empty()) { // Handle backspace if not empty
+                  entered_message.pop_back(); // Remove the last character
+                    cursor_x = std::max(21, cursor_x - 6); // Prevent cursor from going past the start
+                    LCD5110_set_cursor(cursor_x, 34, lcd);
+                    LCD5110_print(" ", BLACK, lcd); // Clear the character on the display
+                }
+            } else if (key >= '0' && key <= '9') { // Check if the key is a digit
+                if (entered_message.length() < 10) { // Ensure the input doesn't exceed 10 characters
+                  entered_message.push_back(key); // Append the key to the global variable
+
+                    LCD5110_set_cursor(cursor_x, 34, lcd);
+                    char str[2] = {key, '\0'}; // Temporary string for display
+                    LCD5110_print(str, BLACK, lcd); // Print character on the display
+                    cursor_x += 6; // Move the cursor forward
+                }
+            } else {
+                // If the key is not a digit and not '*' or '#', display error message
+                LCD5110_set_cursor(0, 40, lcd);
+                LCD5110_print("Invalid input", BLACK, lcd); // Print error message
+                HAL_Delay(1000); // Wait for 1 second to show the error message
+                LCD5110_set_cursor(0, 40, lcd);
+                LCD5110_print("              ", BLACK, lcd); // Clear the error message
+            }
+
+            HAL_Delay(150); // Small delay to debounce
+            LCD5110_refresh(lcd); // Refresh the display
+        }
+    }
+}
+
+
+//std::string read_input(LCD5110_display* lcd) {
+//    size_t index = 0;
+//    char key;
+//    char buffer[11];
+//    std::memset(buffer, 0, 11);
+//
+//
+//    int cursor_x = 21;
+//
+//    while (true) {
+//        key = keypad_scan();
+//
+//        if (key != 0) {
+//            if (key == '#') {
+//            	return std::string(buffer);
+//            } else if (key == '*') {
+//                if (index > 0) {
+//                    index--;
+//                    buffer[index] = '\0';
+//                    cursor_x -= 6;
+//                    LCD5110_set_cursor(cursor_x, 34, lcd);
+//                    LCD5110_print(" ", BLACK, lcd);
+//                }
+//            } else if (index < sizeof(buffer) - 1) {
+//                buffer[index++] = key;
+//
+//                LCD5110_set_cursor(cursor_x, 34, lcd);
+//                char str[2] = {key, '\0'};
+//                LCD5110_print(str, BLACK, lcd);
+//                cursor_x += 6;
+//            }
+//            HAL_Delay(100);
+//            LCD5110_refresh(lcd);
+//        }
+//    }
+////    return std::string(buffer);
+//}
+
 
 void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
   LCD5110_clear_scr(lcd);
@@ -429,37 +517,37 @@ void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
   LCD5110_putpix(82, 8, BLACK, &lcd->hw_conf);
   LCD5110_putpix(83, 8, BLACK, &lcd->hw_conf);
 
-  if (gsm.signal >= 0) {
-      LCD5110_putpix(70, 7, BLACK, &lcd->hw_conf);
-    }
+	  if (gsm.signal >= 0) {
+		LCD5110_putpix(70, 7, BLACK, &lcd->hw_conf);
+	      }
 
-    if (gsm.signal >= 9) {
-      LCD5110_putpix(74, 7, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(74, 6, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(74, 5, BLACK, &lcd->hw_conf);
-    }
+		  if (gsm.signal >= 9) {
+			LCD5110_putpix(74, 7, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(74, 6, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(74, 5, BLACK, &lcd->hw_conf);
+		  }
 
-    if (gsm.signal >= 14) {
-      LCD5110_putpix(78, 7, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(78, 6, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(78, 5, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(78, 4, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(78, 3, BLACK, &lcd->hw_conf);
-    }
+		  if (gsm.signal >= 14) {
+			LCD5110_putpix(78, 7, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(78, 6, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(78, 5, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(78, 4, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(78, 3, BLACK, &lcd->hw_conf);
+		  }
 
-    if (gsm.signal >= 19) {
-      LCD5110_putpix(82, 7, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(82, 6, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(82, 5, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(82, 4, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(82, 3, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(82, 2, BLACK, &lcd->hw_conf);
-      LCD5110_putpix(82, 1, BLACK, &lcd->hw_conf);
-    }
+		  if (gsm.signal >= 19) {
+			LCD5110_putpix(82, 7, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 6, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 5, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 4, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 3, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 2, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 1, BLACK, &lcd->hw_conf);
+		  }
 
-  int y_position = 35; // Y position for the menu button
-  int rect_height = 8; // Height of the rectangle
-  int rect_width = 8; // Full width of the screen (Nokia 5110)
+	int y_position = 35; // Y position for the menu button
+	int rect_height = 8; // Height of the rectangle
+	int rect_width = 8; // Full width of the screen (Nokia 5110)
 
   if (menu == 1) {
     // Draw a black rectangle
@@ -507,7 +595,7 @@ void display_main_menu(LCD5110_display* lcd, int selected_num) {
 
     const char* menu_items[] = {"> Call", "> Messages", "> Snake"};
     const int y_positions[] = {12, 20, 28};
-    const int num_items = 4;
+    const int num_items = 3;
 
 
     for (int i = 0; i < num_items; i++) {
@@ -720,44 +808,54 @@ void display_send_sms(LCD5110_display* lcd) {
 
 }
 
+void display_send_sms_input(LCD5110_display* lcd) {
+    LCD5110_clear_scr(lcd); // Clear the screen
 
+    // Display "Send SMS" at the top
+    LCD5110_set_cursor(25, 0, lcd);
+    LCD5110_print("Send SMS", BLACK, lcd);
 
-void display_send_sms_input(LCD5110_display* lcd){
-  LCD5110_clear_scr(lcd);
+    // Draw a horizontal line under the title
+    for (int x = 0; x < 84; x++) {
+        LCD5110_putpix(x, 9, BLACK, &lcd->hw_conf);
+    }
 
-  LCD5110_set_cursor(17, 0, lcd);
-  LCD5110_print("Send SMS", BLACK, lcd);
+    // Display "Enter SMS:" prompt
+    LCD5110_set_cursor(3, 14, lcd);
+    LCD5110_print("Enter SMS:", BLACK, lcd);
 
-  for (int x = 0; x < 84; x++) {
-    LCD5110_putpix(x, 9, BLACK, &lcd->hw_conf);
-  }
+    // Display a frame for the SMS message input
+    int x_start = 1;
+    int x_end = 83;
+    int y_start = 32;
+    int y_end = 42;
 
-  LCD5110_set_cursor(3, 14, lcd);
-  LCD5110_print("Enter SMS:", BLACK, lcd);
+    // Top border of the frame
+    for (int x = x_start; x < x_end; x++) {
+        LCD5110_putpix(x, y_start, BLACK, &lcd->hw_conf);
+    }
 
-  int x_start = 0;
-  int x_end = 84;
-  int y_start = 25;
-  int y_end = 41;
+    // Bottom border of the frame
+    for (int x = x_start; x < x_end; x++) {
+        LCD5110_putpix(x, y_end, BLACK, &lcd->hw_conf);
+    }
 
-  for (int x = x_start; x < x_end; x++) {
-    LCD5110_putpix(x, y_start, BLACK, &lcd->hw_conf);
-  }
+    // Left border of the frame
+    for (int y = y_start; y <= y_end; y++) {
+        LCD5110_putpix(x_start, y, BLACK, &lcd->hw_conf);
+    }
 
-  for (int x = x_start; x < x_end; x++) {
-    LCD5110_putpix(x, y_end, BLACK, &lcd->hw_conf);
-  }
+    // Right border of the frame
+    for (int y = y_start; y <= y_end; y++) {
+        LCD5110_putpix(x_end - 1, y, BLACK, &lcd->hw_conf);
+    }
 
-  for (int y = y_start; y <= y_end; y++) {
-    LCD5110_putpix(x_start, y, BLACK, &lcd->hw_conf);
-  }
+    LCD5110_refresh(lcd); // Refresh the display
 
-  for (int y = y_start; y <= y_end; y++) {
-    LCD5110_putpix(x_end - 1, y, BLACK, &lcd->hw_conf);
-      }
-
-  LCD5110_refresh(lcd);
+    // Call the function to read input from the keypad
+    std::string sms_message = read_input_message(lcd);
 }
+
 
 void display_sent_sms(LCD5110_display* lcd){
   LCD5110_clear_scr(lcd);
@@ -821,19 +919,13 @@ typedef enum {
     STATE_MAIN_SCREEN,
     STATE_MENU,
     STATE_CALL_INPUT,
-	STATE_CALLING,
-	STATE_CALL,
-	STATE_INCOMING_CALL,
+    STATE_CALLING,
+    STATE_CALL,
+    STATE_INCOMING_CALL,
     STATE_MESSAGES,
-	STATE_MESSAGE_NUMBER,
-	STATE_MESSAGE_TEXT,
-    STATE_SNAKE_SCREEN,
-    STATE_MUSIC_SCREEN,
-//    STATE_CALL_INPUT,
-//    STATE_CALL_PROCESS,
-//	STATE_CALL,
-
-    STATE_HANG_ON_SCREEN
+    STATE_MESSAGE_NUMBER,
+    STATE_MESSAGE_TEXT,
+    STATE_SNAKE_SCREEN
 } SystemState;
 
 void update_display_for_option(int option);
@@ -843,16 +935,16 @@ void enter_menu();
 void enter_call();
 void enter_call_input();
 void enter_calling();
-//void enter_hang_on_screen();
 void enter_messages();
-void enter_message_input();
+void enter_message_number();
 void enter_message_text();
 char keypad_scan();
 void handle_key_press(char key_pressed);
 
-int MAX_OPTIONS = 4;
+int MAX_OPTIONS = 3;
 
 SystemState current_state = STATE_MAIN_SCREEN;
+std::stack<SystemState> state_stack;
 int current_option = 0;
 int current_message_option = 1;
 
@@ -867,175 +959,230 @@ void update_display_for_option(int option) {
         case 2:
             display_main_menu(&lcd, 3);
             break;
-        case 3:
-            display_main_menu(&lcd, 4);
-            break;
     }
 }
 
 void update_display_for_message_option(int option) {
     switch (option) {
         case 0:
-        	display_messages_screen(&lcd,1);
+            display_messages_screen(&lcd, 1);
             break;
         case 1:
-        	display_messages_screen(&lcd,2);
+            display_messages_screen(&lcd, 2);
             break;
     }
 }
 
+void push_state(SystemState state) {
+    state_stack.push(state);
+}
+
+void pop_state() {
+    if (!state_stack.empty()) {
+        current_state = state_stack.top();
+        state_stack.pop();
+
+        // Update the display based on the restored state
+        switch (current_state) {
+            case STATE_MAIN_SCREEN:
+            	display_main_screen(&lcd, 0, gsm);
+                break;
+            case STATE_MENU:
+                display_main_menu(&lcd, 0);
+                update_display_for_option(current_option);
+                break;
+            case STATE_CALL_INPUT:
+                display_call_screen(&lcd);
+                read_input(&lcd);
+                break;
+            case STATE_CALLING:
+                display_call_process(&lcd);
+                break;
+            case STATE_CALL:
+                display_hang_up_call_process(&lcd);
+                break;
+            case STATE_MESSAGES:
+                display_messages_screen(&lcd, 0);
+                update_display_for_message_option(current_message_option);
+                break;
+            case STATE_MESSAGE_NUMBER:
+                display_send_sms(&lcd);
+                break;
+            case STATE_MESSAGE_TEXT:
+                display_send_sms_input(&lcd);
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+
 void enter_main_screen(GSM_Module gsm) {
     display_main_screen(&lcd, 0, gsm);
     entered_number.clear();
+    entered_message.clear();
+    push_state(current_state);
     current_state = STATE_MAIN_SCREEN;
 }
 
 void enter_menu() {
     display_main_menu(&lcd, 0);
     update_display_for_option(current_option);
+    push_state(current_state);
     current_state = STATE_MENU;
 }
 
-//void enter_call_input() {
-//    display_call_screen(&lcd);
-//    current_state = STATE_CALL_INPUT;
-//}
-
 void enter_call_input() {
-	display_call_screen(&lcd);
+    display_call_screen(&lcd);
     read_input(&lcd);
+    push_state(current_state);
     current_state = STATE_CALL_INPUT;
 }
 
 void enter_calling() {
     display_call_process(&lcd);
+    push_state(current_state);
     current_state = STATE_CALLING;
 }
 
 void enter_call() {
-	display_hang_up_call_process(&lcd);
+    display_hang_up_call_process(&lcd);
+    push_state(current_state);
     current_state = STATE_CALL;
-    // Wait for 2 seconds before returning to the main screen
-//    HAL_Delay(2000);
-//    enter_main_screen();
 }
 
 void enter_messages() {
-	display_messages_screen(&lcd,0);
+    display_messages_screen(&lcd, 0);
     current_message_option = 0;
+    push_state(current_state);
     current_state = STATE_MESSAGES;
 }
 
 void enter_message_number() {
-	display_send_sms(&lcd);  // Display the phone input screen (or you can swap this with text input if needed)
-    current_state = STATE_MESSAGE_NUMBER;  // Assuming phone input screen is the initial state
+    display_send_sms(&lcd);
+    read_input(&lcd);
+    push_state(current_state);
+    current_state = STATE_MESSAGE_NUMBER;
 }
 
-void enter_message_text(){
-	display_send_sms_input(&lcd);
-	current_state = STATE_MESSAGE_TEXT;
+void enter_message_text() {
+    display_send_sms_input(&lcd);
+    read_input(&lcd);
+    push_state(current_state);
+    current_state = STATE_MESSAGE_TEXT;
 }
 
 void handle_key_press(char key_pressed, GSM_Module gsm) {
-	if (gsm.current_state == gsm.IDLE) {
-		switch (current_state) {
-			case STATE_MAIN_SCREEN:
-				if (key_pressed == '0') {
-					enter_menu();
-				}
-				break;
-			case STATE_MENU:
-				if (key_pressed == 'A') {
-					current_option = (current_option - 1 + MAX_OPTIONS) % MAX_OPTIONS;
-					update_display_for_option(current_option);
-				} else if (key_pressed == 'B') {
-					current_option = (current_option + 1) % MAX_OPTIONS;
-					update_display_for_option(current_option);
-				} else if (key_pressed == '0') {
-					switch (current_option) {
-						case 0: enter_call_input(); break;
-						case 1: enter_messages(); break;
+    if (gsm.current_state == gsm.IDLE) {
+        switch (current_state) {
+            case STATE_MAIN_SCREEN:
+                if (key_pressed == '0') {
+                    enter_menu();
+                }
+                break;
+            case STATE_MENU:
+                if (key_pressed == 'A') {
+                    current_option = (current_option - 1 + MAX_OPTIONS) % MAX_OPTIONS;
+                    update_display_for_option(current_option);
+                } else if (key_pressed == 'B') {
+                    current_option = (current_option + 1) % MAX_OPTIONS;
+                    update_display_for_option(current_option);
+                } else if (key_pressed == '0') {
+                    switch (current_option) {
+                        case 0: enter_call_input(); break;
+                        case 1: enter_messages(); break;
+                    }
+                } else if (key_pressed == 'D') {
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                    pop_state();
+                }
+                break;
+            case STATE_CALL_INPUT:
+                if (key_pressed == '#') {
+                    enter_calling();
+                } else if (key_pressed == 'D') {
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                    pop_state();
+                }
+                break;
+            case STATE_CALLING:
+                if (key_pressed == '#') {
+                    enter_call();
+                } else if (key_pressed == '*') {
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                    pop_state();
+                }
+                break;
+            case STATE_MESSAGES:
+                if (key_pressed == 'A') {
+                    current_message_option = (current_message_option - 1 + 2) % 2;
+                    update_display_for_message_option(current_message_option);
+                } else if (key_pressed == 'B') {
+                    current_message_option = (current_message_option + 1) % 2;
+                    update_display_for_message_option(current_message_option);
+                } else if (key_pressed == '0') {
+                	switch (current_message_option) {
+						case 0: enter_message_number(); break;
+//						case 1: enter_message(); break;
 					}
-				} else if (key_pressed == 'D') {
-					enter_main_screen(gsm);
-				}
-				break;
-			case STATE_CALL_INPUT:
-				if (key_pressed == '#') {
-					enter_calling();
-				} else if (key_pressed == 'D') {
-					enter_main_screen(gsm);
-				}
-				break;
-			case STATE_CALLING:
-				if (key_pressed == '#') {
-					gsm.make_call(entered_number.c_str());
-					enter_call(); // Transition to call process
-				} else if (key_pressed == '*') {
-					enter_main_screen(gsm); // Allow exit to main screen
-				}
-				break;
-//			case STATE_CALL:
-//				enter_hang_on_screen();
-//				if (key_pressed == '*') {
-//					enter_main_screen();
-//				}
-//				break;
-			case STATE_MESSAGES:
-				if (key_pressed == 'A') {
-					current_message_option = (current_message_option - 1 + 2) % 2; // Toggle between 1 and 2
-					update_display_for_message_option(current_message_option);
-				}
-				if (key_pressed == 'B') {
-					current_message_option = (current_message_option + 1) % 2; // Toggle between 1 and 2
-					update_display_for_message_option(current_message_option);
-				}
-				if (key_pressed == '0') {
-					if (current_message_option == 0) {
-//						enter_message_input(); // Enter message input for sending SMS
-					}
-				}
-				if (key_pressed == 'D') {
-					enter_menu();
-				}
-				break;
-			case STATE_MESSAGE_NUMBER:
-				if (key_pressed = '#') {
-					enter_message_text();
-				}
-				break;
-			case STATE_MESSAGE_TEXT:
-				if (key_pressed = '#') {
-					display_sent_sms(&lcd);
-					HAL_Delay(2000);
-					enter_main_screen(gsm);
-				}
-				break;
-			default:
-				enter_main_screen(gsm);
-
-
-		}
-	} else {
-		switch (current_state) {
-			case STATE_CALL:
-				if (key_pressed == '*') {
-					gsm.hang_up();
-					enter_main_screen(gsm);
-				}
-				break;
-			case STATE_INCOMING_CALL:
-				if (key_pressed == '*') {
-					gsm.receive_call();
-					enter_call();
-				} else if (key_pressed == '#') {
-					gsm.hang_up();
-					enter_main_screen(gsm);
-				}
-		}
-
-	}
+                } else if (key_pressed == 'D') {
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                    pop_state();
+                }
+                break;
+            case STATE_MESSAGE_NUMBER:
+                if (key_pressed == '#') {
+                    enter_message_text();
+                } else if (key_pressed == 'C') {
+                    pop_state();
+                } else if (key_pressed == 'D') {
+                	enter_main_screen(gsm);
+                }
+                break;
+            case STATE_MESSAGE_TEXT:
+                if (key_pressed == '#') {
+                    display_sent_sms(&lcd);
+                    HAL_Delay(2000);
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                    pop_state();
+                } else if (key_pressed == 'D') {
+                	enter_main_screen(gsm);
+                }
+                break;
+            default:
+                enter_main_screen(gsm);
+        }
+    } else {
+        switch (current_state) {
+            case STATE_CALL:
+                if (key_pressed == '*') {
+                    gsm.hang_up();
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                }
+                break;
+            case STATE_INCOMING_CALL:
+                if (key_pressed == '*') {
+                    gsm.receive_call();
+                    enter_call();
+                } else if (key_pressed == '#') {
+                    gsm.hang_up();
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                    pop_state();
+                }
+                break;
+        }
+    }
 }
+
+
 
 
 
@@ -1091,16 +1238,16 @@ int main(void) {
     LCD5110_init(&lcd.hw_conf, LCD5110_NORMAL_MODE, 0x40, 2, 3);
     keypad_init();
 
-//    enter_main_screen(gsm);
+//    enter_main_screen();
 
     char key_pressed = 0;
 
-    Parameters parameters = load_parameters();
-    GSM_Module gsm(parameters);
+//    Parameters parameters = load_parameters();
+//    _Module (parameters);
     enter_main_screen(gsm);
 
     /* USER CODE END 2 */
-//    gsm.make_call("380661597304");
+//    .make_call("380661597304");
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
@@ -1109,7 +1256,7 @@ int main(void) {
         key_pressed = keypad_scan();
         if (key_pressed != 0) {
           HAL_GPIO_WritePin(GPIOE, GPIO_PIN_8, GPIO_PIN_SET);
-            handle_key_press(key_pressed, gsm);
+            handle_key_press(key_pressed);
             HAL_Delay(2000);
           HAL_GPIO_WritePin(GPIOE, GPIO_PIN_8, GPIO_PIN_RESET);
         }
@@ -1141,15 +1288,15 @@ int main(void) {
 
 
 /**
-  * @brief  Handle the GSM state machine based on user input.
-  * @param  gsm: Reference to the GSM_Module instance.
+  * @brief  Handle the  state machine based on user input.
+  * @param  : Reference to the _Module instance.
   * @param  user_input: Input from the keyboard.
   * @retval None
   */
-//void handle_state_machine(GSM_Module& gsm, const std::string& user_input) {
-//    GSMState next_state = parse_command(user_input);
+//void handle_state_machine(_Module& , const std::string& user_input) {
+//    State next_state = parse_command(user_input);
 //
-//    if (next_state != GSM_UNKNOWN) {
+//    if (next_state != _UNKNOWN) {
 //        current_state = next_state;
 //    }
 //
@@ -1157,11 +1304,11 @@ int main(void) {
 //}
 
 /**
-  * @brief Parse command and map it to a GSMState.
+  * @brief Parse command and map it to a State.
   * @param command: The command string.
-  * @retval GSMState corresponding to the command.
+  * @retval State corresponding to the command.
   */
-//ProgramState parse_command(const std::string& command, GSM_Module gsm) {
+//ProgramState parse_command(const std::string& command, _Module ) {
 //
 //}
 
