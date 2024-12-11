@@ -305,7 +305,7 @@ std::string read_input_message(LCD5110_display* lcd) {
 //}
 
 
-void display_main_screen(LCD5110_display* lcd, int menu) {
+void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
   LCD5110_clear_scr(lcd);
 
 // Kitty
@@ -517,9 +517,37 @@ void display_main_screen(LCD5110_display* lcd, int menu) {
   LCD5110_putpix(82, 8, BLACK, &lcd->hw_conf);
   LCD5110_putpix(83, 8, BLACK, &lcd->hw_conf);
 
-  int y_position = 35; // Y position for the menu button
-  int rect_height = 8; // Height of the rectangle
-  int rect_width = 8; // Full width of the screen (Nokia 5110)
+	  if (gsm.signal >= 0) {
+		LCD5110_putpix(70, 7, BLACK, &lcd->hw_conf);
+	      }
+
+		  if (gsm.signal >= 9) {
+			LCD5110_putpix(74, 7, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(74, 6, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(74, 5, BLACK, &lcd->hw_conf);
+		  }
+
+		  if (gsm.signal >= 14) {
+			LCD5110_putpix(78, 7, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(78, 6, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(78, 5, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(78, 4, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(78, 3, BLACK, &lcd->hw_conf);
+		  }
+
+		  if (gsm.signal >= 19) {
+			LCD5110_putpix(82, 7, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 6, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 5, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 4, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 3, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 2, BLACK, &lcd->hw_conf);
+			LCD5110_putpix(82, 1, BLACK, &lcd->hw_conf);
+		  }
+
+	int y_position = 35; // Y position for the menu button
+	int rect_height = 8; // Height of the rectangle
+	int rect_width = 8; // Full width of the screen (Nokia 5110)
 
   if (menu == 1) {
     // Draw a black rectangle
@@ -544,10 +572,10 @@ void display_main_screen(LCD5110_display* lcd, int menu) {
 
 
   LCD5110_set_cursor(53, 13, lcd);
-//  LCD5110_print(gsm.time.c_str(), BLACK, lcd);
+  LCD5110_print(gsm.time.c_str(), BLACK, lcd);
 
   LCD5110_set_cursor(36, 25, lcd);
-//  LCD5110_print(gsm.date.c_str(), BLACK, lcd);
+  LCD5110_print(gsm.date.c_str(), BLACK, lcd);
 
 
   LCD5110_refresh(lcd);
@@ -897,13 +925,12 @@ typedef enum {
     STATE_MESSAGES,
     STATE_MESSAGE_NUMBER,
     STATE_MESSAGE_TEXT,
-    STATE_SNAKE_SCREEN,
-    STATE_MUSIC_SCREEN
+    STATE_SNAKE_SCREEN
 } SystemState;
 
 void update_display_for_option(int option);
 void update_display_for_message_option(int option);
-void enter_main_screen();
+void enter_main_screen(GSM_Module gsm);
 void enter_menu();
 void enter_call();
 void enter_call_input();
@@ -958,7 +985,7 @@ void pop_state() {
         // Update the display based on the restored state
         switch (current_state) {
             case STATE_MAIN_SCREEN:
-                display_main_screen(&lcd, 0);
+            	display_main_screen(&lcd, 0, gsm);
                 break;
             case STATE_MENU:
                 display_main_menu(&lcd, 0);
@@ -991,8 +1018,8 @@ void pop_state() {
 }
 
 
-void enter_main_screen() {
-    display_main_screen(&lcd, 0);
+void enter_main_screen(GSM_Module gsm) {
+    display_main_screen(&lcd, 0, gsm);
     entered_number.clear();
     entered_message.clear();
     push_state(current_state);
@@ -1046,8 +1073,8 @@ void enter_message_text() {
     current_state = STATE_MESSAGE_TEXT;
 }
 
-void handle_key_press(char key_pressed) {
-//    if (.current_state == .IDLE) {
+void handle_key_press(char key_pressed, GSM_Module gsm) {
+    if (gsm.current_state == gsm.IDLE) {
         switch (current_state) {
             case STATE_MAIN_SCREEN:
                 if (key_pressed == '0') {
@@ -1067,7 +1094,7 @@ void handle_key_press(char key_pressed) {
                         case 1: enter_messages(); break;
                     }
                 } else if (key_pressed == 'D') {
-                    enter_main_screen();
+                    enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
                     pop_state();
                 }
@@ -1076,7 +1103,7 @@ void handle_key_press(char key_pressed) {
                 if (key_pressed == '#') {
                     enter_calling();
                 } else if (key_pressed == 'D') {
-                    enter_main_screen();
+                    enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
                     pop_state();
                 }
@@ -1085,7 +1112,7 @@ void handle_key_press(char key_pressed) {
                 if (key_pressed == '#') {
                     enter_call();
                 } else if (key_pressed == '*') {
-                    enter_main_screen();
+                    enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
                     pop_state();
                 }
@@ -1103,7 +1130,7 @@ void handle_key_press(char key_pressed) {
 //						case 1: enter_message(); break;
 					}
                 } else if (key_pressed == 'D') {
-                    enter_menu();
+                    enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
                     pop_state();
                 }
@@ -1113,42 +1140,46 @@ void handle_key_press(char key_pressed) {
                     enter_message_text();
                 } else if (key_pressed == 'C') {
                     pop_state();
+                } else if (key_pressed == 'D') {
+                	enter_main_screen(gsm);
                 }
                 break;
             case STATE_MESSAGE_TEXT:
                 if (key_pressed == '#') {
                     display_sent_sms(&lcd);
                     HAL_Delay(2000);
-                    enter_main_screen();
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                    pop_state();
+                } else if (key_pressed == 'D') {
+                	enter_main_screen(gsm);
+                }
+                break;
+            default:
+                enter_main_screen(gsm);
+        }
+    } else {
+        switch (current_state) {
+            case STATE_CALL:
+                if (key_pressed == '*') {
+                    gsm.hang_up();
+                    enter_main_screen(gsm);
+                } else if (key_pressed == 'C') {
+                }
+                break;
+            case STATE_INCOMING_CALL:
+                if (key_pressed == '*') {
+                    gsm.receive_call();
+                    enter_call();
+                } else if (key_pressed == '#') {
+                    gsm.hang_up();
+                    enter_main_screen(gsm);
                 } else if (key_pressed == 'C') {
                     pop_state();
                 }
                 break;
-            default:
-                enter_main_screen();
         }
-//    } else {
-//        switch (current_state) {
-//            case STATE_CALL:
-//                if (key_pressed == '*') {
-////                    .hang_up();
-//                    enter_main_screen();
-//                } else if (key_pressed == 'C') {
-//                }
-//                break;
-//            case STATE_INCOMING_CALL:
-//                if (key_pressed == '*') {
-//                    .receive_call();
-//                    enter_call();
-//                } else if (key_pressed == '#') {
-//                    .hang_up();
-//                    enter_main_screen();
-//                } else if (key_pressed == 'C') {
-//                    pop_state();
-//                }
-//                break;
-//        }
-//    }
+    }
 }
 
 
@@ -1213,7 +1244,7 @@ int main(void) {
 
 //    Parameters parameters = load_parameters();
 //    _Module (parameters);
-    enter_main_screen();
+    enter_main_screen(gsm);
 
     /* USER CODE END 2 */
 //    .make_call("380661597304");
