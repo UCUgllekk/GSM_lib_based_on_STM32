@@ -18,20 +18,44 @@ P.S GSMLib is currently outdated due to dependance project to other files which 
 In order to compile the existing part of our project, you need to install **STM32CUBEIDE** (work better with Ubuntu 22 or Windows). Here is the link to the site where you can find it [here](https://www.st.com/en/development-tools/stm32cubeide.html).
 You will also need a STM32f3discovery board, bread board, screen, speakers, GSM A9G module, Arduino wires, micro-USB, mini-USB.
 
-## Compilation
-In order to compile our project 
-1) Clone repository<br>
-```bash
-git clone https://github.com/UCUgllekk/GSM_lib_based_on_STM32.git
-```
-3) Then go to the required directory:<br>
-```bash
-cd Test/Core/Src
-```
-4) Then run this code to compile project:<br>
-```bash
-g++ main.cpp -o main
-```
+## Linking the Library with Your Project
+
+Follow these steps to integrate the GSMLibrary with your project:
+
+1. Build the Library
+   - Open the GSMLibrary project in STM32CubeIDE and build it.
+2. Set Up the Project Directory
+   - Navigate to your project folder → Core.
+   - Create a directory (e.g., lib or GSMLib).
+3. Add Library Files
+   - Copy libGSMLibrary.a from GSMLibrary/Core/Debug into the newly created directory.
+   - Copy GSMLibrary.hpp from GSMLibrary/Core/Inc into the same directory.
+4. Update Project Properties
+   - Right-click on your project folder → Properties.
+   - Navigate to C/C++ General → Paths and Symbols → Includes → GNU C++.
+       - Click Add, choose Workspace, select the created directory, and click OK.
+   - Repeat the process in the Library Paths tab.
+5. Configure Linker Settings
+
+   - Open C/C++ Build → Settings → Tool Settings.
+   - Scroll to MCU/MPU G++ Linker → Miscellaneous.
+   - In the Additional Object Files field, click Add and include libGSMLibrary.a.
+6. Include the Library Header
+
+   - At the top of your source files, include the library header:
+   ```{c++}
+   #include "GSMModule.hpp"
+   ```
+## Connection
+  * In order to connect STM32F3Discovery with GSM module, LCD5110 screen and keyboard use following scheme:
+![image](https://github.com/user-attachments/assets/f2b1c2f9-22e0-436e-ade6-2ddabe87ad29)
+
+  * After successful connection and building project the next image should appear on your screen:
+![image](https://github.com/user-attachments/assets/8f011a59-f5bc-4fee-951f-3d0ecf5a72b7)
+
+## Navigation
+  * To navigate through GUI use following scheme:
+![image](https://github.com/user-attachments/assets/661d9116-1368-4cb0-8240-6c169e90e16f)
 
 ## Usage
 To run our project you need to follow these steps:
