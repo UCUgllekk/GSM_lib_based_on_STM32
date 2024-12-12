@@ -53,13 +53,13 @@ void GSM_Module::receive_call() {
 
 
 void GSM_Module::hang_up(){
-	if (this->current_state != CALLING_PROCESS) {
+	if (this->current_state != CALLING_PROCESS && this->current_state != INCOMING_CALL && this->current_state != CONVERSATION) {
 	    return;
 	}
 
 	transmit("ATH\r\n", 5);
-	this->current_state = this->prev_state;
-	this->prev_state = IDLE;
+	this->prev_state = this->current_state;
+	this->current_state = IDLE;
 }
 
 
@@ -144,52 +144,6 @@ void GSM_Module::receive_date_and_time(std::string buffer) {
     time = std::string(time_buffer);
 }
 
-//
-//char* GSM_Module::receive_gps_data() {
-//  char* answer = (char*)malloc(256 * sizeof(char));;
-//  transmit(GET_TIME, strlen(GET_TIME));
-//  receive(answer, 256);
-//  return answer;
-//}
-//
-//
-//std::pair<std::string, std::string> GSM_Module::get_date_and_time() {
-//  transmit(GET_TIME, strlen(GET_TIME));
-//  return std::make_pair(date, time);
-//}
-//
-//
-//void GSM_Module::receive_date_and_time(std::string buffer) {
-//	size_t cclk_start = buffer.find("+CCLK: ");
-//
-//	std::string time_string = buffer.substr(cclk_start + 7);
-//
-//	if (time_string[0] == '"') {
-//		time_string = time_string.substr(1, time_string.size() - 2); // Remove quotes
-//	}
-//
-//	int year, month, day, hh, mm, ss, tz;
-//
-//	sscanf(time_string.c_str(), "%2d/%2d/%2d,%2d:%2d:%2d+%2d", &year, &month, &day, &hh, &mm, &ss, &tz);
-//
-//	hh += tz;
-//
-//	if (hh >= 24)
-//	{
-//		day += 1;
-//		hh = hh % 24;
-//	}
-//
-//	char date_buffer[9];
-//	snprintf(date_buffer, sizeof(date_buffer), "%02d/%02d/%02d", day, month, year);
-//	date = std::string(date_buffer);
-//
-//	char time_buffer[9]; // "hh:mm:ss"
-//	snprintf(time_buffer, sizeof(time_buffer), "%02d:%02d:%02d", hh, mm, ss);
-//	time = std::string(time_buffer);
-//}
-
-
 int GSM_Module::get_signal_strength() {
     if (!transmit(GET_SIGNAL, strlen(GET_SIGNAL))) {
         return -1;
@@ -270,11 +224,11 @@ void GSM_Module::handle_interruption() {
     	this->prev_state = this->current_state;
     	this->current_state = IDLE;
 
-	} else if (buffer_to_str.find("+CIEV: \"SOUNDER\",1")){
+	} else if (buffer_to_str.find("+CIEV: \"SOUNDER\",1") != std::string::npos){
 
 		this->current_state = CONVERSATION;
 
-	} else if (buffer_to_str.find("+CIEV: \"SOUNDER\",0")) {
+	} else if (buffer_to_str.find("+CIEV: \"SOUNDER\",0") != std::string::npos || buffer_to_str.find("BUSY") != std::string::npos) {
 
 		this->current_state = this->prev_state;
 

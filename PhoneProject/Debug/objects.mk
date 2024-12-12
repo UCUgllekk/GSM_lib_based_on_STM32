@@ -3,7 +3,7 @@
 # Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
-USER_OBJS := /home/gllekk/STMProjects/GSM_lib_based_on_STM32/PhoneProject/Core/GSMLib/libGSMLibrary.a
+USER_OBJS := /home/yuliana/Documents/finalproject/GSM_lib_based_on_STM32/PhoneProject/Core/GSMLib/libGSMLibrary.a
 
 LIBS :=
 

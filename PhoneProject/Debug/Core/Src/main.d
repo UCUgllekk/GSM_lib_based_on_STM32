@@ -36,7 +36,7 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Core/Inc/usart.h ../Core/Inc/usb.h ../Core/Inc/gpio.h \
  ../Core/Inc/lcd5110.h ../Core/Inc/lcd5110_ll.h ../Core/Inc/spi.h \
  ../Core/Inc/gpio.h ../Core/Inc/lcd5110_hal.h \
- /home/gllekk/STMProjects/GSM_lib_based_on_STM32/PhoneProject/Core/GSMLib/GSMLibrary.hpp
+ /home/yuliana/Documents/finalproject/GSM_lib_based_on_STM32/PhoneProject/Core/GSMLib/GSMLibrary.hpp
 ../Core/Inc/main.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:
 ../Core/Inc/stm32f3xx_hal_conf.h:
@@ -82,4 +82,4 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Core/Inc/spi.h:
 ../Core/Inc/gpio.h:
 ../Core/Inc/lcd5110_hal.h:
-/home/gllekk/STMProjects/GSM_lib_based_on_STM32/PhoneProject/Core/GSMLib/GSMLibrary.hpp:
+/home/yuliana/Documents/finalproject/GSM_lib_based_on_STM32/PhoneProject/Core/GSMLib/GSMLibrary.hpp:
