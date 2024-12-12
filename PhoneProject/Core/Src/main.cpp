@@ -276,6 +276,7 @@ void display_main_screen(LCD5110_display* lcd, int menu, GSM_Module gsm) {
   LCD5110_putpix(13, 14, BLACK, &lcd->hw_conf);
   LCD5110_putpix(22, 14, BLACK, &lcd->hw_conf);
 
+
   LCD5110_putpix(2, 15, BLACK, &lcd->hw_conf);
   LCD5110_putpix(22, 15, BLACK, &lcd->hw_conf);
 
