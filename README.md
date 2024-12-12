@@ -47,14 +47,17 @@ Follow these steps to integrate the GSMLibrary with your project:
    #include "GSMModule.hpp"
    ```
 ## Connection
-  * In order to connect STM32F3Discovery with GSM module, LCD5110 screen and keyboard use following scheme:
+  * In order to connect STM32F3Discovery with GSM module, LCD5110 screen and keyboard use following scheme:\
+
 ![image](https://github.com/user-attachments/assets/f2b1c2f9-22e0-436e-ade6-2ddabe87ad29)
 
-  * After successful connection and building project the next image should appear on your screen:
+  * After successful connection and building project the next image should appear on your screen:\
+
 ![image](https://github.com/user-attachments/assets/8f011a59-f5bc-4fee-951f-3d0ecf5a72b7)
 
 ## Navigation
-  * To navigate through GUI use following scheme:
+  * To navigate through GUI use following scheme:\
+
 ![image](https://github.com/user-attachments/assets/661d9116-1368-4cb0-8240-6c169e90e16f)
 
 ## Usage
